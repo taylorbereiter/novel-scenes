@@ -103,7 +103,10 @@ export function createScene(opts = {}) {
  */
 async function getAsset(id) {
   if (!_manifest) {
-    const res = await fetch(MANIFEST_URL);
+    // cache: 'no-cache' forces the browser to revalidate with the CDN.
+    // Without this, old browser caches can serve a stale manifest that
+    // does not know about newly-added assets.
+    const res = await fetch(MANIFEST_URL, { cache: 'no-cache' });
     _manifest = await res.json();
   }
   const entry = _manifest.assets.find(a => a.id === id);
@@ -190,7 +193,7 @@ export async function loadAssets(ids, sharedOpts = {}) {
  */
 export async function searchAssets(terms) {
   if (!_manifest) {
-    const res = await fetch(MANIFEST_URL);
+    const res = await fetch(MANIFEST_URL, { cache: 'no-cache' });
     _manifest = await res.json();
   }
   const lowered = terms.map(t => t.toLowerCase());
