@@ -339,6 +339,8 @@ const HTML = `
 
 <div id="hud" style="display:none">Beat <span class="num" id="beat-num">1</span> / <span id="beat-total">1</span></div>
 <div id="controls" style="display:none">
+  <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> walk &nbsp;·&nbsp;
+  <kbd>Shift</kbd> run<br>
   <kbd>Click</kbd> examine &nbsp;·&nbsp;
   <kbd>B</kbd> hide book &nbsp;·&nbsp;
   <kbd>Space</kbd> continue

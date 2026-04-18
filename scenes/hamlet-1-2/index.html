@@ -39,11 +39,13 @@ import {
   makeExaminable,
   enableExamination,
   startRenderLoop
-} from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js?v=2';
-import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js?v=2';
-import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js?v=2';
+} from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js?v=3';
+import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js?v=3';
+import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js?v=3';
 import { GuideBook, runGuideBookEval, showEvalBanner }
-  from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/guide-book.js?v=2';
+  from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/guide-book.js?v=3';
+import { PlayerControls }
+  from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/player-controls.js?v=3';
 
 BookUI.mount();
 
@@ -303,6 +305,14 @@ guideBook.addCollidable(portrait);
 guideBook.addCollidable(armor);
 
 /* ============================================================
+   PLAYER CONTROLS — WASD + arrow keys to walk between beats
+   ============================================================ */
+const controls = new PlayerControls(camera, {
+  colliders: [backWall, tapestry, arch, window1, portrait, armor, throne, platform],
+  bounds: { x: [-12, 12], z: [-7, 12] }
+});
+
+/* ============================================================
    BEATS
    ============================================================ */
 const BEATS = [
@@ -393,7 +403,13 @@ await BookUI.showTitle({
 
 BeatEngine.start(BEATS);
 
-startRenderLoop({ scene, camera, renderer, composer, onFrame: (dt) => guideBook.update(dt) });
+startRenderLoop({
+  scene, camera, renderer, composer,
+  onFrame: (dt) => {
+    controls.update(dt);
+    guideBook.update(dt);
+  }
+});
 
 // Self-eval mode: append ?eval=1 to the URL to run checks and show a banner.
 if (new URLSearchParams(location.search).has('eval')) {
