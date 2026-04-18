@@ -86,15 +86,53 @@ platformFill.position.set(0, 3, 2);
 scene.add(platformFill);
 
 /* ============================================================
-   GROUND — dark stone platform
+   GROUND — flagstones with per-tile color variance
    ============================================================ */
-const ground = new THREE.Mesh(
-  new THREE.PlaneGeometry(100, 100),
-  new THREE.MeshStandardMaterial({ color: 0x5e6878, roughness: 1 })
-);
+const matFlagstone = new THREE.MeshStandardMaterial({ color: 0x5e6878, roughness: 0.95 });
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), matFlagstone);
 ground.rotation.x = -Math.PI / 2;
 ground.receiveShadow = true;
 scene.add(ground);
+
+// Flagstone tiles on the platform area — each slightly different in tone
+const stoneColors = [0x5e6878, 0x5a6272, 0x626a7a, 0x585f6b, 0x656d7c];
+for (let x = -10; x <= 10; x += 1.5) {
+  for (let z = -3; z <= 8; z += 1.5) {
+    const tile = new THREE.Mesh(
+      new THREE.BoxGeometry(1.4, 0.08, 1.4),
+      new THREE.MeshStandardMaterial({
+        color: stoneColors[(Math.abs(x * 7 + z * 13)) % stoneColors.length],
+        roughness: 0.95
+      })
+    );
+    tile.position.set(x + (Math.sin(x * z) * 0.05), 0.04, z);
+    tile.receiveShadow = true;
+    scene.add(tile);
+  }
+}
+
+/* ============================================================
+   STAR FIELD — a dome of faint points above the scene
+   ============================================================ */
+{
+  const starCount = 600;
+  const positions = new Float32Array(starCount * 3);
+  for (let i = 0; i < starCount; i++) {
+    // Random point on upper hemisphere (radius 60)
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(Math.random() * 0.85 + 0.15);   // bias toward top
+    const r = 60;
+    positions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+    positions[i * 3 + 1] = r * Math.cos(phi);
+    positions[i * 3 + 2] = r * Math.sin(phi) * Math.sin(theta);
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const stars = new THREE.Points(geo, new THREE.PointsMaterial({
+    color: 0xf4ead3, size: 0.35, sizeAttenuation: true, transparent: true, opacity: 0.85
+  }));
+  scene.add(stars);
+}
 
 /* ============================================================
    ASSETS
@@ -114,19 +152,75 @@ const assets = await loadAssets([
 
 // Castle tower — far background silhouette on the right
 const tower = assets['castle-castle-tower-01'];
-tower.position.set(12, 0, -14);
+tower.position.set(13, 0, -14);
+tower.scale.multiplyScalar(1.4);
 scene.add(tower);
 
-// Castle walls — flanking both sides, forming the battlements
-const wallL = assets['architecture-stone-wall-01'];
-wallL.position.set(-8, 0, -6);
-wallL.rotation.y = Math.PI / 2;
-scene.add(wallL);
+// A second, smaller tower on the far left for balance
+const towerL = assets['castle-castle-tower-01'].clone(true);
+towerL.position.set(-13, 0, -13);
+towerL.scale.multiplyScalar(1.1);
+towerL.rotation.y = Math.PI / 6;
+scene.add(towerL);
 
-const wallR = wallL.clone(true);
-wallR.position.set(8, 0, -6);
-wallR.rotation.y = -Math.PI / 2;
+/* ============================================================
+   HAND-BUILT STONE WALLS WITH CRENELLATIONS
+   Two big flanking walls, each with battlements running along the top.
+   Built from BoxGeometry so we control the silhouette.
+   ============================================================ */
+const matStone      = new THREE.MeshStandardMaterial({ color: 0x5a6272, roughness: 0.95 });
+const matStoneDark  = new THREE.MeshStandardMaterial({ color: 0x4a525e, roughness: 1.0 });
+const matStoneLight = new THREE.MeshStandardMaterial({ color: 0x6a7280, roughness: 0.9 });
+const stoneMats = [matStone, matStoneDark, matStoneLight];
+
+function buildWall(length, x, z, rotY) {
+  const group = new THREE.Group();
+
+  // Main wall body — tall, chunky, cast shadow
+  const body = new THREE.Mesh(new THREE.BoxGeometry(length, 4.0, 1.4), matStone);
+  body.position.y = 2.0;
+  body.castShadow = true;
+  body.receiveShadow = true;
+  group.add(body);
+
+  // Horizontal seam — a slightly darker band at mid-height to read as masonry course
+  const band = new THREE.Mesh(new THREE.BoxGeometry(length + 0.02, 0.25, 1.44), matStoneDark);
+  band.position.y = 2.4;
+  group.add(band);
+
+  // Crenellations on top — alternating merlons
+  const merlonW = 0.5, merlonH = 0.6, gap = 0.35;
+  const period = merlonW + gap;
+  const count = Math.floor(length / period);
+  const startX = -((count - 1) * period) / 2;
+  for (let i = 0; i < count; i++) {
+    const mat = stoneMats[i % stoneMats.length];
+    const merlon = new THREE.Mesh(new THREE.BoxGeometry(merlonW, merlonH, 1.4), mat);
+    merlon.position.set(startX + i * period, 4.0 + merlonH / 2, 0);
+    merlon.castShadow = true;
+    group.add(merlon);
+  }
+
+  // Stone block accents along the lower edge — a base course
+  for (let i = 0; i < count; i += 2) {
+    const block = new THREE.Mesh(new THREE.BoxGeometry(period * 1.6, 0.3, 1.5), matStoneLight);
+    block.position.set(startX + i * period, 0.15, 0);
+    group.add(block);
+  }
+
+  group.position.set(x, 0, z);
+  group.rotation.y = rotY;
+  return group;
+}
+
+const wallL = buildWall(16, -8.5, -5, Math.PI / 2);
+scene.add(wallL);
+const wallR = buildWall(16, 8.5, -5, -Math.PI / 2);
 scene.add(wallR);
+
+// Low back wall running between the two flanking walls (the rear of the battlement)
+const backWall = buildWall(18, 0, -11, 0);
+scene.add(backWall);
 
 // Parapet stones — the examinable castle wall along the front edge
 const parapet = assets['castle-parapet-stone-01'];
@@ -152,32 +246,39 @@ const moon = assets['nature-full-moon-01'];
 moon.position.set(-6, 11, -18);
 scene.add(moon);
 
+// Scale up the Poly Pizza figures — default size is too small to read across the battlements
+const FIG_SCALE = 1.9;
+
 // Guard figures — two standing watchmen (one a clone) and Horatio (a seated figure)
 const guard1 = assets['character-human-01'];
-guard1.position.set(-5, 0, 1);
+guard1.position.set(-5.5, 0, 1);
 guard1.rotation.y = 0.4;
+guard1.scale.multiplyScalar(FIG_SCALE);
 scene.add(guard1);
 
 const guard2 = assets['character-human-01'].clone(true);
-guard2.position.set(5.5, 0, 0.5);
+guard2.position.set(6, 0, 0.5);
 guard2.rotation.y = -0.4;
+guard2.scale.multiplyScalar(FIG_SCALE);
 scene.add(guard2);
 
-// Horatio — distinguish him by using the seated-man (business figure) standing
+// Horatio — distinguish him by using the seated-man figure
 const horatio = assets['characters-seated-man-01'];
 horatio.position.set(3, 0, 1.5);
 horatio.rotation.y = -0.35;
+horatio.scale.multiplyScalar(FIG_SCALE);
 scene.add(horatio);
 
-// The Ghost — center-rear, the focal point
+// The Ghost — center-rear, the focal point, a touch larger than the guards
 const ghost = assets['characters-ghost-01'];
 ghost.position.set(0, 0, -3.5);
 ghost.rotation.y = 0;
+ghost.scale.multiplyScalar(FIG_SCALE * 1.15);
 scene.add(ghost);
 
 // Soft glow around the ghost
-const ghostGlow = new THREE.PointLight(0xb8d4ff, 1.2, 8, 2);
-ghostGlow.position.set(0, 1.5, -3.5);
+const ghostGlow = new THREE.PointLight(0xb8d4ff, 1.6, 10, 2);
+ghostGlow.position.set(0, 2, -3.5);
 scene.add(ghostGlow);
 
 // Sword — dropped/leaning against the parapet (for Horatio drawing it)
@@ -185,7 +286,141 @@ const sword = assets['castle-rapier-sword-01'];
 sword.position.set(1.8, 0, -1.2);
 sword.rotation.z = 0.3;
 sword.rotation.y = -0.5;
+sword.scale.multiplyScalar(1.4);
 scene.add(sword);
+
+/* ============================================================
+   PROPS — crates, barrels, spear rack, banner, rope
+   The watch has been here a while. Fill the space with its leavings.
+   ============================================================ */
+const matWood       = new THREE.MeshStandardMaterial({ color: 0x5a3a22, roughness: 0.85 });
+const matWoodDark   = new THREE.MeshStandardMaterial({ color: 0x3e2818, roughness: 0.95 });
+const matIron       = new THREE.MeshStandardMaterial({ color: 0x2a2a2e, roughness: 0.6, metalness: 0.5 });
+const matCloth      = new THREE.MeshStandardMaterial({ color: 0x8a2418, roughness: 0.8, side: THREE.DoubleSide });
+const matRope       = new THREE.MeshStandardMaterial({ color: 0x8a6a3e, roughness: 1 });
+
+function makeCrate(x, z, size = 0.9, rotY = 0) {
+  const g = new THREE.Group();
+  const box = new THREE.Mesh(new THREE.BoxGeometry(size, size, size), matWood);
+  box.position.y = size / 2;
+  box.castShadow = true;
+  g.add(box);
+  // Iron straps
+  const strap = new THREE.Mesh(new THREE.BoxGeometry(size + 0.02, 0.08, size + 0.02), matIron);
+  strap.position.y = size * 0.2;
+  g.add(strap);
+  const strap2 = strap.clone();
+  strap2.position.y = size * 0.8;
+  g.add(strap2);
+  g.position.set(x, 0, z);
+  g.rotation.y = rotY;
+  return g;
+}
+
+function makeBarrel(x, z, rotY = 0) {
+  const g = new THREE.Group();
+  const body = new THREE.Mesh(new THREE.CylinderGeometry(0.38, 0.38, 0.95, 14), matWood);
+  body.position.y = 0.475;
+  body.castShadow = true;
+  g.add(body);
+  // Hoops
+  for (const y of [0.12, 0.5, 0.88]) {
+    const hoop = new THREE.Mesh(new THREE.TorusGeometry(0.39, 0.035, 6, 18), matIron);
+    hoop.position.y = y;
+    hoop.rotation.x = Math.PI / 2;
+    g.add(hoop);
+  }
+  g.position.set(x, 0, z);
+  g.rotation.y = rotY;
+  return g;
+}
+
+function makeSpear(x, z, lean = 0) {
+  const g = new THREE.Group();
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 2.2, 8), matWoodDark);
+  shaft.position.y = 1.1;
+  g.add(shaft);
+  const head = new THREE.Mesh(new THREE.ConeGeometry(0.08, 0.3, 6), matIron);
+  head.position.y = 2.35;
+  g.add(head);
+  g.position.set(x, 0, z);
+  g.rotation.z = lean;
+  return g;
+}
+
+// Crate stack in the rear-left corner
+scene.add(makeCrate(-7, -3, 0.9, 0.2));
+scene.add(makeCrate(-6.2, -3.3, 0.7, -0.3));
+{
+  const top = makeCrate(-7, -3, 0.65, 0.1);
+  top.position.y = 0.9;
+  scene.add(top);
+}
+
+// Barrels on the right — the guards' wine ration
+scene.add(makeBarrel(7, 2, 0.3));
+scene.add(makeBarrel(7.7, 2.4, -0.5));
+
+// Spears leaning against the back wall
+for (let i = 0; i < 5; i++) {
+  scene.add(makeSpear(-2.5 + i * 0.3, -9.2, -0.12 + Math.sin(i) * 0.03));
+}
+
+// A coiled rope on the flagstones
+{
+  const rope = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.07, 6, 18), matRope);
+  rope.position.set(-5, 0.08, 3.5);
+  rope.rotation.x = Math.PI / 2;
+  scene.add(rope);
+  const rope2 = rope.clone();
+  rope2.scale.setScalar(0.7);
+  rope2.position.set(-5.1, 0.22, 3.6);
+  scene.add(rope2);
+}
+
+// Banner hanging from the back wall (the Danish colors, faded)
+{
+  const poleL = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 5, 8), matWoodDark);
+  poleL.position.set(-2.5, 2.5, -10.5);
+  scene.add(poleL);
+  const poleR = poleL.clone();
+  poleR.position.set(2.5, 2.5, -10.5);
+  scene.add(poleR);
+  const crossbar = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 5.2, 8), matWoodDark);
+  crossbar.rotation.z = Math.PI / 2;
+  crossbar.position.set(0, 4.5, -10.5);
+  scene.add(crossbar);
+  const banner = new THREE.Mesh(new THREE.PlaneGeometry(4.5, 3), matCloth);
+  banner.position.set(0, 2.8, -10.45);
+  banner.userData.bannerBase = 2.8;
+  scene.add(banner);
+  // Expose for animation
+  window.__banner = banner;
+}
+
+/* ============================================================
+   EMBER PARTICLES — rising from the brazier
+   ============================================================ */
+const EMBER_COUNT = 40;
+const emberGeo = new THREE.BufferGeometry();
+const emberPos = new Float32Array(EMBER_COUNT * 3);
+const emberLife = new Float32Array(EMBER_COUNT);
+const emberSpeed = new Float32Array(EMBER_COUNT);
+for (let i = 0; i < EMBER_COUNT; i++) {
+  emberPos[i * 3]     = -3.5 + (Math.random() - 0.5) * 0.4;
+  emberPos[i * 3 + 1] = 0.3 + Math.random() * 1.8;
+  emberPos[i * 3 + 2] = 2.5 + (Math.random() - 0.5) * 0.4;
+  emberLife[i] = Math.random();
+  emberSpeed[i] = 0.4 + Math.random() * 0.6;
+}
+emberGeo.setAttribute('position', new THREE.BufferAttribute(emberPos, 3));
+const emberMat = new THREE.PointsMaterial({
+  color: 0xff9a48, size: 0.08, transparent: true, opacity: 0.95,
+  blending: THREE.AdditiveBlending, depthWrite: false
+});
+const embers = new THREE.Points(emberGeo, emberMat);
+scene.add(embers);
+window.__embers = { embers, emberPos, emberLife, emberSpeed };
 
 /* ============================================================
    EXAMINABLES
@@ -340,11 +575,42 @@ startRenderLoop({
   onFrame: (dt) => {
     controls.update(dt);
     guideBook.update(dt);
-    // Proximity reveal — panel fades in near the book, fades out when away.
     BookUI.updateProximity(
       guideBook.distanceToCamera(camera),
       guideBook.isSettled()
     );
+
+    // --- Ember particles drifting up from the brazier ---
+    const e = window.__embers;
+    if (e) {
+      for (let i = 0; i < EMBER_COUNT; i++) {
+        e.emberLife[i] += dt * 0.5;
+        if (e.emberLife[i] > 1) {
+          e.emberLife[i] = 0;
+          e.emberPos[i * 3]     = -3.5 + (Math.random() - 0.5) * 0.3;
+          e.emberPos[i * 3 + 1] = 0.3;
+          e.emberPos[i * 3 + 2] = 2.5 + (Math.random() - 0.5) * 0.3;
+        } else {
+          e.emberPos[i * 3 + 1] += dt * e.emberSpeed[i];
+          e.emberPos[i * 3]     += Math.sin(e.emberLife[i] * 8 + i) * dt * 0.15;
+        }
+      }
+      e.embers.geometry.attributes.position.needsUpdate = true;
+      e.embers.material.opacity = 0.95 - 0.3 * Math.abs(Math.sin(performance.now() * 0.001));
+    }
+
+    // --- Brazier light flicker ---
+    const flicker = 0.85 + Math.sin(performance.now() * 0.011) * 0.1 + Math.sin(performance.now() * 0.031) * 0.06;
+    fireLight1.intensity = 4.0 * flicker;
+    fireLight2.intensity = 3.4 * flicker;
+
+    // --- Banner sway ---
+    if (window.__banner) {
+      const b = window.__banner;
+      const t = performance.now() * 0.0008;
+      b.rotation.y = Math.sin(t) * 0.08;
+      b.position.y = b.userData.bannerBase + Math.sin(t * 2) * 0.04;
+    }
   }
 });
 
