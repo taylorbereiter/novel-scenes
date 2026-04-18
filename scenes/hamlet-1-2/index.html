@@ -42,6 +42,8 @@ import {
 } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js';
 import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js';
 import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js';
+import { GuideBook, runGuideBookEval, showEvalBanner }
+  from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/guide-book.js';
 
 BookUI.mount();
 
@@ -289,6 +291,18 @@ makeExaminable(cloak, 'cloak', () => {
 enableExamination(camera);
 
 /* ============================================================
+   GUIDE BOOK — the floating 3D book that leads students
+   ============================================================ */
+const guideBook = new GuideBook(scene);
+// Register static collidables the book must not pass through
+guideBook.addCollidable(backWall);
+guideBook.addCollidable(tapestry);
+guideBook.addCollidable(arch);
+guideBook.addCollidable(window1);
+guideBook.addCollidable(portrait);
+guideBook.addCollidable(armor);
+
+/* ============================================================
    BEATS
    ============================================================ */
 const BEATS = [
@@ -349,9 +363,18 @@ const BEATS = [
   }
 ];
 
+// Book waypoints — one per beat. Default to cameraLookAt lifted 0.4m.
+// Default: lift the book 1.0m above the lookAt so it floats above waist-height
+// geometry (parapets, tables, etc.). Use beat.bookPos for explicit overrides.
+const BOOK_WAYPOINTS = BEATS.map(b => b.bookPos || [b.cameraLookAt[0], b.cameraLookAt[1] + 1.0, b.cameraLookAt[2]]);
+guideBook.placeAt(BOOK_WAYPOINTS[0]);
+
 await BeatEngine.init({
   camera,
-  onBeat: (beat, i, total) => BookUI.showBeat(beat, i, total),
+  onBeat: (beat, i, total) => {
+    BookUI.showBeat(beat, i, total);
+    guideBook.moveTo(BOOK_WAYPOINTS[i]);
+  },
   onEnd: () => BookUI.showEnding({
     eyebrow: 'End of Act 1 · Hamlet I.ii',
     finalLine: '"My father\'s spirit in arms! All is not well; / I doubt some foul play."',
@@ -370,7 +393,14 @@ await BookUI.showTitle({
 
 BeatEngine.start(BEATS);
 
-startRenderLoop({ scene, camera, renderer, composer });
+startRenderLoop({ scene, camera, renderer, composer, onFrame: (dt) => guideBook.update(dt) });
+
+// Self-eval mode: append ?eval=1 to the URL to run checks and show a banner.
+if (new URLSearchParams(location.search).has('eval')) {
+  const report = runGuideBookEval(guideBook, BOOK_WAYPOINTS);
+  window.__EVAL_RESULT = report;
+  showEvalBanner(report);
+}
 </script>
 </body>
 </html>
