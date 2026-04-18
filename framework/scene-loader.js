@@ -112,10 +112,29 @@ async function getAsset(id) {
 }
 
 /**
- * Load a GLB asset by its manifest id. Returns the top-level THREE.Group.
- * Enables shadows on all child meshes.
+ * Fit a group to a target height (meters), and settle it on the ground plane.
+ * Works regardless of the asset's native scale.
  */
-export async function loadAsset(id) {
+export function fitToHeight(group, targetHeight) {
+  const box = new THREE.Box3().setFromObject(group);
+  const size = new THREE.Vector3();
+  box.getSize(size);
+  if (size.y <= 0) return;
+  const scale = targetHeight / size.y;
+  group.scale.setScalar(scale);
+  const box2 = new THREE.Box3().setFromObject(group);
+  group.position.y -= box2.min.y;
+}
+
+/**
+ * Load a GLB asset by its manifest id. Returns the top-level THREE.Group.
+ * Enables shadows on all child meshes. By default, auto-fits the group to
+ * the manifest's size_m value — scenes almost never need to set scale manually.
+ *
+ *   opts.autoFit   - default true; if false, returns the asset at native scale
+ *   opts.height    - override the manifest's size_m with a custom height
+ */
+export async function loadAsset(id, opts = {}) {
   const entry = await getAsset(id);
   const url = REPO_BASE + entry.path;
   const gltf = await _loader.loadAsync(url);
@@ -127,6 +146,13 @@ export async function loadAsset(id) {
     }
   });
   group.userData.manifestId = id;
+  group.userData.manifest = entry;
+
+  const autoFit = opts.autoFit !== false;
+  const targetHeight = opts.height ?? entry.size_m;
+  if (autoFit && typeof targetHeight === 'number' && targetHeight > 0) {
+    fitToHeight(group, targetHeight);
+  }
   return group;
 }
 
@@ -135,10 +161,49 @@ export async function loadAsset(id) {
  *
  *   const assets = await loadAssets(['graveyard-skull-01', 'graveyard-shovel-01']);
  *   scene.add(assets['graveyard-skull-01']);
+ *
+ * Accepts the same options object as loadAsset (applied to every asset).
+ * For per-asset options, pass an object of { id: options }:
+ *
+ *   const assets = await loadAssets({
+ *     'graveyard-skull-01': { height: 0.3 },
+ *     'graveyard-shovel-01': {}
+ *   });
  */
-export async function loadAssets(ids) {
-  const results = await Promise.all(ids.map(id => loadAsset(id).then(g => [id, g])));
+export async function loadAssets(ids, sharedOpts = {}) {
+  if (Array.isArray(ids)) {
+    const results = await Promise.all(ids.map(id => loadAsset(id, sharedOpts).then(g => [id, g])));
+    return Object.fromEntries(results);
+  }
+  // Object form: per-asset options
+  const entries = Object.entries(ids);
+  const results = await Promise.all(entries.map(([id, o]) => loadAsset(id, { ...sharedOpts, ...o }).then(g => [id, g])));
   return Object.fromEntries(results);
+}
+
+/**
+ * Search the manifest by tags or keywords. Returns all asset entries whose
+ * tags, name, description, category, or use_cases contain any of the terms.
+ * Useful when Claude Code is picking assets for a new scene.
+ *
+ *   const results = await searchAssets(['skull', 'bone']);
+ */
+export async function searchAssets(terms) {
+  if (!_manifest) {
+    const res = await fetch(MANIFEST_URL);
+    _manifest = await res.json();
+  }
+  const lowered = terms.map(t => t.toLowerCase());
+  return _manifest.assets.filter(a => {
+    const hay = [
+      ...(a.tags || []),
+      a.name || '',
+      a.description || '',
+      a.category || '',
+      ...(a.use_cases || []),
+    ].join(' ').toLowerCase();
+    return lowered.some(t => hay.includes(t));
+  });
 }
 
 // Internal: a flat list of examinable meshes for the raycaster

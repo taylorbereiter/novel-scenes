@@ -100,55 +100,39 @@ const assets = await loadAssets([
   'props-cross-01'
 ]);
 
-// Normalize each asset's scale by measuring its bounding box.
-// Assets from different authors come in with wildly different scales.
-function fitToHeight(group, targetHeight) {
-  const box = new THREE.Box3().setFromObject(group);
-  const size = new THREE.Vector3();
-  box.getSize(size);
-  const scale = targetHeight / size.y;
-  group.scale.setScalar(scale);
-  // Re-measure and settle on ground
-  const box2 = new THREE.Box3().setFromObject(group);
-  group.position.y -= box2.min.y;
-}
+// Assets auto-scale via manifest.size_m — no manual fitToHeight needed.
 
 // Dirt mound — the "fresh grave" itself, center of the scene
 const mound = assets['graveyard-dirt-mound-01'];
-fitToHeight(mound, 0.5);
 mound.position.set(0, 0, 0);
 scene.add(mound);
 
 // Two gravestones — one close, one further back-right
 const stone1 = assets['graveyard-gravestone-01'];
-fitToHeight(stone1, 0.9);
 stone1.position.set(-2.4, 0, -0.2);
 stone1.rotation.y = 0.1;
 scene.add(stone1);
 
 const stone2 = stone1.clone(true);
-fitToHeight(stone2, 0.8);
+stone2.scale.multiplyScalar(0.9);
 stone2.position.set(3.2, 0, -1.8);
 stone2.rotation.y = -0.25;
 scene.add(stone2);
 
 // Wooden cross marker, off to the left
 const cross = assets['props-cross-01'];
-fitToHeight(cross, 1.1);
 cross.position.set(-3.8, 0, -2.5);
 cross.rotation.y = 0.18;
 scene.add(cross);
 
 // Skull — on the ground at the edge of the grave, the focal examinable
 const skull = assets['graveyard-skull-01'];
-fitToHeight(skull, 0.22);
 skull.position.set(0.9, 0, 1.1);
 skull.rotation.y = -0.4;
 scene.add(skull);
 
 // Shovel/spade — stuck at an angle in the dirt mound
 const shovel = assets['graveyard-shovel-01'];
-fitToHeight(shovel, 1.4);
 shovel.position.set(-0.6, 0, 0.6);
 shovel.rotation.z = 0.35;
 shovel.rotation.y = 0.8;
@@ -156,13 +140,11 @@ scene.add(shovel);
 
 // Bare tree — background, off to the right
 const tree = assets['nature-dead-tree-01'];
-fitToHeight(tree, 7);
 tree.position.set(7, 0, -5);
 scene.add(tree);
 
 // Bench — further back, atmosphere only
 const bench = assets['props-bench-01'];
-fitToHeight(bench, 0.8);
 bench.position.set(-6, 0, -6);
 bench.rotation.y = 0.4;
 scene.add(bench);
