@@ -307,6 +307,14 @@ canvas { display: block; }
   resize: vertical; border-radius: 2px;
   margin-bottom: 24px;
 }
+#ending .next-scene {
+  display: none; margin-top: 18px;
+  padding-top: 20px; border-top: 1px solid rgba(247, 227, 164, 0.18);
+  color: #c9b894; font-size: 13px; line-height: 1.7;
+  max-width: 520px;
+}
+#ending .next-scene.show { display: block; }
+#ending .next-scene em { color: var(--sun); font-style: normal; }
 #ending button {
   background: transparent; color: var(--sun);
   border: 1px solid var(--sun); padding: 12px 32px;
@@ -373,6 +381,10 @@ const HTML = `
   <div>
     <button id="save-btn">Save my response</button>
     <button id="restart-btn">Walk again</button>
+  </div>
+  <div class="next-scene" id="next-scene">
+    <div id="next-scene-text">When you are ready, <em>continue to the next scene</em>.</div>
+    <button id="next-scene-btn" style="margin-top: 14px;">Continue →</button>
   </div>
 </div>
 `;
@@ -527,14 +539,28 @@ export const BookUI = {
   /**
    * Show the ending reflection screen.
    *
-   *   config: { finalLine, prompt, onRestart? }
+   *   config: { finalLine, prompt, onRestart?, nextSceneUrl?, nextSceneLabel?, nextSceneText? }
    *   prompt may contain HTML.
+   *   If nextSceneUrl is set, a "Continue →" button navigates there after the
+   *   reflection block. nextSceneText (HTML) customizes the hint above the button.
    */
   showEnding(config) {
     $('final-line').textContent = config.finalLine || '';
     $('ending-prompt').innerHTML = config.prompt || '';
     if (config.eyebrow) $('ending-eyebrow').textContent = config.eyebrow;
     _onRestart = config.onRestart || null;
+
+    const nextWrap = $('next-scene');
+    if (config.nextSceneUrl) {
+      if (config.nextSceneText) $('next-scene-text').innerHTML = config.nextSceneText;
+      const btn = $('next-scene-btn');
+      btn.textContent = config.nextSceneLabel || 'Continue →';
+      btn.onclick = () => { window.location.href = config.nextSceneUrl; };
+      nextWrap.classList.add('show');
+    } else {
+      nextWrap.classList.remove('show');
+    }
+
     $('page').classList.remove('show');
     $('ending').classList.add('show');
   },

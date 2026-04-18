@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Hamlet — The Battlements · Act 1, Scene 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="js-error" style="position:fixed;top:0;left:0;right:0;z-index:999;background:#b9503f;color:#fff;padding:8px 14px;font:12px/1.4 Menlo,monospace;display:none;white-space:pre-wrap;max-height:40vh;overflow:auto"></div>
+<script>
+  window.addEventListener('error', (e) => {
+    const el = document.getElementById('js-error');
+    el.style.display = 'block';
+    el.textContent = 'JS ERROR: ' + (e.message || '') + '\nat ' + (e.filename || '') + ':' + (e.lineno || '') + ':' + (e.colno || '') + '\n' + (e.error && e.error.stack ? e.error.stack : '');
+  });
+  window.addEventListener('unhandledrejection', (e) => {
+    const el = document.getElementById('js-error');
+    el.style.display = 'block';
+    el.textContent = 'PROMISE REJECTION: ' + (e.reason && e.reason.message ? e.reason.message : e.reason) + '\n' + (e.reason && e.reason.stack ? e.reason.stack : '');
+  });
+</script>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import {
+  createScene,
+  loadAssets,
+  makeExaminable,
+  enableExamination,
+  startRenderLoop
+} from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js';
+import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js';
+import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js';
+
+BookUI.mount();
+
+/* ============================================================
+   RIG — midnight on the battlements of Elsinore
+   Cold pewter-blue sky, heavy fog, moonlit stone.
+   ============================================================ */
+const { scene, camera, renderer, composer, sun, hemi } = createScene({
+  skyColor: 0x0e1218,
+  fogDensity: 0.04,
+  cameraPos: [0, 2.8, 9],
+  exposure: 0.75
+});
+camera.lookAt(0, 1.5, 0);
+
+// Re-tune lighting for night
+sun.intensity = 0.3;
+sun.color.set(0x5a6b8c);  // cold moonlight
+sun.position.set(-4, 18, -6);
+hemi.intensity = 0.35;
+hemi.color.set(0x3a4560);
+hemi.groundColor.set(0x15181c);
+
+// A single warm fill near the braziers
+const fireLight1 = new THREE.PointLight(0xff8a3a, 1.6, 10, 1.8);
+fireLight1.position.set(-3.5, 1.2, 3);
+scene.add(fireLight1);
+const fireLight2 = new THREE.PointLight(0xff8a3a, 1.4, 9, 1.8);
+fireLight2.position.set(4, 1.2, 3);
+scene.add(fireLight2);
+
+/* ============================================================
+   GROUND — dark stone platform
+   ============================================================ */
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(100, 100),
+  new THREE.MeshStandardMaterial({ color: 0x1e2228, roughness: 1 })
+);
+ground.rotation.x = -Math.PI / 2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+/* ============================================================
+   ASSETS
+   ============================================================ */
+const assets = await loadAssets([
+  'castle-castle-tower-01',
+  'architecture-stone-wall-01',
+  'castle-parapet-stone-01',
+  'lighting-torch-wall-01',
+  'castle-rapier-sword-01',
+  'characters-ghost-01',
+  'character-human-01',
+  'characters-seated-man-01',
+  'nature-full-moon-01',
+  'vietnam-campfire-01'
+]);
+
+// Castle tower — far background silhouette on the right
+const tower = assets['castle-castle-tower-01'];
+tower.position.set(12, 0, -14);
+scene.add(tower);
+
+// Castle walls — flanking both sides, forming the battlements
+const wallL = assets['architecture-stone-wall-01'];
+wallL.position.set(-8, 0, -6);
+wallL.rotation.y = Math.PI / 2;
+scene.add(wallL);
+
+const wallR = wallL.clone(true);
+wallR.position.set(8, 0, -6);
+wallR.rotation.y = -Math.PI / 2;
+scene.add(wallR);
+
+// Parapet stones — the examinable castle wall along the front edge
+const parapet = assets['castle-parapet-stone-01'];
+parapet.position.set(0, 0, -2);
+scene.add(parapet);
+
+// Torch sconces — left and right
+const torchL = assets['lighting-torch-wall-01'];
+torchL.position.set(-3.5, 0, 2.5);
+scene.add(torchL);
+const torchR = assets['lighting-torch-wall-01'].clone(true);
+torchR.position.set(4, 0, 2.5);
+scene.add(torchR);
+
+// Brazier / small fire between the torches for warmth
+const brazier = assets['vietnam-campfire-01'];
+brazier.position.set(-3.5, 0, 2.5);
+brazier.scale.multiplyScalar(0.6);
+scene.add(brazier);
+
+// Full moon — high in the sky behind the tower
+const moon = assets['nature-full-moon-01'];
+moon.position.set(-6, 11, -18);
+scene.add(moon);
+
+// Guard figures — two standing watchmen (one a clone) and Horatio (a seated figure)
+const guard1 = assets['character-human-01'];
+guard1.position.set(-5, 0, 1);
+guard1.rotation.y = 0.4;
+scene.add(guard1);
+
+const guard2 = assets['character-human-01'].clone(true);
+guard2.position.set(5.5, 0, 0.5);
+guard2.rotation.y = -0.4;
+scene.add(guard2);
+
+// Horatio — distinguish him by using the seated-man (business figure) standing
+const horatio = assets['characters-seated-man-01'];
+horatio.position.set(3, 0, 1.5);
+horatio.rotation.y = -0.35;
+scene.add(horatio);
+
+// The Ghost — center-rear, the focal point
+const ghost = assets['characters-ghost-01'];
+ghost.position.set(0, 0, -3.5);
+ghost.rotation.y = 0;
+scene.add(ghost);
+
+// Soft glow around the ghost
+const ghostGlow = new THREE.PointLight(0xb8d4ff, 1.2, 8, 2);
+ghostGlow.position.set(0, 1.5, -3.5);
+scene.add(ghostGlow);
+
+// Sword — dropped/leaning against the parapet (for Horatio drawing it)
+const sword = assets['castle-rapier-sword-01'];
+sword.position.set(1.8, 0, -1.2);
+sword.rotation.z = 0.3;
+sword.rotation.y = -0.5;
+scene.add(sword);
+
+/* ============================================================
+   EXAMINABLES
+   ============================================================ */
+makeExaminable(ghost, 'ghost', () => {
+  BookUI.showCard({
+    title: "The Apparition",
+    body: '"In the same figure, like the king that\'s dead." — Bernardo<br><br>"What art thou that usurp\'st this time of night, / Together with that fair and warlike form / In which the majesty of buried Denmark / Did sometimes march?" — Horatio',
+    note: 'The Ghost wears the old king\'s <em>armor</em>. Horatio\'s word for its silent appearance is <em>usurp\'st</em> — the Ghost, too, is taking something that does not belong to it. Watch how the word returns.'
+  });
+});
+
+makeExaminable(brazier, 'brazier', () => {
+  BookUI.showCard({
+    title: "The Watchman's Fire",
+    body: '"\'Tis bitter cold, / And I am sick at heart." — Francisco<br><br>"Not a mouse stirring." — Francisco',
+    note: 'The play opens with a man who is <em>sick at heart</em> and does not say why. Camus could have written this line. Shakespeare\'s first atmosphere is Denmark\'s — cold, sick, quiet, waiting.'
+  });
+});
+
+makeExaminable(sword, 'sword', () => {
+  BookUI.showCard({
+    title: "Horatio Draws",
+    body: '"I\'ll cross it, though it blast me. Stay, illusion! / If thou hast any sound, or use of voice, / Speak to me." — Horatio',
+    note: 'Horatio is the skeptic. He came to disprove. He draws his sword anyway. The play is already teaching Hamlet: <em>sometimes you must cross something, though it blast you.</em>'
+  });
+});
+
+makeExaminable(parapet, 'parapet', () => {
+  BookUI.showCard({
+    title: "The Watch",
+    body: '"Who\'s there?" — Bernardo<br>"Nay, answer me. Stand and unfold yourself." — Francisco',
+    note: 'The play\'s first words are a challenge in the dark. The first reply reverses the challenge. Nobody in Denmark is ever quite sure who is questioning whom.'
+  });
+});
+
+enableExamination(camera);
+
+/* ============================================================
+   BEATS
+   ============================================================ */
+const BEATS = [
+  {
+    label: 'Beat I · The Watch',
+    title: '"\'Tis now struck twelve."',
+    text: 'Midnight on the platform at Elsinore. Francisco is relieved from his cold watch by Bernardo. Horatio and Marcellus arrive. <span class="hl">Something has been seen here.</span>',
+    gloss: 'Examine the <em>brazier</em> and the <em>parapet</em>. The first lines of the play are questions asked in the dark.',
+    cite: 'Hamlet · Act 1, Scene 1',
+    cameraPos: [0, 2.6, 8],
+    cameraLookAt: [0, 1.5, -1]
+  },
+  {
+    label: 'Beat II · Horatio\'s Skepticism',
+    title: 'He does not believe them.',
+    text: '"Tush, tush, \'twill not appear." — Horatio<br><br>Bernardo begins to recount what they have twice already seen: a figure in the dead king\'s armor.',
+    gloss: 'The <em>skeptic</em> is on stage with the believers. Notice who, later, will see what he came to disprove.',
+    cite: 'Hamlet · Act 1, Scene 1',
+    cameraPos: [-2, 2.3, 6],
+    cameraLookAt: [-3, 1.6, 1]
+  },
+  {
+    label: 'Beat III · The Ghost',
+    title: '"In the same figure, like the king that\'s dead."',
+    text: 'The Ghost appears. It wears the armor Old Hamlet wore when he fought the Norwegians. <span class="hl">Bernardo: "Looks it not like the king? mark it, Horatio."</span>',
+    gloss: 'Examine the <em>ghost</em>. The proof has arrived. The skeptic sees it too.',
+    cite: 'Hamlet · Act 1, Scene 1',
+    cameraPos: [2, 2.4, 5],
+    cameraLookAt: [0, 1.6, -3]
+  },
+  {
+    label: 'Beat IV · Horatio Speaks',
+    title: 'He challenges the spirit.',
+    text: '"What art thou that usurp\'st this time of night, / Together with that fair and warlike form / In which the majesty of buried Denmark / Did sometimes march?" — Horatio',
+    gloss: 'Examine the <em>sword</em>. Horatio came to disprove. He draws anyway. The Ghost does not answer — yet.',
+    cite: 'Hamlet · Act 1, Scene 1',
+    cameraPos: [1.5, 2.2, 3],
+    cameraLookAt: [0, 1.7, -3]
+  },
+  {
+    label: 'Beat V · Dawn, and a Plan',
+    title: '"This spirit, dumb to us, will speak to him."',
+    text: 'The cock crows. The Ghost vanishes. Morning is pale behind the battlements. Horatio has one last word: <span class="hl">tell the young prince.</span>',
+    gloss: 'The Ghost would not speak to them, but Horatio knows — or gambles — that it will speak to <em>Hamlet</em>. The play\'s motion has begun.',
+    cite: 'Hamlet · Act 1, Scene 1',
+    cameraPos: [0, 3.8, 9],
+    cameraLookAt: [0, 1, -2],
+    onEnter: () => {
+      // Dawn: sky lightens, fog lifts slightly
+      scene.background = new THREE.Color(0x3a3a4a);
+      if (scene.fog) scene.fog.density = 0.025;
+      ghost.visible = false;
+      ghostGlow.intensity = 0;
+    }
+  }
+];
+
+const NEXT_URL = 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/scenes/hamlet-1-2/index.html';
+
+await BeatEngine.init({
+  camera,
+  onBeat: (beat, i, total) => BookUI.showBeat(beat, i, total),
+  onEnd: () => BookUI.showEnding({
+    eyebrow: 'End of Scene · Hamlet I.i',
+    finalLine: '"Break we our watch up; and by my advice, / Let us impart what we have seen to-night / Unto young Hamlet…"',
+    prompt: 'What does Horatio <em>believe</em> about the Ghost — and what does he withhold? Why tell Hamlet, and not the King?',
+    nextSceneUrl: NEXT_URL,
+    nextSceneLabel: 'Continue to I.ii →',
+    nextSceneText: 'Morning comes. The court is gathered. <em>Hamlet is still in mourning.</em>',
+    onRestart: () => BeatEngine.start(BEATS)
+  })
+});
+
+await BookUI.showTitle({
+  author: 'William Shakespeare',
+  title: 'Hamlet',
+  chapter: 'Act 1 · Scene 1',
+  intro: 'Midnight on the platform of Elsinore. A cold watch. Something has been seen here twice already.<br><br>Follow the book. Click what you want to examine. When you are ready, press <em>Space</em>.',
+  startLabel: 'Enter the watch'
+});
+
+BeatEngine.start(BEATS);
+
+startRenderLoop({ scene, camera, renderer, composer });
+</script>
+</body>
+</html>
