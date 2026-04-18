@@ -20,10 +20,12 @@
  *   });
  *
  * Controls:
- *   W / ↑     — walk forward (direction camera is facing, horizontal only)
- *   S / ↓     — walk backward
- *   A / ←     — strafe left
- *   D / →     — strafe right
+ *   W         — walk forward (direction camera is facing, horizontal only)
+ *   S         — walk backward
+ *   A         — strafe left
+ *   D         — strafe right
+ *   ↑ / ↓     — look up / down (pitch)
+ *   ← / →     — look left / right (yaw)
  *   Shift     — run (1.8× speed)
  *   B         — (handled by book-ui) toggle the book panel
  *   Space     — (handled by beat-engine) advance beat
@@ -34,6 +36,8 @@ import * as THREE from 'three';
 const MOVEMENT_KEYS = new Set([
   'KeyW', 'KeyA', 'KeyS', 'KeyD',
   'ShiftLeft', 'ShiftRight',
+]);
+const LOOK_KEYS = new Set([
   'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
 ]);
 
@@ -46,24 +50,42 @@ export class PlayerControls {
     this.bounds    = opts.bounds    ?? { x: [-30, 30], z: [-30, 30] };
     this.collisionBuffer = opts.collisionBuffer ?? 0.6;  // m — keep this far from walls
     this.enabled = true;
+    this.lookSpeed = opts.lookSpeed ?? 1.6;       // rad/s
+    this.pitchLimit = opts.pitchLimit ?? 1.1;      // ~63°, so you can't flip over
 
     this._keys = new Set();
     this._raycaster = new THREE.Raycaster();
+    // Seed yaw/pitch from the camera's current orientation so an initial
+    // lookAt() is preserved when arrow keys first fire.
+    const e = new THREE.Euler().setFromQuaternion(this.camera.quaternion, 'YXZ');
+    this._yaw = e.y;
+    this._pitch = e.x;
+    this._applyLook();
     this._bindKeys();
   }
 
   _bindKeys() {
     document.addEventListener('keydown', (e) => {
-      if (!MOVEMENT_KEYS.has(e.code)) return;
-      this._keys.add(e.code);
-      // Prevent arrow keys from scrolling the page
-      if (e.code.startsWith('Arrow')) e.preventDefault();
+      if (MOVEMENT_KEYS.has(e.code)) {
+        this._keys.add(e.code);
+        return;
+      }
+      if (LOOK_KEYS.has(e.code)) {
+        this._keys.add(e.code);
+        e.preventDefault();  // stop the page from scrolling
+      }
     });
     document.addEventListener('keyup', (e) => {
       this._keys.delete(e.code);
     });
-    // Clear keys if the window loses focus (prevents stuck keys)
     window.addEventListener('blur', () => this._keys.clear());
+  }
+
+  _applyLook() {
+    this.camera.rotation.order = 'YXZ';
+    this.camera.rotation.y = this._yaw;
+    this.camera.rotation.x = this._pitch;
+    this.camera.rotation.z = 0;
   }
 
   addCollider(obj) {
@@ -74,11 +96,22 @@ export class PlayerControls {
   update(dt) {
     if (!this.enabled || dt <= 0) return;
 
+    // --- Look (arrow keys) ---
+    const look = this.lookSpeed * Math.min(dt, 0.05);
+    let lookChanged = false;
+    if (this._keys.has('ArrowLeft'))  { this._yaw   += look;       lookChanged = true; }
+    if (this._keys.has('ArrowRight')) { this._yaw   -= look;       lookChanged = true; }
+    if (this._keys.has('ArrowUp'))    { this._pitch += look * 0.7; lookChanged = true; }
+    if (this._keys.has('ArrowDown'))  { this._pitch -= look * 0.7; lookChanged = true; }
+    if (lookChanged) {
+      this._pitch = Math.max(-this.pitchLimit, Math.min(this.pitchLimit, this._pitch));
+      this._applyLook();
+    }
+
     const running = this._keys.has('ShiftLeft') || this._keys.has('ShiftRight');
     const speed = running ? this.runSpeed : this.walkSpeed;
-    const stepLen = speed * Math.min(dt, 0.05);   // clamp to avoid teleport after long stalls
+    const stepLen = speed * Math.min(dt, 0.05);
 
-    // Derive horizontal forward/right from camera orientation
     const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(this.camera.quaternion);
     forward.y = 0;
     if (forward.lengthSq() < 1e-6) return;
@@ -86,10 +119,10 @@ export class PlayerControls {
     const right = new THREE.Vector3().crossVectors(forward, new THREE.Vector3(0, 1, 0)).normalize();
 
     const move = new THREE.Vector3();
-    if (this._keys.has('KeyW') || this._keys.has('ArrowUp'))    move.add(forward);
-    if (this._keys.has('KeyS') || this._keys.has('ArrowDown'))  move.sub(forward);
-    if (this._keys.has('KeyD') || this._keys.has('ArrowRight')) move.add(right);
-    if (this._keys.has('KeyA') || this._keys.has('ArrowLeft'))  move.sub(right);
+    if (this._keys.has('KeyW')) move.add(forward);
+    if (this._keys.has('KeyS')) move.sub(forward);
+    if (this._keys.has('KeyD')) move.add(right);
+    if (this._keys.has('KeyA')) move.sub(right);
     if (move.lengthSq() === 0) return;
 
     move.normalize().multiplyScalar(stepLen);

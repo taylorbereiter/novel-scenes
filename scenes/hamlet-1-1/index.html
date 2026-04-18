@@ -54,33 +54,35 @@ BookUI.mount();
    Cold pewter-blue sky, heavy fog, moonlit stone.
    ============================================================ */
 const { scene, camera, renderer, composer, sun, hemi } = createScene({
-  skyColor: 0x334660,       // brighter moonlit navy — readable, still night
-  fogDensity: 0.010,        // lighter fog so the tower + moon stay visible
+  skyColor: 0x4a5d80,       // dusky blue — reads as "night" without swallowing geometry
+  fogDensity: 0.004,        // very light atmospheric haze only
   cameraPos: [0, 1.7, 9],
-  exposure: 1.5             // lift the whole image — midnight you can actually see
+  exposure: 1.9
 });
 camera.lookAt(0, 1.5, 0);
 
-// Moonlit night tuned bright enough to read materials
-sun.intensity = 1.4;
-sun.color.set(0xb8c8ea);  // cool moonlight, stronger
+// Moonlit night — bright enough to see materials and faces clearly
+sun.intensity = 2.4;
+sun.color.set(0xd8e0f0);
 sun.position.set(-4, 18, -6);
-hemi.intensity = 1.3;
-hemi.color.set(0x8aa0c8);
-hemi.groundColor.set(0x3a4258);
+hemi.intensity = 2.0;
+hemi.color.set(0xa8bcd8);
+hemi.groundColor.set(0x4e5870);
 
-// Warm brazier fills — stronger so the torches actually feel like light sources
-const fireLight1 = new THREE.PointLight(0xff8a3a, 3.0, 14, 1.8);
+// Ambient fill so nothing falls to pure black
+scene.add(new THREE.AmbientLight(0x6c7a92, 0.6));
+
+// Warm brazier fills
+const fireLight1 = new THREE.PointLight(0xff9a48, 4.0, 18, 1.6);
 fireLight1.position.set(-3.5, 1.2, 3);
 scene.add(fireLight1);
-const fireLight2 = new THREE.PointLight(0xff8a3a, 2.6, 12, 1.8);
+const fireLight2 = new THREE.PointLight(0xff9a48, 3.4, 16, 1.6);
 fireLight2.position.set(4, 1.2, 3);
 scene.add(fireLight2);
 
-// Soft key fill on the center of the platform — so walking toward the parapet
-// isn't walking into a pit of black
-const platformFill = new THREE.PointLight(0xc8d4ea, 1.0, 16, 2.0);
-platformFill.position.set(0, 3, 4);
+// Cool platform fill near the parapet so the ghost-area isn't a void
+const platformFill = new THREE.PointLight(0xc8d4ea, 1.6, 22, 2.0);
+platformFill.position.set(0, 3, 2);
 scene.add(platformFill);
 
 /* ============================================================
@@ -88,7 +90,7 @@ scene.add(platformFill);
    ============================================================ */
 const ground = new THREE.Mesh(
   new THREE.PlaneGeometry(100, 100),
-  new THREE.MeshStandardMaterial({ color: 0x3e4652, roughness: 1 })
+  new THREE.MeshStandardMaterial({ color: 0x5e6878, roughness: 1 })
 );
 ground.rotation.x = -Math.PI / 2;
 ground.receiveShadow = true;
