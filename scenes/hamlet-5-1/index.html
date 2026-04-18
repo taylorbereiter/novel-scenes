@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Hamlet — The Graveyard · Act 5, Scene 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<!-- Visible error surface for diagnosis -->
+<div id="js-error" style="position:fixed;top:0;left:0;right:0;z-index:999;background:#b9503f;color:#fff;padding:8px 14px;font:12px/1.4 Menlo,monospace;display:none;white-space:pre-wrap;max-height:40vh;overflow:auto"></div>
+<script>
+  window.addEventListener('error', (e) => {
+    const el = document.getElementById('js-error');
+    el.style.display = 'block';
+    el.textContent = 'JS ERROR: ' + (e.message || '') + '\nat ' + (e.filename || '') + ':' + (e.lineno || '') + ':' + (e.colno || '') + '\n' + (e.error && e.error.stack ? e.error.stack : '');
+  });
+  window.addEventListener('unhandledrejection', (e) => {
+    const el = document.getElementById('js-error');
+    el.style.display = 'block';
+    el.textContent = 'PROMISE REJECTION: ' + (e.reason && e.reason.message ? e.reason.message : e.reason) + '\n' + (e.reason && e.reason.stack ? e.reason.stack : '');
+  });
+</script>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import {
+  createScene,
+  loadAssets,
+  makeExaminable,
+  enableExamination,
+  startRenderLoop
+} from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js';
+import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js';
+import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js';
+
+BookUI.mount();
+
+/* ============================================================
+   RIG — overcast graveyard (cooler, damper than Algiers)
+   ============================================================ */
+const { scene, camera, renderer, composer, sun, hemi } = createScene({
+  skyColor: 0x8e8778,            // overcast pewter
+  fogDensity: 0.03,
+  cameraPos: [0, 1.65, 6],
+  exposure: 0.95
+});
+
+// Dim the sun & recolor hemi for the muted mood
+sun.intensity = 1.0;
+sun.color.set(0xe8e0c8);
+hemi.intensity = 0.9;
+hemi.color.set(0xc9c4b2);
+hemi.groundColor.set(0x6b5a3e);
+
+/* ============================================================
+   GROUND — wet earth, muted green
+   ============================================================ */
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(80, 80),
+  new THREE.MeshStandardMaterial({ color: 0x6a6248, roughness: 1 })
+);
+ground.rotation.x = -Math.PI / 2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// A darker patch under the grave (freshly disturbed earth)
+const gravePatch = new THREE.Mesh(
+  new THREE.PlaneGeometry(3.5, 2.5),
+  new THREE.MeshStandardMaterial({ color: 0x3a2f20, roughness: 1 })
+);
+gravePatch.rotation.x = -Math.PI / 2;
+gravePatch.position.set(0, 0.01, 0);
+gravePatch.receiveShadow = true;
+scene.add(gravePatch);
+
+/* ============================================================
+   ASSETS — load all in parallel, then place
+   ============================================================ */
+const assets = await loadAssets([
+  'graveyard-gravestone-01',
+  'graveyard-skull-01',
+  'graveyard-shovel-01',
+  'graveyard-dirt-mound-01',
+  'nature-dead-tree-01',
+  'props-bench-01',
+  'props-cross-01'
+]);
+
+// Normalize each asset's scale by measuring its bounding box.
+// Assets from different authors come in with wildly different scales.
+function fitToHeight(group, targetHeight) {
+  const box = new THREE.Box3().setFromObject(group);
+  const size = new THREE.Vector3();
+  box.getSize(size);
+  const scale = targetHeight / size.y;
+  group.scale.setScalar(scale);
+  // Re-measure and settle on ground
+  const box2 = new THREE.Box3().setFromObject(group);
+  group.position.y -= box2.min.y;
+}
+
+// Dirt mound — the "fresh grave" itself, center of the scene
+const mound = assets['graveyard-dirt-mound-01'];
+fitToHeight(mound, 0.5);
+mound.position.set(0, 0, 0);
+scene.add(mound);
+
+// Two gravestones — one close, one further back-right
+const stone1 = assets['graveyard-gravestone-01'];
+fitToHeight(stone1, 0.9);
+stone1.position.set(-2.4, 0, -0.2);
+stone1.rotation.y = 0.1;
+scene.add(stone1);
+
+const stone2 = stone1.clone(true);
+fitToHeight(stone2, 0.8);
+stone2.position.set(3.2, 0, -1.8);
+stone2.rotation.y = -0.25;
+scene.add(stone2);
+
+// Wooden cross marker, off to the left
+const cross = assets['props-cross-01'];
+fitToHeight(cross, 1.1);
+cross.position.set(-3.8, 0, -2.5);
+cross.rotation.y = 0.18;
+scene.add(cross);
+
+// Skull — on the ground at the edge of the grave, the focal examinable
+const skull = assets['graveyard-skull-01'];
+fitToHeight(skull, 0.22);
+skull.position.set(0.9, 0, 1.1);
+skull.rotation.y = -0.4;
+scene.add(skull);
+
+// Shovel/spade — stuck at an angle in the dirt mound
+const shovel = assets['graveyard-shovel-01'];
+fitToHeight(shovel, 1.4);
+shovel.position.set(-0.6, 0, 0.6);
+shovel.rotation.z = 0.35;
+shovel.rotation.y = 0.8;
+scene.add(shovel);
+
+// Bare tree — background, off to the right
+const tree = assets['nature-dead-tree-01'];
+fitToHeight(tree, 7);
+tree.position.set(7, 0, -5);
+scene.add(tree);
+
+// Bench — further back, atmosphere only
+const bench = assets['props-bench-01'];
+fitToHeight(bench, 0.8);
+bench.position.set(-6, 0, -6);
+bench.rotation.y = 0.4;
+scene.add(bench);
+
+/* ============================================================
+   EXAMINABLES — skull, spade, grave
+   ============================================================ */
+makeExaminable(skull, 'skull', () => {
+  BookUI.showCard({
+    title: "The Skull",
+    body: '"Alas, poor Yorick! I knew him, Horatio — a fellow of infinite jest, of most excellent fancy. He hath borne me on his back a thousand times; and now, how abhorred in my imagination it is! My gorge rises at it."',
+    note: 'Hamlet does not deliver a meditation on death in the abstract. He identifies the skull. He remembers being carried. The philosophy comes only after the memory — and even then, it is a joke, then a revulsion, then silence.'
+  });
+});
+
+makeExaminable(shovel, 'shovel', () => {
+  BookUI.showCard({
+    title: "The Gravedigger's Spade",
+    body: '"A pick-axe, and a spade, a spade, / For and a shrouding sheet: / O, a pit of clay for to be made / For such a guest is meet."',
+    note: 'The gravedigger sings while he works. His song is a blunt inventory — tools, cloth, hole, body. What Hamlet philosophizes, the gravedigger dispatches.'
+  });
+});
+
+makeExaminable(mound, 'grave', () => {
+  BookUI.showCard({
+    title: "The Grave",
+    body: '"To what base uses we may return, Horatio! Why may not imagination trace the noble dust of Alexander, till he find it stopping a bung-hole?"',
+    note: 'Alexander the Great becomes a cork. The greatest of men, put to the smallest of uses. Hamlet follows the thought with a rhyme — "Imperious Caesar, dead and turn\'d to clay, / Might stop a hole to keep the wind away." The levelling is total.'
+  });
+});
+
+enableExamination(camera);
+
+/* ============================================================
+   BEATS — a single beat for this test scene
+   ============================================================ */
+const BEATS = [
+  {
+    label: 'Beat I · "Alas, poor Yorick"',
+    title: 'Hamlet pauses at the grave.',
+    text: 'Hamlet and Horatio arrive at a freshly-dug grave. The gravedigger has tossed up a skull. <span class="hl">The skull on the ground arrests him.</span>',
+    gloss: 'Three things lie at his feet: a <em>skull</em>, a <em>spade</em>, and the <em>grave</em> itself. Click each to read what Hamlet says about it. Then press Space.',
+    cite: 'Hamlet · Act 5, Scene 1',
+    cameraPos: [0, 1.65, 4.2],
+    cameraLookAt: [0, 0.8, 0.4]
+  }
+];
+
+await BeatEngine.init({
+  camera,
+  onBeat: (beat, i, total) => BookUI.showBeat(beat, i, total),
+  onEnd: () => BookUI.showEnding({
+    eyebrow: 'End of Scene · Hamlet V.i',
+    finalLine: '"To what base uses we may return, Horatio."',
+    prompt: 'One last question. What does Hamlet <em>notice</em>? And what does he <em>refuse</em> to notice?'
+  })
+});
+
+await BookUI.showTitle({
+  author: 'William Shakespeare',
+  title: 'Hamlet',
+  chapter: 'Act 5 · Scene 1',
+  intro: 'A churchyard. A freshly-dug grave. The gravedigger at his work.<br><br>Follow the book. Click what you want to examine. When you are ready, press <em>Space</em>.',
+  startLabel: 'Enter the graveyard'
+});
+
+BeatEngine.start(BEATS);
+
+startRenderLoop({ scene, camera, renderer, composer });
+</script>
+</body>
+</html>
