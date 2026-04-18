@@ -364,8 +364,16 @@ export const BookUI = {
     });
 
     $('restart-btn').addEventListener('click', () => {
-      if (_onRestart) _onRestart();
-      else location.reload();
+      // Always hide the ending overlay; scene-provided onRestart then replays
+      // the beats. Fallback to location.reload() only when no handler is set
+      // and the context allows it (some sandboxed iframes block reload).
+      $('ending').classList.remove('show');
+      $('final-reflection').value = '';
+      if (_onRestart) {
+        _onRestart();
+      } else {
+        try { location.reload(); } catch (e) { /* sandboxed iframe */ }
+      }
     });
 
     $('save-btn').addEventListener('click', () => {
@@ -413,6 +421,8 @@ export const BookUI = {
    *   continuation prompt only.
    */
   showBeat(beat, index = 0, total = 1) {
+    // Hide the ending if it's showing — supports "Walk again"
+    $('ending').classList.remove('show');
     $('beat-num').textContent = (index + 1).toString();
     $('beat-total').textContent = total.toString();
     $('beat-label').textContent = beat.label || '';

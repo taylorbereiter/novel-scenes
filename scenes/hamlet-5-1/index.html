@@ -214,7 +214,8 @@ await BeatEngine.init({
   onEnd: () => BookUI.showEnding({
     eyebrow: 'End of Scene · Hamlet V.i',
     finalLine: '"To what base uses we may return, Horatio."',
-    prompt: 'One last question. What does Hamlet <em>notice</em>? And what does he <em>refuse</em> to notice?'
+    prompt: 'One last question. What does Hamlet <em>notice</em>? And what does he <em>refuse</em> to notice?',
+    onRestart: () => BeatEngine.start(BEATS)
   })
 });
 

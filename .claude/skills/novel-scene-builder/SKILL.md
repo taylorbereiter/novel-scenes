@@ -162,7 +162,10 @@ await BeatEngine.init({
   onEnd: () => BookUI.showEnding({
     eyebrow: 'End of Scene',
     finalLine: '"...we may return, Horatio..."',
-    prompt: 'What does Hamlet <em>notice</em>? What does he refuse to notice?'
+    prompt: 'What does Hamlet <em>notice</em>? What does he refuse to notice?',
+    // Always pass onRestart so "Walk again" replays in place. Never rely on
+    // location.reload() — it's blocked in sandboxed iframe contexts.
+    onRestart: () => BeatEngine.start(BEATS)
   })
 });
 
