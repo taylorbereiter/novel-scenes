@@ -9,8 +9,24 @@
       "category": "graveyard",
       "description": "A standard weathered rectangular tombstone with a rounded top.",
       "size_m": 0.9,
-      "use_cases": ["churchyard", "funeral", "cemetery", "graveside scene"],
-      "tags": ["gravestone", "tombstone", "headstone", "grave", "marker", "stone", "graveyard", "cemetery", "death", "memento-mori"],
+      "use_cases": [
+        "churchyard",
+        "funeral",
+        "cemetery",
+        "graveside scene"
+      ],
+      "tags": [
+        "gravestone",
+        "tombstone",
+        "headstone",
+        "grave",
+        "marker",
+        "stone",
+        "graveyard",
+        "cemetery",
+        "death",
+        "memento-mori"
+      ],
       "source": "https://poly.pizza/m/ErfdU1GJSD",
       "license": "CC0",
       "attribution": null
@@ -22,8 +38,21 @@
       "category": "graveyard",
       "description": "A plain hexagonal wooden coffin.",
       "size_m": 0.5,
-      "use_cases": ["funeral", "wake", "burial", "mortuary"],
-      "tags": ["coffin", "casket", "wooden", "burial", "graveyard", "death", "funeral"],
+      "use_cases": [
+        "funeral",
+        "wake",
+        "burial",
+        "mortuary"
+      ],
+      "tags": [
+        "coffin",
+        "casket",
+        "wooden",
+        "burial",
+        "graveyard",
+        "death",
+        "funeral"
+      ],
       "source": "https://poly.pizza/m/ySERERWPgE",
       "license": "CC0",
       "attribution": null
@@ -33,10 +62,24 @@
       "path": "assets/graveyard/skull.glb",
       "name": "Human skull",
       "category": "graveyard",
-      "description": "A stylized human skull — classroom-appropriate, not graphic.",
+      "description": "A stylized human skull \u2014 classroom-appropriate, not graphic.",
       "size_m": 0.22,
-      "use_cases": ["graveyard", "Yorick's skull", "memento mori", "study"],
-      "tags": ["skull", "bone", "skeleton", "memento-mori", "graveyard", "death", "yorick", "decay"],
+      "use_cases": [
+        "graveyard",
+        "Yorick's skull",
+        "memento mori",
+        "study"
+      ],
+      "tags": [
+        "skull",
+        "bone",
+        "skeleton",
+        "memento-mori",
+        "graveyard",
+        "death",
+        "yorick",
+        "decay"
+      ],
       "source": "https://poly.pizza/m/7clFQGz5jH",
       "license": "CC0",
       "attribution": null
@@ -48,8 +91,22 @@
       "category": "tools",
       "description": "A wooden-handled digging shovel with a metal blade.",
       "size_m": 1.4,
-      "use_cases": ["gravedigger", "farm work", "digging", "burial"],
-      "tags": ["shovel", "spade", "tool", "digging", "gravedigger", "graveyard", "burial", "farm"],
+      "use_cases": [
+        "gravedigger",
+        "farm work",
+        "digging",
+        "burial"
+      ],
+      "tags": [
+        "shovel",
+        "spade",
+        "tool",
+        "digging",
+        "gravedigger",
+        "graveyard",
+        "burial",
+        "farm"
+      ],
       "source": "https://poly.pizza/m/oNBQSf87ZJ",
       "license": "CC0",
       "attribution": null
@@ -61,8 +118,22 @@
       "category": "graveyard",
       "description": "A rectangular mound of freshly-dug earth.",
       "size_m": 0.5,
-      "use_cases": ["fresh grave", "burial", "farming", "construction"],
-      "tags": ["dirt", "mound", "grave", "earth", "soil", "freshly-dug", "burial", "graveyard"],
+      "use_cases": [
+        "fresh grave",
+        "burial",
+        "farming",
+        "construction"
+      ],
+      "tags": [
+        "dirt",
+        "mound",
+        "grave",
+        "earth",
+        "soil",
+        "freshly-dug",
+        "burial",
+        "graveyard"
+      ],
       "source": "https://poly.pizza/m/Yg8Yz6T8A6",
       "license": "CC0",
       "attribution": null
@@ -72,10 +143,24 @@
       "path": "assets/nature/cypress-tree.glb",
       "name": "Cypress tree",
       "category": "trees",
-      "description": "A tall, narrow Mediterranean cypress — typical graveyard/funeral tree.",
+      "description": "A tall, narrow Mediterranean cypress \u2014 typical graveyard/funeral tree.",
       "size_m": 8,
-      "use_cases": ["graveyard", "Mediterranean setting", "mourning", "Italian/French landscape"],
-      "tags": ["cypress", "tree", "evergreen", "tall", "narrow", "graveyard", "mediterranean", "mourning"],
+      "use_cases": [
+        "graveyard",
+        "Mediterranean setting",
+        "mourning",
+        "Italian/French landscape"
+      ],
+      "tags": [
+        "cypress",
+        "tree",
+        "evergreen",
+        "tall",
+        "narrow",
+        "graveyard",
+        "mediterranean",
+        "mourning"
+      ],
       "source": "https://poly.pizza/m/eUQDPAFMQfv",
       "license": "CC-BY",
       "attribution": "Poly by Google"
@@ -85,10 +170,26 @@
       "path": "assets/nature/dead-tree.glb",
       "name": "Bare / dead tree",
       "category": "trees",
-      "description": "A leafless tree with gnarled branches — winter or dead.",
+      "description": "A leafless tree with gnarled branches \u2014 winter or dead.",
       "size_m": 7,
-      "use_cases": ["winter", "graveyard", "mourning", "desolate landscape", "witch forest"],
-      "tags": ["tree", "dead", "bare", "leafless", "winter", "branches", "skeletal", "mourning", "graveyard"],
+      "use_cases": [
+        "winter",
+        "graveyard",
+        "mourning",
+        "desolate landscape",
+        "witch forest"
+      ],
+      "tags": [
+        "tree",
+        "dead",
+        "bare",
+        "leafless",
+        "winter",
+        "branches",
+        "skeletal",
+        "mourning",
+        "graveyard"
+      ],
       "source": "https://poly.pizza/m/Mcd2zYqyww",
       "license": "CC0",
       "attribution": null
@@ -100,8 +201,20 @@
       "category": "nature",
       "description": "A low-poly patch of grass tufts.",
       "size_m": 0.3,
-      "use_cases": ["ground cover", "meadow", "field", "yard"],
-      "tags": ["grass", "tuft", "ground", "vegetation", "nature", "low-poly"],
+      "use_cases": [
+        "ground cover",
+        "meadow",
+        "field",
+        "yard"
+      ],
+      "tags": [
+        "grass",
+        "tuft",
+        "ground",
+        "vegetation",
+        "nature",
+        "low-poly"
+      ],
       "source": "https://poly.pizza/m/UGTOzcO3P2",
       "license": "CC0",
       "attribution": null
@@ -113,8 +226,20 @@
       "category": "furniture",
       "description": "A simple wooden park/garden bench.",
       "size_m": 0.8,
-      "use_cases": ["park", "garden", "churchyard", "waiting"],
-      "tags": ["bench", "seat", "wooden", "park", "outdoor", "furniture"],
+      "use_cases": [
+        "park",
+        "garden",
+        "churchyard",
+        "waiting"
+      ],
+      "tags": [
+        "bench",
+        "seat",
+        "wooden",
+        "park",
+        "outdoor",
+        "furniture"
+      ],
       "source": "https://poly.pizza/m/7uSlZo3n9Y",
       "license": "CC0",
       "attribution": null
@@ -126,8 +251,22 @@
       "category": "lighting",
       "description": "A simple lit candle with flame.",
       "size_m": 0.25,
-      "use_cases": ["vigil", "mourning", "interior", "religious ceremony", "power outage"],
-      "tags": ["candle", "flame", "light", "wax", "mourning", "vigil", "religious"],
+      "use_cases": [
+        "vigil",
+        "mourning",
+        "interior",
+        "religious ceremony",
+        "power outage"
+      ],
+      "tags": [
+        "candle",
+        "flame",
+        "light",
+        "wax",
+        "mourning",
+        "vigil",
+        "religious"
+      ],
       "source": "https://poly.pizza/m/AnzHB44wlW",
       "license": "CC0",
       "attribution": null
@@ -139,8 +278,21 @@
       "category": "furniture",
       "description": "A simple wooden chair with a straight back.",
       "size_m": 0.9,
-      "use_cases": ["interior", "dining room", "parlor", "classroom", "schoolhouse"],
-      "tags": ["chair", "wooden", "seat", "furniture", "simple", "interior"],
+      "use_cases": [
+        "interior",
+        "dining room",
+        "parlor",
+        "classroom",
+        "schoolhouse"
+      ],
+      "tags": [
+        "chair",
+        "wooden",
+        "seat",
+        "furniture",
+        "simple",
+        "interior"
+      ],
       "source": "https://poly.pizza/m/iMNqRzPwwe",
       "license": "CC0",
       "attribution": null
@@ -150,10 +302,24 @@
       "path": "assets/props/cross.glb",
       "name": "Wooden cross",
       "category": "religious",
-      "description": "A plain wooden cross — grave marker or Christian symbol.",
+      "description": "A plain wooden cross \u2014 grave marker or Christian symbol.",
       "size_m": 1.1,
-      "use_cases": ["graveyard", "church", "wayside shrine", "mission", "Puritan village"],
-      "tags": ["cross", "crucifix", "grave-marker", "religious", "christian", "wooden", "graveyard"],
+      "use_cases": [
+        "graveyard",
+        "church",
+        "wayside shrine",
+        "mission",
+        "Puritan village"
+      ],
+      "tags": [
+        "cross",
+        "crucifix",
+        "grave-marker",
+        "religious",
+        "christian",
+        "wooden",
+        "graveyard"
+      ],
       "source": "https://poly.pizza/m/fKE29ukGpF",
       "license": "CC0",
       "attribution": null
@@ -165,8 +331,23 @@
       "category": "lighting",
       "description": "An ornate hanging chandelier with multiple candle/bulb arms.",
       "size_m": 1,
-      "use_cases": ["dining room", "ballroom", "castle hall", "manor", "church"],
-      "tags": ["chandelier", "light", "ceiling", "hanging", "interior", "church", "grand", "ornate"],
+      "use_cases": [
+        "dining room",
+        "ballroom",
+        "castle hall",
+        "manor",
+        "church"
+      ],
+      "tags": [
+        "chandelier",
+        "light",
+        "ceiling",
+        "hanging",
+        "interior",
+        "church",
+        "grand",
+        "ornate"
+      ],
       "source": "https://poly.pizza/m/q3k8I8YYX9",
       "license": "CC0",
       "attribution": null
@@ -176,13 +357,5013 @@
       "path": "assets/characters/human.glb",
       "name": "Neutral human figure",
       "category": "characters",
-      "description": "A blocky, stylized low-poly human figure — readable as mourner, gravedigger, villager, soldier depending on context.",
+      "description": "A blocky, stylized low-poly human figure \u2014 readable as mourner, gravedigger, villager, soldier depending on context.",
       "size_m": 1.75,
-      "use_cases": ["background character", "mourner", "villager", "witness", "placeholder figure"],
-      "tags": ["human", "person", "figure", "character", "low-poly", "stylized", "neutral", "mourner", "gravedigger", "placeholder"],
+      "use_cases": [
+        "background character",
+        "mourner",
+        "villager",
+        "witness",
+        "placeholder figure"
+      ],
+      "tags": [
+        "human",
+        "person",
+        "figure",
+        "character",
+        "low-poly",
+        "stylized",
+        "neutral",
+        "mourner",
+        "gravedigger",
+        "placeholder"
+      ],
       "source": "https://poly.pizza/m/HMnuH5geEG",
       "license": "CC0",
       "attribution": null
+    },
+    {
+      "id": "furniture-armchair-01",
+      "path": "assets/furniture/armchair.glb",
+      "name": "Armchair",
+      "category": "furniture",
+      "description": "Upholstered armchair with padded arms and back.",
+      "size_m": 0.9,
+      "use_cases": [
+        "sitting room",
+        "parlor",
+        "study"
+      ],
+      "tags": [
+        "armchair",
+        "plush",
+        "upholstered",
+        "parlor",
+        "sitting",
+        "victorian"
+      ],
+      "source": "https://poly.pizza/m/myd1WSucAz",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-stool-wooden-01",
+      "path": "assets/furniture/stool-wooden.glb",
+      "name": "Stool",
+      "category": "furniture",
+      "description": "Round wooden stool, backless.",
+      "size_m": 0.6,
+      "use_cases": [
+        "tavern",
+        "workshop",
+        "kitchen"
+      ],
+      "tags": [
+        "stool",
+        "wooden",
+        "seat",
+        "simple",
+        "tavern"
+      ],
+      "source": "https://poly.pizza/m/TvaOenUAni",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-rocking-chair-01",
+      "path": "assets/furniture/rocking-chair.glb",
+      "name": "Rocking Chair",
+      "category": "furniture",
+      "description": "Wooden rocking chair with curved rockers.",
+      "size_m": 1.0,
+      "use_cases": [
+        "porch",
+        "living room",
+        "nursery"
+      ],
+      "tags": [
+        "rocking",
+        "chair",
+        "porch",
+        "wooden",
+        "old fashioned"
+      ],
+      "source": "https://poly.pizza/m/Gnst85J3vK",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-dining-table-01",
+      "path": "assets/furniture/dining-table.glb",
+      "name": "Table",
+      "category": "furniture",
+      "description": "Rectangular wooden dining table.",
+      "size_m": 0.75,
+      "use_cases": [
+        "dining room",
+        "kitchen"
+      ],
+      "tags": [
+        "table",
+        "dining",
+        "rectangular",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/KndwzSWSHR",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-round-table-01",
+      "path": "assets/furniture/round-table.glb",
+      "name": "Round Table",
+      "category": "furniture",
+      "description": "Small round wooden table.",
+      "size_m": 0.75,
+      "use_cases": [
+        "parlor",
+        "tavern",
+        "kitchen"
+      ],
+      "tags": [
+        "table",
+        "round",
+        "small",
+        "tea",
+        "side"
+      ],
+      "source": "https://poly.pizza/m/KZXCuGx1WZ",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-writing-desk-01",
+      "path": "assets/furniture/writing-desk.glb",
+      "name": "Desk",
+      "category": "furniture",
+      "description": "Wooden writing desk with legs.",
+      "size_m": 0.75,
+      "use_cases": [
+        "study",
+        "bedroom",
+        "office"
+      ],
+      "tags": [
+        "desk",
+        "writing",
+        "study",
+        "office",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/YJyJam67hJ",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-bed-simple-01",
+      "path": "assets/furniture/bed-simple.glb",
+      "name": "Bed Single",
+      "category": "furniture",
+      "description": "Simple single bed with pillow and sheet.",
+      "size_m": 0.6,
+      "use_cases": [
+        "bedroom",
+        "inn",
+        "cabin"
+      ],
+      "tags": [
+        "bed",
+        "single",
+        "twin",
+        "simple",
+        "sleep"
+      ],
+      "source": "https://poly.pizza/m/sn8az3odMR",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-bed-large-01",
+      "path": "assets/furniture/bed-large.glb",
+      "name": "Bed King",
+      "category": "furniture",
+      "description": "Large bed, wider than a single.",
+      "size_m": 1.2,
+      "use_cases": [
+        "bedroom",
+        "manor"
+      ],
+      "tags": [
+        "bed",
+        "king",
+        "large",
+        "double",
+        "grand"
+      ],
+      "source": "https://poly.pizza/m/3kiLmRcb1o",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-wardrobe-01",
+      "path": "assets/furniture/wardrobe.glb",
+      "name": "Closet",
+      "category": "furniture",
+      "description": "Tall freestanding wooden wardrobe/closet.",
+      "size_m": 2.0,
+      "use_cases": [
+        "bedroom",
+        "cottage"
+      ],
+      "tags": [
+        "wardrobe",
+        "closet",
+        "armoire",
+        "storage",
+        "tall"
+      ],
+      "source": "https://poly.pizza/m/BHEVb1DIuH",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-bookshelf-01",
+      "path": "assets/furniture/bookshelf.glb",
+      "name": "Bookcase with Books",
+      "category": "furniture",
+      "description": "Tall bookcase filled with books.",
+      "size_m": 1.8,
+      "use_cases": [
+        "study",
+        "library",
+        "office"
+      ],
+      "tags": [
+        "bookshelf",
+        "bookcase",
+        "library",
+        "books",
+        "study"
+      ],
+      "source": "https://poly.pizza/m/tACDGJ4CGW",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-cabinet-tall-01",
+      "path": "assets/furniture/cabinet-tall.glb",
+      "name": "Cabinet",
+      "category": "furniture",
+      "description": "Tall wooden cabinet with doors.",
+      "size_m": 1.8,
+      "use_cases": [
+        "kitchen",
+        "dining room",
+        "shop"
+      ],
+      "tags": [
+        "cabinet",
+        "storage",
+        "tall",
+        "wooden",
+        "cupboard"
+      ],
+      "source": "https://poly.pizza/m/wOiMrnUuhe",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-chest-trunk-01",
+      "path": "assets/furniture/chest-trunk.glb",
+      "name": "Chest",
+      "category": "furniture",
+      "description": "Wooden chest / trunk with lid.",
+      "size_m": 0.6,
+      "use_cases": [
+        "attic",
+        "bedroom",
+        "castle",
+        "ship"
+      ],
+      "tags": [
+        "chest",
+        "storage",
+        "treasure",
+        "trunk",
+        "wood",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/O72u4Drp8k",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-mirror-wall-01",
+      "path": "assets/furniture/mirror-wall.glb",
+      "name": "Mirror",
+      "category": "furniture",
+      "description": "Framed wall-mounted mirror.",
+      "size_m": 1.5,
+      "use_cases": [
+        "bedroom",
+        "hallway",
+        "parlor"
+      ],
+      "tags": [
+        "mirror",
+        "wall",
+        "framed",
+        "reflection"
+      ],
+      "source": "https://poly.pizza/m/2WQIUVj5qr",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-rug-patterned-01",
+      "path": "assets/furniture/rug-patterned.glb",
+      "name": "Rug",
+      "category": "furniture",
+      "description": "Patterned floor rug.",
+      "size_m": 0.02,
+      "use_cases": [
+        "parlor",
+        "living room",
+        "bedroom"
+      ],
+      "tags": [
+        "rug",
+        "carpet",
+        "floor",
+        "patterned",
+        "oriental"
+      ],
+      "source": "https://poly.pizza/m/7H5qKjuxVY",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-fireplace-01",
+      "path": "assets/furniture/fireplace.glb",
+      "name": "Fireplace",
+      "category": "furniture",
+      "description": "Stone fireplace with hearth.",
+      "size_m": 2.0,
+      "use_cases": [
+        "Proctor house interior",
+        "cottage",
+        "living room",
+        "manor"
+      ],
+      "tags": [
+        "colonial",
+        "fire",
+        "fireplace",
+        "hearth",
+        "mantel",
+        "stone"
+      ],
+      "source": "https://poly.pizza/m/nzxZYIOCIr",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-pew-bench-01",
+      "path": "assets/furniture/pew-bench.glb",
+      "name": "Bench",
+      "category": "furniture",
+      "description": "Church pew bench.",
+      "size_m": 1.0,
+      "use_cases": [
+        "church",
+        "chapel"
+      ],
+      "tags": [
+        "pew",
+        "bench",
+        "church",
+        "chapel"
+      ],
+      "source": "https://poly.pizza/m/jLxjFxFRpw",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-piano-upright-01",
+      "path": "assets/furniture/piano-upright.glb",
+      "name": "Piano",
+      "category": "furniture",
+      "description": "Upright piano with keys.",
+      "size_m": 1.3,
+      "use_cases": [
+        "parlor",
+        "music room"
+      ],
+      "tags": [
+        "piano",
+        "upright",
+        "music",
+        "keys"
+      ],
+      "source": "https://poly.pizza/m/7U-93vxPOER",
+      "license": "CC-BY",
+      "attribution": "jeremy"
+    },
+    {
+      "id": "furniture-sofa-01",
+      "path": "assets/furniture/sofa.glb",
+      "name": "Sofa",
+      "category": "furniture",
+      "description": "Upholstered sofa / settee.",
+      "size_m": 0.85,
+      "use_cases": [
+        "home",
+        "korean",
+        "living room",
+        "parlor"
+      ],
+      "tags": [
+        "apartment",
+        "couch",
+        "modern",
+        "settee",
+        "sofa",
+        "upholstered"
+      ],
+      "source": "https://poly.pizza/m/X5kQPKzAWp",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-side-table-01",
+      "path": "assets/furniture/side-table.glb",
+      "name": "Night Stand",
+      "category": "furniture",
+      "description": "Small bedside / side table with drawer.",
+      "size_m": 0.6,
+      "use_cases": [
+        "bedroom",
+        "parlor"
+      ],
+      "tags": [
+        "side table",
+        "nightstand",
+        "bedside",
+        "small table"
+      ],
+      "source": "https://poly.pizza/m/A9vPgVUrF9",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-grandfather-clock-01",
+      "path": "assets/furniture/grandfather-clock.glb",
+      "name": "Grandfathers Clock",
+      "category": "furniture",
+      "description": "Tall grandfather pendulum clock.",
+      "size_m": 2.0,
+      "use_cases": [
+        "hallway",
+        "parlor",
+        "study"
+      ],
+      "tags": [
+        "clock",
+        "grandfather",
+        "pendulum",
+        "tall",
+        "time"
+      ],
+      "source": "https://poly.pizza/m/09YKIkFZnA",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-wall-clock-01",
+      "path": "assets/furniture/wall-clock.glb",
+      "name": "Timer",
+      "category": "furniture",
+      "description": "Round analog wall clock.",
+      "size_m": 0.35,
+      "use_cases": [
+        "kitchen",
+        "office",
+        "classroom"
+      ],
+      "tags": [
+        "clock",
+        "wall",
+        "analog",
+        "time"
+      ],
+      "source": "https://poly.pizza/m/wZOaCBBiJ9",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-bathtub-01",
+      "path": "assets/furniture/bathtub.glb",
+      "name": "Bathtub",
+      "category": "furniture",
+      "description": "Freestanding bathtub.",
+      "size_m": 0.7,
+      "use_cases": [
+        "bathroom"
+      ],
+      "tags": [
+        "bathtub",
+        "tub",
+        "bath",
+        "clawfoot"
+      ],
+      "source": "https://poly.pizza/m/kVFRyNEn4F",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "furniture-crib-01",
+      "path": "assets/furniture/crib.glb",
+      "name": "Crib",
+      "category": "furniture",
+      "description": "Infant crib.",
+      "size_m": 1.1,
+      "use_cases": [
+        "nursery",
+        "bedroom"
+      ],
+      "tags": [
+        "crib",
+        "cot",
+        "baby",
+        "nursery",
+        "infant"
+      ],
+      "source": "https://poly.pizza/m/4iV2yZ0wIf1",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "lighting-oil-lamp-01",
+      "path": "assets/lighting/oil-lamp.glb",
+      "name": "Kerosene Lamp",
+      "category": "lighting",
+      "description": "Kerosene / oil lamp with glass chimney.",
+      "size_m": 0.3,
+      "use_cases": [
+        "victorian interior",
+        "study",
+        "cottage"
+      ],
+      "tags": [
+        "oil lamp",
+        "kerosene",
+        "victorian",
+        "light",
+        "antique"
+      ],
+      "source": "https://poly.pizza/m/3wJ6loGTYJj",
+      "license": "CC-BY",
+      "attribution": "Bruno Oliveira"
+    },
+    {
+      "id": "lighting-kerosene-lantern-01",
+      "path": "assets/lighting/kerosene-lantern.glb",
+      "name": "Lantern",
+      "category": "lighting",
+      "description": "Portable hand lantern.",
+      "size_m": 0.35,
+      "use_cases": [
+        "barn",
+        "bunkhouse night",
+        "night scene",
+        "outdoors"
+      ],
+      "tags": [
+        "hand",
+        "kerosene",
+        "lantern",
+        "light",
+        "lighting",
+        "portable"
+      ],
+      "source": "https://poly.pizza/m/CtHBJ1ufeW",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "lighting-torch-wall-01",
+      "path": "assets/lighting/torch-wall.glb",
+      "name": "Torch",
+      "category": "lighting",
+      "description": "Wooden handle torch with flame.",
+      "size_m": 0.6,
+      "use_cases": [
+        "castle",
+        "corridor",
+        "dungeon",
+        "medieval"
+      ],
+      "tags": [
+        "fire",
+        "flame",
+        "medieval",
+        "sconce",
+        "torch",
+        "wall"
+      ],
+      "source": "https://poly.pizza/m/Gq38E7hFZw",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "lighting-candelabra-general-01",
+      "path": "assets/lighting/candelabra-general.glb",
+      "name": "Simple Candelabra",
+      "category": "lighting",
+      "description": "Multi-branch candelabra candle holder.",
+      "size_m": 0.45,
+      "use_cases": [
+        "dining room",
+        "gothic",
+        "manor"
+      ],
+      "tags": [
+        "candelabra",
+        "candle holder",
+        "gothic",
+        "elegant"
+      ],
+      "source": "https://poly.pizza/m/b07YM_KsRhb",
+      "license": "CC-BY",
+      "attribution": "Don Carson"
+    },
+    {
+      "id": "lighting-candlestick-01",
+      "path": "assets/lighting/candlestick.glb",
+      "name": "Candlestick",
+      "category": "lighting",
+      "description": "Single candle in a holder.",
+      "size_m": 0.3,
+      "use_cases": [
+        "bedroom",
+        "dining",
+        "study"
+      ],
+      "tags": [
+        "candle",
+        "candlestick",
+        "holder",
+        "single"
+      ],
+      "source": "https://poly.pizza/m/tknOVwxT8B",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "lighting-streetlamp-01",
+      "path": "assets/lighting/streetlamp.glb",
+      "name": "Street Light",
+      "category": "lighting",
+      "description": "Street lamp post.",
+      "size_m": 3.5,
+      "use_cases": [
+        "street",
+        "town",
+        "victorian"
+      ],
+      "tags": [
+        "streetlamp",
+        "lamppost",
+        "victorian",
+        "street",
+        "town"
+      ],
+      "source": "https://poly.pizza/m/nFwrlcLvM5",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "lighting-wall-sconce-01",
+      "path": "assets/lighting/wall-sconce.glb",
+      "name": "Lamp Wall",
+      "category": "lighting",
+      "description": "Wall-mounted lamp.",
+      "size_m": 0.4,
+      "use_cases": [
+        "hallway",
+        "castle",
+        "interior"
+      ],
+      "tags": [
+        "sconce",
+        "wall",
+        "lamp",
+        "light",
+        "mounted"
+      ],
+      "source": "https://poly.pizza/m/74FEuNrLJ5",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-oak-tree-01",
+      "path": "assets/nature/oak-tree.glb",
+      "name": "Tree",
+      "category": "nature",
+      "description": "Large leafy tree.",
+      "size_m": 6.0,
+      "use_cases": [
+        "forest",
+        "yard",
+        "park"
+      ],
+      "tags": [
+        "tree",
+        "oak",
+        "deciduous",
+        "broadleaf",
+        "forest"
+      ],
+      "source": "https://poly.pizza/m/qZtx0AHhcy",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-pine-tree-01",
+      "path": "assets/nature/pine-tree.glb",
+      "name": "Pine",
+      "category": "nature",
+      "description": "Tall coniferous pine tree.",
+      "size_m": 8.0,
+      "use_cases": [
+        "forest",
+        "mountain",
+        "winter"
+      ],
+      "tags": [
+        "pine",
+        "conifer",
+        "evergreen",
+        "tree",
+        "forest"
+      ],
+      "source": "https://poly.pizza/m/igSu0cPoBz",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-willow-tree-01",
+      "path": "assets/nature/willow-tree.glb",
+      "name": "Willow",
+      "category": "nature",
+      "description": "Drooping willow tree.",
+      "size_m": 7.0,
+      "use_cases": [
+        "riverbank",
+        "garden",
+        "graveyard"
+      ],
+      "tags": [
+        "willow",
+        "weeping",
+        "tree",
+        "graceful",
+        "melancholy"
+      ],
+      "source": "https://poly.pizza/m/mBrUbIp9Zd",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-birch-tree-01",
+      "path": "assets/nature/birch-tree.glb",
+      "name": "Birch Tree",
+      "category": "nature",
+      "description": "Slender white-bark birch tree.",
+      "size_m": 8.0,
+      "use_cases": [
+        "forest",
+        "meadow",
+        "nordic",
+        "village edge"
+      ],
+      "tags": [
+        "birch",
+        "forest",
+        "slender",
+        "tree",
+        "white bark"
+      ],
+      "source": "https://poly.pizza/m/k6cozoNfLH",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-palm-tree-01",
+      "path": "assets/nature/palm-tree.glb",
+      "name": "Palm Tree",
+      "category": "nature",
+      "description": "Tropical palm tree.",
+      "size_m": 10.0,
+      "use_cases": [
+        "beach",
+        "desert",
+        "jungle",
+        "river",
+        "tropical"
+      ],
+      "tags": [
+        "beach",
+        "coconut",
+        "jungle",
+        "palm",
+        "tree",
+        "tropical"
+      ],
+      "source": "https://poly.pizza/m/A6cKJYFsIb",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-fallen-log-01",
+      "path": "assets/nature/fallen-log.glb",
+      "name": "Wood Log",
+      "category": "nature",
+      "description": "Fallen wooden log.",
+      "size_m": 0.4,
+      "use_cases": [
+        "forest",
+        "clearing"
+      ],
+      "tags": [
+        "log",
+        "wood",
+        "fallen",
+        "forest"
+      ],
+      "source": "https://poly.pizza/m/L4E32Wee6C",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-tree-stump-01",
+      "path": "assets/nature/tree-stump.glb",
+      "name": "Tree Stump with Moss",
+      "category": "nature",
+      "description": "Tree stump with mossy top.",
+      "size_m": 0.5,
+      "use_cases": [
+        "forest",
+        "clearing"
+      ],
+      "tags": [
+        "stump",
+        "wood",
+        "cut",
+        "forest",
+        "mossy"
+      ],
+      "source": "https://poly.pizza/m/nFvEbUX6LE",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-boulder-01",
+      "path": "assets/nature/boulder.glb",
+      "name": "Rock",
+      "category": "nature",
+      "description": "Large rock / boulder.",
+      "size_m": 1.2,
+      "use_cases": [
+        "landscape",
+        "mountain",
+        "field"
+      ],
+      "tags": [
+        "rock",
+        "boulder",
+        "stone",
+        "large"
+      ],
+      "source": "https://poly.pizza/m/RtLRqYjfMs",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-rock-pile-01",
+      "path": "assets/nature/rock-pile.glb",
+      "name": "Rocks",
+      "category": "nature",
+      "description": "Cluster of small rocks.",
+      "size_m": 0.4,
+      "use_cases": [
+        "landscape",
+        "path",
+        "garden"
+      ],
+      "tags": [
+        "rocks",
+        "pile",
+        "stones",
+        "small",
+        "cluster"
+      ],
+      "source": "https://poly.pizza/m/OQvi8PIZ40",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-bush-01",
+      "path": "assets/nature/bush.glb",
+      "name": "Bush",
+      "category": "nature",
+      "description": "Generic green bush / shrub.",
+      "size_m": 0.8,
+      "use_cases": [
+        "garden",
+        "yard",
+        "forest edge"
+      ],
+      "tags": [
+        "bush",
+        "shrub",
+        "green",
+        "foliage",
+        "hedge"
+      ],
+      "source": "https://poly.pizza/m/ooG6CkLyE8",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-wildflowers-01",
+      "path": "assets/nature/wildflowers.glb",
+      "name": "Flowers",
+      "category": "nature",
+      "description": "Patch of small flowers.",
+      "size_m": 0.3,
+      "use_cases": [
+        "meadow",
+        "garden",
+        "field"
+      ],
+      "tags": [
+        "flowers",
+        "wildflowers",
+        "meadow",
+        "patch"
+      ],
+      "source": "https://poly.pizza/m/NBUxHir6FJ",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-rose-bush-01",
+      "path": "assets/nature/rose-bush.glb",
+      "name": "Rosebush",
+      "category": "nature",
+      "description": "Rose bush with red blooms.",
+      "size_m": 1.0,
+      "use_cases": [
+        "garden",
+        "yard",
+        "manor"
+      ],
+      "tags": [
+        "rose",
+        "bush",
+        "flower",
+        "garden",
+        "red"
+      ],
+      "source": "https://poly.pizza/m/fR4tQufNJcK",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "nature-fern-01",
+      "path": "assets/nature/fern.glb",
+      "name": "Fern",
+      "category": "nature",
+      "description": "Leafy fern plant.",
+      "size_m": 0.6,
+      "use_cases": [
+        "forest floor",
+        "garden",
+        "jungle floor",
+        "shade"
+      ],
+      "tags": [
+        "fern",
+        "green",
+        "jungle",
+        "leafy",
+        "plant",
+        "undergrowth"
+      ],
+      "source": "https://poly.pizza/m/jqcanvH7D6",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-tall-grass-01",
+      "path": "assets/nature/tall-grass.glb",
+      "name": "Grass",
+      "category": "nature",
+      "description": "Patch of tall grass.",
+      "size_m": 0.4,
+      "use_cases": [
+        "field",
+        "meadow",
+        "prairie"
+      ],
+      "tags": [
+        "grass",
+        "tall",
+        "patch",
+        "meadow",
+        "tuft"
+      ],
+      "source": "https://poly.pizza/m/vUJjrRsFp4",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-mushrooms-01",
+      "path": "assets/nature/mushrooms.glb",
+      "name": "Mushroom",
+      "category": "nature",
+      "description": "Cluster of mushrooms / toadstools.",
+      "size_m": 0.15,
+      "use_cases": [
+        "forest floor",
+        "fairy garden"
+      ],
+      "tags": [
+        "mushroom",
+        "toadstool",
+        "fungi",
+        "forest"
+      ],
+      "source": "https://poly.pizza/m/db1tjMhmiA",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-woman-standing-01",
+      "path": "assets/characters/woman-standing.glb",
+      "name": "Woman in Dress",
+      "category": "characters",
+      "description": "Adult female figure in a dress.",
+      "size_m": 1.68,
+      "use_cases": [
+        "any street or interior",
+        "home",
+        "village"
+      ],
+      "tags": [
+        "adult",
+        "colonial",
+        "dress",
+        "female",
+        "standing",
+        "woman"
+      ],
+      "source": "https://poly.pizza/m/zMyPlQXBzq",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-child-01",
+      "path": "assets/characters/child.glb",
+      "name": "Little girl",
+      "category": "characters",
+      "description": "Young child figure.",
+      "size_m": 1.1,
+      "use_cases": [
+        "accuser group",
+        "home",
+        "school",
+        "street",
+        "village"
+      ],
+      "tags": [
+        "character",
+        "child",
+        "girl",
+        "kid",
+        "small",
+        "young"
+      ],
+      "source": "https://poly.pizza/m/5ihpeSlkOkt",
+      "license": "CC-BY",
+      "attribution": "Jair Trejo"
+    },
+    {
+      "id": "characters-old-man-01",
+      "path": "assets/characters/old-man.glb",
+      "name": "Grandpa",
+      "category": "characters",
+      "description": "Elderly man figure.",
+      "size_m": 1.7,
+      "use_cases": [
+        "porch",
+        "cottage",
+        "village"
+      ],
+      "tags": [
+        "old",
+        "elderly",
+        "grandpa",
+        "man",
+        "senior"
+      ],
+      "source": "https://poly.pizza/m/mED3MPaQ6i",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-old-woman-01",
+      "path": "assets/characters/old-woman.glb",
+      "name": "Grandmother",
+      "category": "characters",
+      "description": "Elderly woman figure.",
+      "size_m": 1.6,
+      "use_cases": [
+        "home",
+        "cottage",
+        "village"
+      ],
+      "tags": [
+        "old",
+        "elderly",
+        "grandmother",
+        "woman",
+        "senior"
+      ],
+      "source": "https://poly.pizza/m/brIJ7qxMvx-",
+      "license": "CC-BY",
+      "attribution": "Aya Kawa"
+    },
+    {
+      "id": "characters-seated-man-01",
+      "path": "assets/characters/seated-man.glb",
+      "name": "Business Man",
+      "category": "characters",
+      "description": "Business / formal seated man.",
+      "size_m": 1.3,
+      "use_cases": [
+        "office",
+        "parlor",
+        "court"
+      ],
+      "tags": [
+        "man",
+        "seated",
+        "sitting",
+        "business",
+        "formal"
+      ],
+      "source": "https://poly.pizza/m/JFrLIKqvCH",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-seated-woman-01",
+      "path": "assets/characters/seated-woman.glb",
+      "name": "Woman Casual",
+      "category": "characters",
+      "description": "Casually dressed woman.",
+      "size_m": 1.3,
+      "use_cases": [
+        "home",
+        "parlor"
+      ],
+      "tags": [
+        "woman",
+        "casual",
+        "seated",
+        "sitting",
+        "female"
+      ],
+      "source": "https://poly.pizza/m/jpKRgGDxhk",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-horse-01",
+      "path": "assets/characters/horse.glb",
+      "name": "Horse",
+      "category": "characters",
+      "description": "Adult horse.",
+      "size_m": 1.6,
+      "use_cases": [
+        "countryside",
+        "ranch",
+        "stable",
+        "street"
+      ],
+      "tags": [
+        "animal",
+        "equine",
+        "farm",
+        "horse",
+        "mount"
+      ],
+      "source": "https://poly.pizza/m/qvTrSG9pZF",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-dog-01",
+      "path": "assets/characters/dog.glb",
+      "name": "Shiba Inu",
+      "category": "characters",
+      "description": "Shiba-style dog.",
+      "size_m": 0.5,
+      "use_cases": [
+        "home",
+        "yard",
+        "street"
+      ],
+      "tags": [
+        "dog",
+        "pet",
+        "canine",
+        "animal",
+        "shiba"
+      ],
+      "source": "https://poly.pizza/m/y4wdQpg767",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-cat-01",
+      "path": "assets/characters/cat.glb",
+      "name": "Cat",
+      "category": "characters",
+      "description": "House cat.",
+      "size_m": 0.3,
+      "use_cases": [
+        "home",
+        "alley",
+        "windowsill"
+      ],
+      "tags": [
+        "cat",
+        "pet",
+        "feline",
+        "animal"
+      ],
+      "source": "https://poly.pizza/m/qKICY6xla2",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-chicken-01",
+      "path": "assets/characters/chicken.glb",
+      "name": "Chicken",
+      "category": "characters",
+      "description": "Farmyard chicken / hen.",
+      "size_m": 0.4,
+      "use_cases": [
+        "farm",
+        "yard",
+        "coop"
+      ],
+      "tags": [
+        "chicken",
+        "hen",
+        "bird",
+        "farm",
+        "poultry"
+      ],
+      "source": "https://poly.pizza/m/ineV9pU5VL",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-goat-01",
+      "path": "assets/characters/goat.glb",
+      "name": "Goat",
+      "category": "characters",
+      "description": "Farm goat.",
+      "size_m": 0.9,
+      "use_cases": [
+        "farm",
+        "pasture",
+        "mountain"
+      ],
+      "tags": [
+        "goat",
+        "farm",
+        "animal",
+        "livestock"
+      ],
+      "source": "https://poly.pizza/m/d7dImmjtF8E",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "characters-cow-01",
+      "path": "assets/characters/cow.glb",
+      "name": "Cow",
+      "category": "characters",
+      "description": "Dairy cow.",
+      "size_m": 1.5,
+      "use_cases": [
+        "farm",
+        "pasture",
+        "barn"
+      ],
+      "tags": [
+        "cow",
+        "cattle",
+        "farm",
+        "livestock",
+        "dairy"
+      ],
+      "source": "https://poly.pizza/m/5XSc2Fka3F",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-rabbit-01",
+      "path": "assets/characters/rabbit.glb",
+      "name": "Bunny",
+      "category": "characters",
+      "description": "Small bunny rabbit.",
+      "size_m": 0.3,
+      "use_cases": [
+        "garden",
+        "meadow",
+        "burrow"
+      ],
+      "tags": [
+        "rabbit",
+        "bunny",
+        "small",
+        "animal",
+        "hare"
+      ],
+      "source": "https://poly.pizza/m/irZjWFARyl",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "characters-raven-01",
+      "path": "assets/characters/raven.glb",
+      "name": "Raven",
+      "category": "characters",
+      "description": "Black raven / crow bird.",
+      "size_m": 0.5,
+      "use_cases": [
+        "graveyard",
+        "roof",
+        "winter"
+      ],
+      "tags": [
+        "raven",
+        "crow",
+        "bird",
+        "black",
+        "ominous"
+      ],
+      "source": "https://poly.pizza/m/7eQ51arTYDj",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "props-book-closed-01",
+      "path": "assets/props/book-closed.glb",
+      "name": "Book",
+      "category": "props",
+      "description": "Closed hardcover book.",
+      "size_m": 0.03,
+      "use_cases": [
+        "study",
+        "library",
+        "desk"
+      ],
+      "tags": [
+        "book",
+        "closed",
+        "hardcover",
+        "reading"
+      ],
+      "source": "https://poly.pizza/m/LC0w7VI75u",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-book-open-01",
+      "path": "assets/props/book-open.glb",
+      "name": "Open Book",
+      "category": "props",
+      "description": "Open book showing pages.",
+      "size_m": 0.04,
+      "use_cases": [
+        "desk",
+        "library",
+        "lectern"
+      ],
+      "tags": [
+        "book",
+        "open",
+        "pages",
+        "reading",
+        "study"
+      ],
+      "source": "https://poly.pizza/m/JEDMpG0UIR",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-stack-of-books-01",
+      "path": "assets/props/stack-of-books.glb",
+      "name": "Book Stack",
+      "category": "props",
+      "description": "Stack of several books.",
+      "size_m": 0.2,
+      "use_cases": [
+        "desk",
+        "library",
+        "study"
+      ],
+      "tags": [
+        "books",
+        "stack",
+        "pile",
+        "library"
+      ],
+      "source": "https://poly.pizza/m/1WggoIFq8tx",
+      "license": "CC-BY",
+      "attribution": "Danni Bittman"
+    },
+    {
+      "id": "props-letter-01",
+      "path": "assets/props/letter.glb",
+      "name": "Parchment",
+      "category": "props",
+      "description": "Parchment / paper letter.",
+      "size_m": 0.005,
+      "use_cases": [
+        "desk",
+        "study"
+      ],
+      "tags": [
+        "letter",
+        "parchment",
+        "paper",
+        "document",
+        "scroll"
+      ],
+      "source": "https://poly.pizza/m/IrjGNYRB3f",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-quill-ink-01",
+      "path": "assets/props/quill-ink.glb",
+      "name": "Quill and parchment",
+      "category": "props",
+      "description": "Quill pen with parchment.",
+      "size_m": 0.2,
+      "use_cases": [
+        "desk",
+        "study",
+        "medieval"
+      ],
+      "tags": [
+        "quill",
+        "ink",
+        "pen",
+        "feather",
+        "parchment",
+        "writing"
+      ],
+      "source": "https://poly.pizza/m/9RjoPxajS8Z",
+      "license": "CC-BY",
+      "attribution": "Bruno Oliveira"
+    },
+    {
+      "id": "props-pipe-smoking-01",
+      "path": "assets/props/pipe-smoking.glb",
+      "name": "Pipe Long",
+      "category": "props",
+      "description": "Long smoking pipe.",
+      "size_m": 0.2,
+      "use_cases": [
+        "study",
+        "parlor",
+        "inn"
+      ],
+      "tags": [
+        "pipe",
+        "smoking",
+        "tobacco",
+        "long",
+        "detective"
+      ],
+      "source": "https://poly.pizza/m/zHomTZzv6S",
+      "license": "CC-BY",
+      "attribution": "J-Toastie"
+    },
+    {
+      "id": "props-pocket-watch-01",
+      "path": "assets/props/pocket-watch.glb",
+      "name": "Watch",
+      "category": "props",
+      "description": "Round pocket / wrist watch.",
+      "size_m": 0.06,
+      "use_cases": [
+        "desk",
+        "character hand"
+      ],
+      "tags": [
+        "watch",
+        "pocket",
+        "time",
+        "victorian",
+        "timepiece"
+      ],
+      "source": "https://poly.pizza/m/5MFJqeBgWBn",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "props-wine-bottle-01",
+      "path": "assets/props/wine-bottle.glb",
+      "name": "Bottle of wine",
+      "category": "props",
+      "description": "Bottle of wine.",
+      "size_m": 0.3,
+      "use_cases": [
+        "dining",
+        "cellar",
+        "tavern"
+      ],
+      "tags": [
+        "wine",
+        "bottle",
+        "alcohol",
+        "drink"
+      ],
+      "source": "https://poly.pizza/m/65Hf2EMEo4s",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "props-drinking-goblet-01",
+      "path": "assets/props/drinking-goblet.glb",
+      "name": "Chalice",
+      "category": "props",
+      "description": "Metal chalice / goblet.",
+      "size_m": 0.2,
+      "use_cases": [
+        "banquet",
+        "tavern",
+        "medieval"
+      ],
+      "tags": [
+        "goblet",
+        "chalice",
+        "cup",
+        "drink",
+        "medieval"
+      ],
+      "source": "https://poly.pizza/m/VZencXtC2I",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-teacup-saucer-01",
+      "path": "assets/props/teacup-saucer.glb",
+      "name": "Cup Of Tea",
+      "category": "props",
+      "description": "Teacup with saucer.",
+      "size_m": 0.08,
+      "use_cases": [
+        "parlor",
+        "kitchen",
+        "tea"
+      ],
+      "tags": [
+        "teacup",
+        "saucer",
+        "tea",
+        "china",
+        "drink"
+      ],
+      "source": "https://poly.pizza/m/6QBscrL7D3",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-plate-dinner-01",
+      "path": "assets/props/plate-dinner.glb",
+      "name": "Plate",
+      "category": "props",
+      "description": "Round dinner plate.",
+      "size_m": 0.02,
+      "use_cases": [
+        "dining",
+        "kitchen",
+        "table"
+      ],
+      "tags": [
+        "plate",
+        "dinner",
+        "dish",
+        "round"
+      ],
+      "source": "https://poly.pizza/m/JyOqlmg0O8",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-bowl-01",
+      "path": "assets/props/bowl.glb",
+      "name": "Bowl",
+      "category": "props",
+      "description": "Round serving bowl.",
+      "size_m": 0.07,
+      "use_cases": [
+        "kitchen",
+        "dining",
+        "soup"
+      ],
+      "tags": [
+        "bowl",
+        "dish",
+        "round",
+        "kitchen"
+      ],
+      "source": "https://poly.pizza/m/cXIpPoXb1U",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "architecture-wooden-door-01",
+      "path": "assets/architecture/wooden-door.glb",
+      "name": "Wooden Door",
+      "category": "architecture",
+      "description": "Standalone wooden door.",
+      "size_m": 2.1,
+      "use_cases": [
+        "castle",
+        "cottage",
+        "entrance",
+        "house",
+        "interior"
+      ],
+      "tags": [
+        "castle",
+        "door",
+        "entrance",
+        "heavy",
+        "plank",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/P09FqyST04",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "architecture-stone-wall-01",
+      "path": "assets/architecture/stone-wall.glb",
+      "name": "Stone Wall",
+      "category": "architecture",
+      "description": "Stone wall section.",
+      "size_m": 2.5,
+      "use_cases": [
+        "castle",
+        "cottage",
+        "garden",
+        "renaissance"
+      ],
+      "tags": [
+        "castle",
+        "crenellation",
+        "masonry",
+        "modular",
+        "section",
+        "stone",
+        "wall"
+      ],
+      "source": "https://poly.pizza/m/tdeAOh3LQV",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "architecture-wooden-fence-general-01",
+      "path": "assets/architecture/wooden-fence-general.glb",
+      "name": "Fence",
+      "category": "architecture",
+      "description": "Wooden fence section.",
+      "size_m": 1.2,
+      "use_cases": [
+        "corral",
+        "farm",
+        "garden",
+        "pasture",
+        "yard"
+      ],
+      "tags": [
+        "farm",
+        "fence",
+        "picket",
+        "section",
+        "wood",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/e02PFKKhbr",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "architecture-wooden-gate-01",
+      "path": "assets/architecture/wooden-gate.glb",
+      "name": "Wooden Fortress Gate",
+      "category": "architecture",
+      "description": "Large wooden gate.",
+      "size_m": 2.5,
+      "use_cases": [
+        "castle",
+        "entrance",
+        "farm",
+        "fort",
+        "town"
+      ],
+      "tags": [
+        "drawbridge",
+        "entrance",
+        "entry",
+        "fortress",
+        "gate",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/SiSjNL8GtO",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "architecture-window-frame-01",
+      "path": "assets/architecture/window-frame.glb",
+      "name": "Window Small",
+      "category": "architecture",
+      "description": "Standalone window frame.",
+      "size_m": 1.2,
+      "use_cases": [
+        "house",
+        "cottage",
+        "shop"
+      ],
+      "tags": [
+        "window",
+        "frame",
+        "glass",
+        "pane"
+      ],
+      "source": "https://poly.pizza/m/n88WAcjzTv",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "of-mice-and-men-barn-01",
+      "path": "assets/of-mice-and-men/barn.glb",
+      "name": "Barn",
+      "category": "architecture",
+      "description": "A large low-poly wooden barn suitable as the central ranch building.",
+      "size_m": 12,
+      "use_cases": [
+        "ranch",
+        "farm exterior",
+        "Of Mice and Men setting"
+      ],
+      "tags": [
+        "barn",
+        "wood",
+        "farm",
+        "rural"
+      ],
+      "source": "https://poly.pizza/m/vSqQNA7ez6",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-bunkhouse-01",
+      "path": "assets/of-mice-and-men/bunkhouse.glb",
+      "name": "Small Barn",
+      "category": "architecture",
+      "description": "A small stylized wooden outbuilding that works as a bunkhouse or shed.",
+      "size_m": 6,
+      "use_cases": [
+        "bunkhouse",
+        "farmhand quarters"
+      ],
+      "tags": [
+        "small barn",
+        "bunkhouse",
+        "wood"
+      ],
+      "source": "https://poly.pizza/m/aTcDP7UERC",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-hay-bale-square-01",
+      "path": "assets/of-mice-and-men/hay-bale-square.glb",
+      "name": "Hay",
+      "category": "nature",
+      "description": "Stylized square hay bale for barnyard or field dressing.",
+      "size_m": 1.2,
+      "use_cases": [
+        "barnyard",
+        "field",
+        "stable"
+      ],
+      "tags": [
+        "hay",
+        "bale",
+        "straw",
+        "farm"
+      ],
+      "source": "https://poly.pizza/m/Yu8TOERkpw",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-hay-bale-round-01",
+      "path": "assets/of-mice-and-men/hay-bale-round.glb",
+      "name": "Haystack",
+      "category": "nature",
+      "description": "A rounded haystack pile.",
+      "size_m": 1.5,
+      "use_cases": [
+        "field",
+        "barnyard"
+      ],
+      "tags": [
+        "haystack",
+        "hay",
+        "round"
+      ],
+      "source": "https://poly.pizza/m/6LeCqyw00RK",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "tools-pitchfork-01",
+      "path": "assets/tools/pitchfork.glb",
+      "name": "Pitchfork",
+      "category": "tools",
+      "description": "Low-poly pitchfork for ranch-hand labor scenes.",
+      "size_m": 1.6,
+      "use_cases": [
+        "barn work",
+        "haying"
+      ],
+      "tags": [
+        "pitchfork",
+        "tool",
+        "farm"
+      ],
+      "source": "https://poly.pizza/m/dtLT2Nj0KF",
+      "license": "CC-BY",
+      "attribution": "CreativeTrio"
+    },
+    {
+      "id": "of-mice-and-men-wooden-bucket-01",
+      "path": "assets/of-mice-and-men/wooden-bucket.glb",
+      "name": "Bucket",
+      "category": "props",
+      "description": "Simple wooden bucket suitable for chores or water.",
+      "size_m": 0.4,
+      "use_cases": [
+        "well",
+        "chores",
+        "barn"
+      ],
+      "tags": [
+        "bucket",
+        "wood",
+        "farm"
+      ],
+      "source": "https://poly.pizza/m/83obI9bNun",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-watering-trough-01",
+      "path": "assets/of-mice-and-men/watering-trough.glb",
+      "name": "Wood Water Trough",
+      "category": "props",
+      "description": "Wooden water trough for livestock or horses.",
+      "size_m": 1.8,
+      "use_cases": [
+        "corral",
+        "stable"
+      ],
+      "tags": [
+        "trough",
+        "water",
+        "livestock"
+      ],
+      "source": "https://poly.pizza/m/eWOPxWJkqL3",
+      "license": "CC-BY",
+      "attribution": "Oliver Herklotz"
+    },
+    {
+      "id": "of-mice-and-men-windmill-01",
+      "path": "assets/of-mice-and-men/windmill.glb",
+      "name": "Tower Windmill",
+      "category": "architecture",
+      "description": "Tall rural windmill suitable for a ranch skyline.",
+      "size_m": 8,
+      "use_cases": [
+        "ranch skyline",
+        "water pump"
+      ],
+      "tags": [
+        "windmill",
+        "farm",
+        "tower"
+      ],
+      "source": "https://poly.pizza/m/52yaPyaAAG",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-tractor-01",
+      "path": "assets/of-mice-and-men/tractor.glb",
+      "name": "Tractor",
+      "category": "props",
+      "description": "Stylized old tractor for 1930s farm scenes.",
+      "size_m": 3.2,
+      "use_cases": [
+        "field",
+        "farm"
+      ],
+      "tags": [
+        "tractor",
+        "vehicle",
+        "farm"
+      ],
+      "source": "https://poly.pizza/m/136bU5GesHs",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "characters-mule-01",
+      "path": "assets/characters/mule.glb",
+      "name": "Donkey",
+      "category": "characters",
+      "description": "Stylized low-poly donkey usable as a mule stand-in.",
+      "size_m": 1.6,
+      "use_cases": [
+        "barnyard",
+        "field"
+      ],
+      "tags": [
+        "donkey",
+        "mule",
+        "animal"
+      ],
+      "source": "https://poly.pizza/m/qmX6nhnvp7",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "characters-puppy-01",
+      "path": "assets/characters/puppy.glb",
+      "name": "Husky",
+      "category": "characters",
+      "description": "Stylized small dog (Husky) usable as a puppy stand-in.",
+      "size_m": 0.6,
+      "use_cases": [
+        "bunkhouse",
+        "ranch"
+      ],
+      "tags": [
+        "dog",
+        "puppy",
+        "animal"
+      ],
+      "source": "https://poly.pizza/m/wcWiuEqwzq",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-grain-sack-01",
+      "path": "assets/of-mice-and-men/grain-sack.glb",
+      "name": "Bags",
+      "category": "props",
+      "description": "A cluster of low-poly sacks suitable as grain/wheat sacks.",
+      "size_m": 0.8,
+      "use_cases": [
+        "storage",
+        "barn"
+      ],
+      "tags": [
+        "sack",
+        "grain",
+        "wheat"
+      ],
+      "source": "https://poly.pizza/m/gzvyAQ797z",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-straw-hat-01",
+      "path": "assets/of-mice-and-men/straw-hat.glb",
+      "name": "Cowboy Hat",
+      "category": "props",
+      "description": "Low-poly wide-brimmed hat suitable as a ranch straw hat.",
+      "size_m": 0.4,
+      "use_cases": [
+        "ranch hand prop"
+      ],
+      "tags": [
+        "hat",
+        "straw",
+        "cowboy"
+      ],
+      "source": "https://poly.pizza/m/aWzUlZtGLC0",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "of-mice-and-men-work-boots-01",
+      "path": "assets/of-mice-and-men/work-boots.glb",
+      "name": "Boots",
+      "category": "props",
+      "description": "A pair of work boots for ranch-hand gear.",
+      "size_m": 0.3,
+      "use_cases": [
+        "barracks",
+        "bunkhouse",
+        "character prop",
+        "jungle camp"
+      ],
+      "tags": [
+        "boots",
+        "combat",
+        "footwear",
+        "military",
+        "work"
+      ],
+      "source": "https://poly.pizza/m/7HbqG8RwRcA",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "props-wooden-crate-01",
+      "path": "assets/props/wooden-crate.glb",
+      "name": "Crate",
+      "category": "props",
+      "description": "Low-poly wooden crate for storage scenes.",
+      "size_m": 0.9,
+      "use_cases": [
+        "barn",
+        "storehouse"
+      ],
+      "tags": [
+        "crate",
+        "wood",
+        "storage"
+      ],
+      "source": "https://poly.pizza/m/3VGWnZPXmG",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "of-mice-and-men-horseshoe-01",
+      "path": "assets/of-mice-and-men/horseshoe.glb",
+      "name": "Horseshoe",
+      "category": "props",
+      "description": "Low-poly horseshoe detail prop.",
+      "size_m": 0.15,
+      "use_cases": [
+        "barn detail",
+        "stable"
+      ],
+      "tags": [
+        "horseshoe",
+        "iron",
+        "barn"
+      ],
+      "source": "https://poly.pizza/m/cn2TLOaUBIn",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "of-mice-and-men-rope-coil-01",
+      "path": "assets/of-mice-and-men/rope-coil.glb",
+      "name": "Rope",
+      "category": "props",
+      "description": "Coiled rope prop for ranch detail.",
+      "size_m": 0.4,
+      "use_cases": [
+        "barn wall",
+        "chores"
+      ],
+      "tags": [
+        "rope",
+        "coil",
+        "farm"
+      ],
+      "source": "https://poly.pizza/m/dkNzi6oDQj",
+      "license": "CC-BY",
+      "attribution": "J-Toastie"
+    },
+    {
+      "id": "crucible-meeting-house-01",
+      "path": "assets/crucible/meeting-house.glb",
+      "name": "Church",
+      "category": "architecture",
+      "description": "Low-poly plain church suitable as a Puritan meeting house.",
+      "size_m": 10,
+      "use_cases": [
+        "Salem village",
+        "court scene"
+      ],
+      "tags": [
+        "church",
+        "meeting house",
+        "colonial"
+      ],
+      "source": "https://poly.pizza/m/6vzTphxL9w4",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "crucible-colonial-house-01",
+      "path": "assets/crucible/colonial-house.glb",
+      "name": "House",
+      "category": "architecture",
+      "description": "Stylized wooden house with steep roof, fits colonial aesthetic.",
+      "size_m": 7,
+      "use_cases": [
+        "Salem village"
+      ],
+      "tags": [
+        "house",
+        "colonial",
+        "wood"
+      ],
+      "source": "https://poly.pizza/m/oJJIRwv6Bo",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "crucible-wooden-pew-01",
+      "path": "assets/crucible/wooden-pew.glb",
+      "name": "Seat",
+      "category": "furniture",
+      "description": "Simple low-poly bench usable as a church pew.",
+      "size_m": 1.8,
+      "use_cases": [
+        "meeting house interior",
+        "court"
+      ],
+      "tags": [
+        "pew",
+        "bench",
+        "church"
+      ],
+      "source": "https://poly.pizza/m/91dkDNqT7T8",
+      "license": "CC-BY",
+      "attribution": "CMHT Oculus"
+    },
+    {
+      "id": "crucible-poppet-01",
+      "path": "assets/crucible/poppet.glb",
+      "name": "Doll",
+      "category": "props",
+      "description": "Small doll figure that can stand in as a Puritan poppet/rag doll.",
+      "size_m": 0.3,
+      "use_cases": [
+        "Abigail scene",
+        "accusation"
+      ],
+      "tags": [
+        "doll",
+        "poppet",
+        "rag"
+      ],
+      "source": "https://poly.pizza/m/YUAwclCDrF",
+      "license": "CC-BY",
+      "attribution": "CreativeTrio"
+    },
+    {
+      "id": "crucible-cauldron-01",
+      "path": "assets/crucible/cauldron.glb",
+      "name": "Cauldron",
+      "category": "props",
+      "description": "Low-poly iron cauldron for forest ritual or cooking.",
+      "size_m": 0.8,
+      "use_cases": [
+        "forest scene",
+        "kitchen"
+      ],
+      "tags": [
+        "cauldron",
+        "iron pot"
+      ],
+      "source": "https://poly.pizza/m/QaWJOPa6Gt",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "crucible-gavel-01",
+      "path": "assets/crucible/gavel.glb",
+      "name": "Gavel",
+      "category": "props",
+      "description": "Low-poly wooden gavel for courtroom scene.",
+      "size_m": 0.25,
+      "use_cases": [
+        "court trial"
+      ],
+      "tags": [
+        "gavel",
+        "court",
+        "wood"
+      ],
+      "source": "https://poly.pizza/m/6yKiq1_NH5K",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "crucible-colonial-door-01",
+      "path": "assets/crucible/colonial-door.glb",
+      "name": "Door Straight",
+      "category": "architecture",
+      "description": "Heavy wooden door suitable for colonial architecture.",
+      "size_m": 2.0,
+      "use_cases": [
+        "house entry",
+        "jail door"
+      ],
+      "tags": [
+        "door",
+        "wood",
+        "colonial"
+      ],
+      "source": "https://poly.pizza/m/VvWlICcNi8",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "crucible-wooden-sign-01",
+      "path": "assets/crucible/wooden-sign.glb",
+      "name": "Wooden Sign",
+      "category": "props",
+      "description": "Hanging wooden sign for shopfront or village detail.",
+      "size_m": 1.0,
+      "use_cases": [
+        "village",
+        "tavern"
+      ],
+      "tags": [
+        "sign",
+        "wood",
+        "hanging"
+      ],
+      "source": "https://poly.pizza/m/mxyDWLsKer",
+      "license": "CC0",
+      "attribution": "iPoly3D"
+    },
+    {
+      "id": "crucible-hanging-herbs-01",
+      "path": "assets/crucible/hanging-herbs.glb",
+      "name": "Fern",
+      "category": "nature",
+      "description": "Low-poly fern/greenery usable as drying herbs.",
+      "size_m": 0.4,
+      "use_cases": [
+        "kitchen detail"
+      ],
+      "tags": [
+        "herbs",
+        "plant",
+        "kitchen"
+      ],
+      "source": "https://poly.pizza/m/6ttropQuVzQ",
+      "license": "CC-BY",
+      "attribution": "Danni Bittman"
+    },
+    {
+      "id": "crucible-bible-01",
+      "path": "assets/crucible/bible.glb",
+      "name": "Book",
+      "category": "props",
+      "description": "Closed low-poly book as a Bible stand-in.",
+      "size_m": 0.25,
+      "use_cases": [
+        "court",
+        "home"
+      ],
+      "tags": [
+        "book",
+        "bible",
+        "leather"
+      ],
+      "source": "https://poly.pizza/m/h3Wh4fxSQX",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "crucible-wooden-well-01",
+      "path": "assets/crucible/wooden-well.glb",
+      "name": "Well",
+      "category": "architecture",
+      "description": "Low-poly wooden well with bucket.",
+      "size_m": 1.8,
+      "use_cases": [
+        "village center",
+        "courtyard"
+      ],
+      "tags": [
+        "well",
+        "wood",
+        "bucket"
+      ],
+      "source": "https://poly.pizza/m/QlqncKYxXb",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "architecture-wooden-bridge-01",
+      "path": "assets/architecture/wooden-bridge.glb",
+      "name": "Wood Bridge",
+      "category": "architecture",
+      "description": "Small wooden footbridge for village/forest scenes.",
+      "size_m": 3.5,
+      "use_cases": [
+        "forest path",
+        "village outskirts"
+      ],
+      "tags": [
+        "bridge",
+        "wood",
+        "footbridge"
+      ],
+      "source": "https://poly.pizza/m/ccxRFIgIvIL",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "crucible-iron-pot-01",
+      "path": "assets/crucible/iron-pot.glb",
+      "name": "Cooking Pot",
+      "category": "props",
+      "description": "Low-poly iron cooking pot.",
+      "size_m": 0.5,
+      "use_cases": [
+        "hearth",
+        "kitchen"
+      ],
+      "tags": [
+        "pot",
+        "iron",
+        "cooking"
+      ],
+      "source": "https://poly.pizza/m/jAUb3FoCN7",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "props-wooden-barrel-01",
+      "path": "assets/props/wooden-barrel.glb",
+      "name": "Barrel",
+      "category": "props",
+      "description": "Low-poly wooden barrel.",
+      "size_m": 0.9,
+      "use_cases": [
+        "village",
+        "storehouse"
+      ],
+      "tags": [
+        "barrel",
+        "wood"
+      ],
+      "source": "https://poly.pizza/m/ONdghDBByN",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "crucible-wooden-post-01",
+      "path": "assets/crucible/wooden-post.glb",
+      "name": "Post",
+      "category": "props",
+      "description": "Low-poly wooden post/stake.",
+      "size_m": 2.0,
+      "use_cases": [
+        "village square",
+        "corral"
+      ],
+      "tags": [
+        "post",
+        "stake",
+        "wood"
+      ],
+      "source": "https://poly.pizza/m/jnuIFJsXZJ",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "crucible-iron-lantern-01",
+      "path": "assets/crucible/iron-lantern.glb",
+      "name": "Hanging Lantern",
+      "category": "lighting",
+      "description": "Hanging iron-style lantern for colonial atmosphere.",
+      "size_m": 0.35,
+      "use_cases": [
+        "doorway",
+        "interior"
+      ],
+      "tags": [
+        "lantern",
+        "iron",
+        "hanging"
+      ],
+      "source": "https://poly.pizza/m/3jzk3YShv1",
+      "license": "CC-BY",
+      "attribution": "Kay Lousberg"
+    },
+    {
+      "id": "vietnam-canteen-01",
+      "path": "assets/vietnam/canteen.glb",
+      "name": "Water bottle",
+      "category": "props",
+      "description": "Simple water bottle as a canteen stand-in.",
+      "size_m": 0.2,
+      "use_cases": [
+        "soldier gear"
+      ],
+      "tags": [
+        "canteen",
+        "water",
+        "military"
+      ],
+      "source": "https://poly.pizza/m/0PpSxxQVOxY",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "vietnam-rucksack-01",
+      "path": "assets/vietnam/rucksack.glb",
+      "name": "Backpack",
+      "category": "props",
+      "description": "Low-poly backpack usable as a military rucksack.",
+      "size_m": 0.6,
+      "use_cases": [
+        "soldier gear"
+      ],
+      "tags": [
+        "rucksack",
+        "backpack",
+        "military"
+      ],
+      "source": "https://poly.pizza/m/vF7TuXCPDH",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-duffel-bag-01",
+      "path": "assets/vietnam/duffel-bag.glb",
+      "name": "Package",
+      "category": "props",
+      "description": "Simple package/bag usable as duffel.",
+      "size_m": 0.7,
+      "use_cases": [
+        "barracks",
+        "gear pile"
+      ],
+      "tags": [
+        "duffel",
+        "bag",
+        "military"
+      ],
+      "source": "https://poly.pizza/m/kYvD6QCQRd",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-zippo-lighter-01",
+      "path": "assets/vietnam/zippo-lighter.glb",
+      "name": "Lighter",
+      "category": "props",
+      "description": "Low-poly lighter for soldier personal effects.",
+      "size_m": 0.06,
+      "use_cases": [
+        "gear on table",
+        "night scene"
+      ],
+      "tags": [
+        "lighter",
+        "zippo"
+      ],
+      "source": "https://poly.pizza/m/1Zzk1FkZc5I",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "vietnam-folded-letter-01",
+      "path": "assets/vietnam/folded-letter.glb",
+      "name": "Posted Letter",
+      "category": "props",
+      "description": "Folded paper letter on surface.",
+      "size_m": 0.2,
+      "use_cases": [
+        "soldier personal effects"
+      ],
+      "tags": [
+        "letter",
+        "paper",
+        "mail"
+      ],
+      "source": "https://poly.pizza/m/4RKKC0BC4gb",
+      "license": "CC-BY",
+      "attribution": "Jarlan Perez"
+    },
+    {
+      "id": "vietnam-polaroid-photo-01",
+      "path": "assets/vietnam/polaroid-photo.glb",
+      "name": "Polaroids",
+      "category": "props",
+      "description": "Stack of polaroid photos.",
+      "size_m": 0.15,
+      "use_cases": [
+        "gear pile",
+        "memory scene"
+      ],
+      "tags": [
+        "photo",
+        "polaroid"
+      ],
+      "source": "https://poly.pizza/m/6BgcoF0LL6y",
+      "license": "CC-BY",
+      "attribution": "Jarlan Perez"
+    },
+    {
+      "id": "vietnam-compass-01",
+      "path": "assets/vietnam/compass.glb",
+      "name": "Compass",
+      "category": "props",
+      "description": "Low-poly compass for navigation scenes.",
+      "size_m": 0.1,
+      "use_cases": [
+        "navigation",
+        "gear"
+      ],
+      "tags": [
+        "compass",
+        "navigation"
+      ],
+      "source": "https://poly.pizza/m/LlnxQPETHh",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-field-radio-01",
+      "path": "assets/vietnam/field-radio.glb",
+      "name": "Radio",
+      "category": "props",
+      "description": "Low-poly radio usable as a field radio.",
+      "size_m": 0.4,
+      "use_cases": [
+        "comms tent",
+        "camp"
+      ],
+      "tags": [
+        "radio",
+        "field",
+        "comms"
+      ],
+      "source": "https://poly.pizza/m/TPqvwkyWdV",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-sandbag-single-01",
+      "path": "assets/vietnam/sandbag-single.glb",
+      "name": "Sack Trench Small",
+      "category": "props",
+      "description": "Single small sandbag.",
+      "size_m": 0.5,
+      "use_cases": [
+        "foxhole",
+        "bunker wall"
+      ],
+      "tags": [
+        "sandbag",
+        "trench"
+      ],
+      "source": "https://poly.pizza/m/iHyRewQQcN",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-sandbag-stack-01",
+      "path": "assets/vietnam/sandbag-stack.glb",
+      "name": "Sack Trench",
+      "category": "props",
+      "description": "Stack of sandbags forming a wall.",
+      "size_m": 1.5,
+      "use_cases": [
+        "bunker",
+        "foxhole"
+      ],
+      "tags": [
+        "sandbag",
+        "wall",
+        "trench"
+      ],
+      "source": "https://poly.pizza/m/LW3jwpPfiN",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-military-jeep-01",
+      "path": "assets/vietnam/military-jeep.glb",
+      "name": "Jeep",
+      "category": "props",
+      "description": "Low-poly jeep for base/road scenes.",
+      "size_m": 3.5,
+      "use_cases": [
+        "camp road",
+        "convoy"
+      ],
+      "tags": [
+        "jeep",
+        "military",
+        "vehicle"
+      ],
+      "source": "https://poly.pizza/m/AcSdGGrgYP",
+      "license": "CC-BY",
+      "attribution": "Zsky"
+    },
+    {
+      "id": "vietnam-bamboo-stalks-01",
+      "path": "assets/vietnam/bamboo-stalks.glb",
+      "name": "Bamboo",
+      "category": "nature",
+      "description": "Low-poly bamboo cluster.",
+      "size_m": 3,
+      "use_cases": [
+        "jungle",
+        "path"
+      ],
+      "tags": [
+        "bamboo",
+        "jungle",
+        "plant"
+      ],
+      "source": "https://poly.pizza/m/xBPj13w3JQ",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "nature-banana-tree-01",
+      "path": "assets/nature/banana-tree.glb",
+      "name": "Banana Tree",
+      "category": "nature",
+      "description": "Low-poly banana tree for jungle scenes.",
+      "size_m": 4,
+      "use_cases": [
+        "jungle",
+        "village edge"
+      ],
+      "tags": [
+        "banana",
+        "jungle",
+        "tree"
+      ],
+      "source": "https://poly.pizza/m/d0WJSiuOz6o",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "vietnam-mud-puddle-01",
+      "path": "assets/vietnam/mud-puddle.glb",
+      "name": "Pond",
+      "category": "nature",
+      "description": "Small pond patch, usable as a mud puddle.",
+      "size_m": 1.2,
+      "use_cases": [
+        "trail",
+        "jungle floor"
+      ],
+      "tags": [
+        "mud",
+        "puddle",
+        "water"
+      ],
+      "source": "https://poly.pizza/m/cYUMQWc-BOV",
+      "license": "CC-BY",
+      "attribution": "jeremy"
+    },
+    {
+      "id": "vietnam-campfire-01",
+      "path": "assets/vietnam/campfire.glb",
+      "name": "Bonfire",
+      "category": "props",
+      "description": "Low-poly campfire/bonfire for camp scenes.",
+      "size_m": 0.8,
+      "use_cases": [
+        "camp",
+        "night scene"
+      ],
+      "tags": [
+        "campfire",
+        "fire",
+        "camp"
+      ],
+      "source": "https://poly.pizza/m/Azj9hJwwwG",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-military-tent-01",
+      "path": "assets/vietnam/military-tent.glb",
+      "name": "Tent",
+      "category": "architecture",
+      "description": "Small military-style tent.",
+      "size_m": 2.5,
+      "use_cases": [
+        "forward base",
+        "camp"
+      ],
+      "tags": [
+        "tent",
+        "military",
+        "camp"
+      ],
+      "source": "https://poly.pizza/m/5Q7qIrfDxA",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-footbridge-01",
+      "path": "assets/vietnam/footbridge.glb",
+      "name": "Rope Bridge",
+      "category": "architecture",
+      "description": "Rural wooden footbridge for jungle stream.",
+      "size_m": 3.5,
+      "use_cases": [
+        "river crossing"
+      ],
+      "tags": [
+        "bridge",
+        "wood",
+        "rural"
+      ],
+      "source": "https://poly.pizza/m/88e4zjTShuY",
+      "license": "CC-BY",
+      "attribution": "Jeremy Eyring"
+    },
+    {
+      "id": "food-ration-can-01",
+      "path": "assets/food/ration-can.glb",
+      "name": "Can",
+      "category": "food",
+      "description": "Low-poly tin can usable as a C-ration/MRE can.",
+      "size_m": 0.12,
+      "use_cases": [
+        "meal break"
+      ],
+      "tags": [
+        "can",
+        "ration",
+        "food"
+      ],
+      "source": "https://poly.pizza/m/YnowJvWqxE",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "vietnam-playing-cards-01",
+      "path": "assets/vietnam/playing-cards.glb",
+      "name": "Card Backing",
+      "category": "props",
+      "description": "Low-poly playing card.",
+      "size_m": 0.1,
+      "use_cases": [
+        "downtime scene"
+      ],
+      "tags": [
+        "cards",
+        "deck",
+        "game"
+      ],
+      "source": "https://poly.pizza/m/phCQtmbSy5",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-castle-tower-01",
+      "path": "assets/castle/castle-tower.glb",
+      "name": "Stone Tower",
+      "category": "architecture",
+      "description": "Tall stone tower for castle fortifications.",
+      "size_m": 8,
+      "use_cases": [
+        "castle",
+        "renaissance"
+      ],
+      "tags": [
+        "castle",
+        "stone",
+        "tower",
+        "medieval"
+      ],
+      "source": "https://poly.pizza/m/Rz4U5dZJz8",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-throne-chair-01",
+      "path": "assets/castle/throne-chair.glb",
+      "name": "Throne",
+      "category": "furniture",
+      "description": "Ornate royal throne chair.",
+      "size_m": 1.8,
+      "use_cases": [
+        "castle",
+        "royal court"
+      ],
+      "tags": [
+        "throne",
+        "royal",
+        "chair",
+        "king"
+      ],
+      "source": "https://poly.pizza/m/bpFCWQSs-aT",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "castle-tapestry-01",
+      "path": "assets/castle/tapestry.glb",
+      "name": "Wall Flag",
+      "category": "props",
+      "description": "Hanging wall banner resembling tapestry.",
+      "size_m": 2,
+      "use_cases": [
+        "castle",
+        "great hall"
+      ],
+      "tags": [
+        "tapestry",
+        "banner",
+        "wall",
+        "cloth"
+      ],
+      "source": "https://poly.pizza/m/TWDvd4qPzq",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-pewter-goblet-01",
+      "path": "assets/castle/pewter-goblet.glb",
+      "name": "Goblet",
+      "category": "props",
+      "description": "Metal drinking goblet.",
+      "size_m": 0.2,
+      "use_cases": [
+        "castle",
+        "feast"
+      ],
+      "tags": [
+        "goblet",
+        "cup",
+        "pewter",
+        "drink"
+      ],
+      "source": "https://poly.pizza/m/akkmXa2s0R",
+      "license": "CC0",
+      "attribution": "MilkAndBanana"
+    },
+    {
+      "id": "castle-silver-tray-01",
+      "path": "assets/castle/silver-tray.glb",
+      "name": "Square Plate",
+      "category": "props",
+      "description": "Flat serving plate/tray.",
+      "size_m": 0.3,
+      "use_cases": [
+        "castle",
+        "feast"
+      ],
+      "tags": [
+        "tray",
+        "plate",
+        "silver",
+        "serving"
+      ],
+      "source": "https://poly.pizza/m/Gi5sAML9iw",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-candelabra-castle-01",
+      "path": "assets/castle/candelabra-castle.glb",
+      "name": "Chandelier",
+      "category": "lighting",
+      "description": "Multi-arm hanging candle chandelier.",
+      "size_m": 1,
+      "use_cases": [
+        "castle",
+        "great hall"
+      ],
+      "tags": [
+        "candelabra",
+        "chandelier",
+        "candles",
+        "light"
+      ],
+      "source": "https://poly.pizza/m/RPLTkXHOOM",
+      "license": "CC0",
+      "attribution": "CreativeTrio"
+    },
+    {
+      "id": "castle-stone-arch-01",
+      "path": "assets/castle/stone-arch.glb",
+      "name": "Arch",
+      "category": "architecture",
+      "description": "Stone archway structure.",
+      "size_m": 3,
+      "use_cases": [
+        "castle",
+        "entrance"
+      ],
+      "tags": [
+        "arch",
+        "stone",
+        "entry",
+        "doorway"
+      ],
+      "source": "https://poly.pizza/m/QwWdOcNIMh",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "characters-king-01",
+      "path": "assets/characters/king.glb",
+      "name": "King",
+      "category": "characters",
+      "description": "Crowned male monarch character.",
+      "size_m": 1.8,
+      "use_cases": [
+        "castle",
+        "court"
+      ],
+      "tags": [
+        "king",
+        "crown",
+        "royal",
+        "character"
+      ],
+      "source": "https://poly.pizza/m/I1gTjmuK2m",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "characters-queen-01",
+      "path": "assets/characters/queen.glb",
+      "name": "Queen",
+      "category": "characters",
+      "description": "Female noble in gown.",
+      "size_m": 1.7,
+      "use_cases": [
+        "castle",
+        "court"
+      ],
+      "tags": [
+        "queen",
+        "royal",
+        "woman",
+        "gown"
+      ],
+      "source": "https://poly.pizza/m/nIItLV9nxS",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-rapier-sword-01",
+      "path": "assets/castle/rapier-sword.glb",
+      "name": "Sword",
+      "category": "props",
+      "description": "Stylized sword/rapier prop.",
+      "size_m": 1,
+      "use_cases": [
+        "castle",
+        "duel"
+      ],
+      "tags": [
+        "sword",
+        "rapier",
+        "weapon",
+        "blade"
+      ],
+      "source": "https://poly.pizza/m/9lLmH8Et4K",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-portrait-frame-01",
+      "path": "assets/castle/portrait-frame.glb",
+      "name": "Empty Picture Frame",
+      "category": "props",
+      "description": "Ornate empty wall-mounted portrait frame.",
+      "size_m": 0.8,
+      "use_cases": [
+        "castle",
+        "handmaid"
+      ],
+      "tags": [
+        "frame",
+        "portrait",
+        "wall",
+        "ornate"
+      ],
+      "source": "https://poly.pizza/m/ae-21UkVxCg",
+      "license": "CC-BY",
+      "attribution": "Jarlan Perez"
+    },
+    {
+      "id": "castle-castle-window-01",
+      "path": "assets/castle/castle-window.glb",
+      "name": "Window",
+      "category": "architecture",
+      "description": "Arched tall window for stone walls.",
+      "size_m": 1.8,
+      "use_cases": [
+        "castle",
+        "room"
+      ],
+      "tags": [
+        "window",
+        "arched",
+        "stone",
+        "tall"
+      ],
+      "source": "https://poly.pizza/m/EY1zrFcme9",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "characters-ghost-01",
+      "path": "assets/characters/ghost.glb",
+      "name": "Ghost",
+      "category": "characters",
+      "description": "Stylized spectral ghost figure.",
+      "size_m": 1.7,
+      "use_cases": [
+        "castle",
+        "haunting"
+      ],
+      "tags": [
+        "ghost",
+        "spectral",
+        "apparition",
+        "hamlet"
+      ],
+      "source": "https://poly.pizza/m/Iip30bDHmu",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-spiral-staircase-01",
+      "path": "assets/castle/spiral-staircase.glb",
+      "name": "Spiral Stairs",
+      "category": "architecture",
+      "description": "Winding spiral staircase.",
+      "size_m": 3,
+      "use_cases": [
+        "castle",
+        "tower"
+      ],
+      "tags": [
+        "stairs",
+        "spiral",
+        "steps",
+        "winding"
+      ],
+      "source": "https://poly.pizza/m/7o_wIY-00y-",
+      "license": "CC-BY",
+      "attribution": "sugamo"
+    },
+    {
+      "id": "castle-stone-floor-01",
+      "path": "assets/castle/stone-floor.glb",
+      "name": "Floor Tile",
+      "category": "architecture",
+      "description": "Stone floor tile section.",
+      "size_m": 2,
+      "use_cases": [
+        "castle",
+        "interior"
+      ],
+      "tags": [
+        "floor",
+        "tile",
+        "stone",
+        "ground"
+      ],
+      "source": "https://poly.pizza/m/6baBuVGcyD",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-suit-of-armor-01",
+      "path": "assets/castle/suit-of-armor.glb",
+      "name": "Metal Armor",
+      "category": "props",
+      "description": "Standing suit of metal armor.",
+      "size_m": 1.8,
+      "use_cases": [
+        "castle",
+        "hall"
+      ],
+      "tags": [
+        "armor",
+        "knight",
+        "metal",
+        "standing"
+      ],
+      "source": "https://poly.pizza/m/TMUoxILh9w",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-flag-pole-01",
+      "path": "assets/castle/flag-pole.glb",
+      "name": "Flag",
+      "category": "props",
+      "description": "Flag on pole for castle heraldry.",
+      "size_m": 3,
+      "use_cases": [
+        "castle",
+        "outdoor"
+      ],
+      "tags": [
+        "flag",
+        "pole",
+        "banner",
+        "heraldry"
+      ],
+      "source": "https://poly.pizza/m/FuOkF3WBrx",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "castle-parapet-stone-01",
+      "path": "assets/castle/parapet-stone.glb",
+      "name": "Wall Towers",
+      "category": "architecture",
+      "description": "Short parapet stone wall section with crenellation.",
+      "size_m": 2,
+      "use_cases": [
+        "castle",
+        "rampart"
+      ],
+      "tags": [
+        "parapet",
+        "crenellation",
+        "wall",
+        "stone"
+      ],
+      "source": "https://poly.pizza/m/xKVeMHa2tJ",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "algiers-date-palm-01",
+      "path": "assets/algiers/date-palm.glb",
+      "name": "Date Palm Tree",
+      "category": "nature",
+      "description": "Taller date palm tree variant.",
+      "size_m": 7,
+      "use_cases": [
+        "algiers",
+        "street"
+      ],
+      "tags": [
+        "date",
+        "palm",
+        "tall",
+        "tree"
+      ],
+      "source": "https://poly.pizza/m/f9HQ8FJxn-o",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "algiers-colonial-building-01",
+      "path": "assets/algiers/colonial-building.glb",
+      "name": "Large Building",
+      "category": "architecture",
+      "description": "White stucco colonial-style building.",
+      "size_m": 8,
+      "use_cases": [
+        "algiers",
+        "city"
+      ],
+      "tags": [
+        "colonial",
+        "stucco",
+        "building",
+        "white"
+      ],
+      "source": "https://poly.pizza/m/ppwtREejXg",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "algiers-wooden-shutter-01",
+      "path": "assets/algiers/wooden-shutter.glb",
+      "name": "Window Blinds",
+      "category": "architecture",
+      "description": "Wooden window shutter/blinds.",
+      "size_m": 1.2,
+      "use_cases": [
+        "algiers",
+        "building"
+      ],
+      "tags": [
+        "shutter",
+        "window",
+        "wooden",
+        "mediterranean"
+      ],
+      "source": "https://poly.pizza/m/8UULkkmfhcB",
+      "license": "CC-BY",
+      "attribution": "Jarlan Perez"
+    },
+    {
+      "id": "algiers-cafe-table-01",
+      "path": "assets/algiers/cafe-table.glb",
+      "name": "Round Small Table",
+      "category": "furniture",
+      "description": "Small round outdoor cafe table.",
+      "size_m": 0.7,
+      "use_cases": [
+        "algiers",
+        "cafe"
+      ],
+      "tags": [
+        "cafe",
+        "table",
+        "small",
+        "round"
+      ],
+      "source": "https://poly.pizza/m/oEArSZykyi",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "algiers-rowboat-01",
+      "path": "assets/algiers/rowboat.glb",
+      "name": "Boat",
+      "category": "props",
+      "description": "Small wooden rowboat.",
+      "size_m": 3,
+      "use_cases": [
+        "algiers",
+        "beach"
+      ],
+      "tags": [
+        "rowboat",
+        "boat",
+        "wooden",
+        "small"
+      ],
+      "source": "https://poly.pizza/m/5UEl54KsuC",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "algiers-fishing-net-01",
+      "path": "assets/algiers/fishing-net.glb",
+      "name": "Fishing net",
+      "category": "props",
+      "description": "Fishing net with floats.",
+      "size_m": 2,
+      "use_cases": [
+        "algiers",
+        "beach"
+      ],
+      "tags": [
+        "net",
+        "fishing",
+        "floats",
+        "beach"
+      ],
+      "source": "https://poly.pizza/m/6xRmXaU-L7e",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "characters-seagull-01",
+      "path": "assets/characters/seagull.glb",
+      "name": "Seagull",
+      "category": "characters",
+      "description": "Stylized seagull bird.",
+      "size_m": 0.4,
+      "use_cases": [
+        "algiers",
+        "beach"
+      ],
+      "tags": [
+        "seagull",
+        "bird",
+        "beach",
+        "gull"
+      ],
+      "source": "https://poly.pizza/m/0WRzrtCIIRp",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "algiers-beach-umbrella-01",
+      "path": "assets/algiers/beach-umbrella.glb",
+      "name": "Beach Umbrella",
+      "category": "props",
+      "description": "Red and white striped beach umbrella.",
+      "size_m": 2,
+      "use_cases": [
+        "algiers",
+        "beach"
+      ],
+      "tags": [
+        "umbrella",
+        "beach",
+        "parasol",
+        "sun"
+      ],
+      "source": "https://poly.pizza/m/2li3sdSkmCI",
+      "license": "CC-BY",
+      "attribution": "S. Paul Michael"
+    },
+    {
+      "id": "algiers-sand-dune-01",
+      "path": "assets/algiers/sand-dune.glb",
+      "name": "Desert",
+      "category": "nature",
+      "description": "Sand dune/desert patch.",
+      "size_m": 5,
+      "use_cases": [
+        "algiers",
+        "beach"
+      ],
+      "tags": [
+        "sand",
+        "dune",
+        "beach",
+        "desert"
+      ],
+      "source": "https://poly.pizza/m/a1HnTCHfE34",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "algiers-courtyard-door-01",
+      "path": "assets/algiers/courtyard-door.glb",
+      "name": "Round Door",
+      "category": "architecture",
+      "description": "Arched wooden courtyard door.",
+      "size_m": 2.2,
+      "use_cases": [
+        "algiers",
+        "entrance"
+      ],
+      "tags": [
+        "door",
+        "arched",
+        "courtyard",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/4lNptAwxpV",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "algiers-fig-tree-01",
+      "path": "assets/algiers/fig-tree.glb",
+      "name": "Leafy Tree",
+      "category": "nature",
+      "description": "Broad leafy tree stand-in for fig.",
+      "size_m": 3.5,
+      "use_cases": [
+        "algiers",
+        "garden"
+      ],
+      "tags": [
+        "fig",
+        "tree",
+        "leafy",
+        "mediterranean"
+      ],
+      "source": "https://poly.pizza/m/6Yjt8nIwLsD",
+      "license": "CC-BY",
+      "attribution": "Marc Sol\u00e0"
+    },
+    {
+      "id": "algiers-prison-bars-01",
+      "path": "assets/algiers/prison-bars.glb",
+      "name": "Cage Medieval",
+      "category": "architecture",
+      "description": "Vertical metal prison bars/cage.",
+      "size_m": 2.5,
+      "use_cases": [
+        "algiers",
+        "prison"
+      ],
+      "tags": [
+        "prison",
+        "bars",
+        "cell",
+        "metal"
+      ],
+      "source": "https://poly.pizza/m/mybhRIyuL9",
+      "license": "CC0",
+      "attribution": "hat_my_guy"
+    },
+    {
+      "id": "algiers-prison-cot-01",
+      "path": "assets/algiers/prison-cot.glb",
+      "name": "Bedroll",
+      "category": "furniture",
+      "description": "Narrow simple cot/bedroll for prison cell.",
+      "size_m": 1.9,
+      "use_cases": [
+        "algiers",
+        "prison",
+        "handmaid"
+      ],
+      "tags": [
+        "cot",
+        "bed",
+        "narrow",
+        "prison"
+      ],
+      "source": "https://poly.pizza/m/efwd5fjuMU",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "algiers-ceiling-fan-01",
+      "path": "assets/algiers/ceiling-fan.glb",
+      "name": "Ceiling Fan",
+      "category": "lighting",
+      "description": "Simple ceiling fan.",
+      "size_m": 1.2,
+      "use_cases": [
+        "algiers",
+        "interior"
+      ],
+      "tags": [
+        "fan",
+        "ceiling",
+        "blades",
+        "air"
+      ],
+      "source": "https://poly.pizza/m/6UCDIZTNn3",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "algiers-typewriter-01",
+      "path": "assets/algiers/typewriter.glb",
+      "name": "Typewriter",
+      "category": "props",
+      "description": "Vintage typewriter.",
+      "size_m": 0.4,
+      "use_cases": [
+        "algiers",
+        "office"
+      ],
+      "tags": [
+        "typewriter",
+        "vintage",
+        "writing",
+        "office"
+      ],
+      "source": "https://poly.pizza/m/4jHNmeamwP8",
+      "license": "CC-BY",
+      "attribution": "Bruno Oliveira"
+    },
+    {
+      "id": "algiers-filing-cabinet-01",
+      "path": "assets/algiers/filing-cabinet.glb",
+      "name": "File Cabinet",
+      "category": "furniture",
+      "description": "Office filing cabinet.",
+      "size_m": 1.3,
+      "use_cases": [
+        "algiers",
+        "office"
+      ],
+      "tags": [
+        "filing",
+        "cabinet",
+        "office",
+        "drawer"
+      ],
+      "source": "https://poly.pizza/m/9732ObD3OY",
+      "license": "CC-BY",
+      "attribution": "J-Toastie"
+    },
+    {
+      "id": "food-baguette-01",
+      "path": "assets/food/baguette.glb",
+      "name": "Baguette",
+      "category": "food",
+      "description": "French bread baguette.",
+      "size_m": 0.6,
+      "use_cases": [
+        "algiers",
+        "cafe"
+      ],
+      "tags": [
+        "baguette",
+        "bread",
+        "french",
+        "food"
+      ],
+      "source": "https://poly.pizza/m/HPvkMpqqTg",
+      "license": "CC0",
+      "attribution": "Isa Lousberg"
+    },
+    {
+      "id": "algiers-low-stucco-wall-01",
+      "path": "assets/algiers/low-stucco-wall.glb",
+      "name": "Low Stone Wall",
+      "category": "architecture",
+      "description": "Low stucco/stone wall section.",
+      "size_m": 2,
+      "use_cases": [
+        "algiers",
+        "courtyard"
+      ],
+      "tags": [
+        "wall",
+        "stucco",
+        "low",
+        "stone"
+      ],
+      "source": "https://poly.pizza/m/8C9NBoi9cA",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "algiers-bougainvillea-01",
+      "path": "assets/algiers/bougainvillea.glb",
+      "name": "Bush with Flowers",
+      "category": "nature",
+      "description": "Flowering vine/bush stand-in for bougainvillea.",
+      "size_m": 1.2,
+      "use_cases": [
+        "algiers",
+        "courtyard"
+      ],
+      "tags": [
+        "bougainvillea",
+        "flowers",
+        "vine",
+        "pink"
+      ],
+      "source": "https://poly.pizza/m/U1ymDy8tbY",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "algiers-tram-01",
+      "path": "assets/algiers/tram.glb",
+      "name": "Tram",
+      "category": "props",
+      "description": "Tram/trolley car for city streets.",
+      "size_m": 10,
+      "use_cases": [
+        "algiers",
+        "city"
+      ],
+      "tags": [
+        "tram",
+        "trolley",
+        "streetcar",
+        "transit"
+      ],
+      "source": "https://poly.pizza/m/e9pQgEqPGir",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "igbo-mud-hut-01",
+      "path": "assets/igbo/mud-hut.glb",
+      "name": "Hut",
+      "category": "architecture",
+      "description": "Round mud hut with thatched roof.",
+      "size_m": 4,
+      "use_cases": [
+        "igbo",
+        "village"
+      ],
+      "tags": [
+        "hut",
+        "mud",
+        "thatched",
+        "round"
+      ],
+      "source": "https://poly.pizza/m/wxi3kAu5ey",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "igbo-thatched-storage-01",
+      "path": "assets/igbo/thatched-storage.glb",
+      "name": "Storage Hut",
+      "category": "architecture",
+      "description": "Thatched-roof storage structure.",
+      "size_m": 3,
+      "use_cases": [
+        "igbo",
+        "village"
+      ],
+      "tags": [
+        "thatched",
+        "roof",
+        "straw",
+        "hut"
+      ],
+      "source": "https://poly.pizza/m/BsTn4bKSGb",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "food-yam-01",
+      "path": "assets/food/yam.glb",
+      "name": "Yams",
+      "category": "food",
+      "description": "Bundle of yams.",
+      "size_m": 0.3,
+      "use_cases": [
+        "igbo",
+        "food"
+      ],
+      "tags": [
+        "yam",
+        "tuber",
+        "food",
+        "crop"
+      ],
+      "source": "https://poly.pizza/m/7P6BN0j-qLA",
+      "license": "CC-BY",
+      "attribution": "Jarlan Perez"
+    },
+    {
+      "id": "igbo-mortar-pestle-01",
+      "path": "assets/igbo/mortar-pestle.glb",
+      "name": "Mortar and Pestle",
+      "category": "props",
+      "description": "Wooden mortar and pestle.",
+      "size_m": 0.5,
+      "use_cases": [
+        "igbo",
+        "cooking"
+      ],
+      "tags": [
+        "mortar",
+        "pestle",
+        "wooden",
+        "tool"
+      ],
+      "source": "https://poly.pizza/m/luMO0il9ys",
+      "license": "CC0",
+      "attribution": "MilkAndBanana"
+    },
+    {
+      "id": "igbo-clay-pot-small-01",
+      "path": "assets/igbo/clay-pot-small.glb",
+      "name": "Pot Small",
+      "category": "props",
+      "description": "Small clay/ceramic pot.",
+      "size_m": 0.3,
+      "use_cases": [
+        "igbo",
+        "cooking"
+      ],
+      "tags": [
+        "clay",
+        "pot",
+        "ceramic",
+        "small"
+      ],
+      "source": "https://poly.pizza/m/Olu4b0aiiY",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "igbo-clay-pot-large-01",
+      "path": "assets/igbo/clay-pot-large.glb",
+      "name": "Ceramic Pot Large",
+      "category": "props",
+      "description": "Large storage clay pot.",
+      "size_m": 0.9,
+      "use_cases": [
+        "igbo",
+        "storage"
+      ],
+      "tags": [
+        "clay",
+        "pot",
+        "large",
+        "storage"
+      ],
+      "source": "https://poly.pizza/m/fHMy0Xrb0V",
+      "license": "CC0",
+      "attribution": "MilkAndBanana"
+    },
+    {
+      "id": "igbo-calabash-bowl-01",
+      "path": "assets/igbo/calabash-bowl.glb",
+      "name": "Bowl Broth",
+      "category": "props",
+      "description": "Round bowl stand-in for calabash/gourd.",
+      "size_m": 0.2,
+      "use_cases": [
+        "igbo",
+        "food"
+      ],
+      "tags": [
+        "calabash",
+        "gourd",
+        "bowl",
+        "food"
+      ],
+      "source": "https://poly.pizza/m/gXGh0YtJ4W",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "igbo-ceremonial-mask-01",
+      "path": "assets/igbo/ceremonial-mask.glb",
+      "name": "Tiki Head",
+      "category": "props",
+      "description": "Stylized ceremonial wooden mask.",
+      "size_m": 0.6,
+      "use_cases": [
+        "igbo",
+        "ritual"
+      ],
+      "tags": [
+        "mask",
+        "ceremonial",
+        "wooden",
+        "ritual"
+      ],
+      "source": "https://poly.pizza/m/98mRturOg91",
+      "license": "CC-BY",
+      "attribution": "Tipatat Chennavasin"
+    },
+    {
+      "id": "igbo-machete-01",
+      "path": "assets/igbo/machete.glb",
+      "name": "Machete",
+      "category": "tools",
+      "description": "Machete/cutlass tool.",
+      "size_m": 0.6,
+      "use_cases": [
+        "igbo",
+        "farming"
+      ],
+      "tags": [
+        "machete",
+        "cutlass",
+        "blade",
+        "tool"
+      ],
+      "source": "https://poly.pizza/m/SMBU5kBYtZ",
+      "license": "CC0",
+      "attribution": "CreativeTrio"
+    },
+    {
+      "id": "igbo-woven-basket-round-01",
+      "path": "assets/igbo/woven-basket-round.glb",
+      "name": "Basket Round",
+      "category": "props",
+      "description": "Round woven basket.",
+      "size_m": 0.4,
+      "use_cases": [
+        "igbo",
+        "market"
+      ],
+      "tags": [
+        "basket",
+        "woven",
+        "round",
+        "storage"
+      ],
+      "source": "https://poly.pizza/m/a0umk-CRRwo",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "igbo-woven-basket-tall-01",
+      "path": "assets/igbo/woven-basket-tall.glb",
+      "name": "Picnic Basket",
+      "category": "props",
+      "description": "Tall basket for transport.",
+      "size_m": 0.5,
+      "use_cases": [
+        "igbo",
+        "market"
+      ],
+      "tags": [
+        "basket",
+        "tall",
+        "carrying",
+        "woven"
+      ],
+      "source": "https://poly.pizza/m/aWBGhxXig8y",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "igbo-igbo-stool-01",
+      "path": "assets/igbo/igbo-stool.glb",
+      "name": "Low Stool",
+      "category": "furniture",
+      "description": "Low African-style wooden stool.",
+      "size_m": 0.5,
+      "use_cases": [
+        "igbo",
+        "handmaid"
+      ],
+      "tags": [
+        "stool",
+        "wooden",
+        "low",
+        "seat"
+      ],
+      "source": "https://poly.pizza/m/FQj3bKSzdw",
+      "license": "CC0",
+      "attribution": "iPoly3D"
+    },
+    {
+      "id": "igbo-yam-mound-01",
+      "path": "assets/igbo/yam-mound.glb",
+      "name": "Farm Dirt",
+      "category": "nature",
+      "description": "Cultivated earth mound for yams.",
+      "size_m": 1,
+      "use_cases": [
+        "igbo",
+        "farm"
+      ],
+      "tags": [
+        "mound",
+        "farm",
+        "dirt",
+        "yam"
+      ],
+      "source": "https://poly.pizza/m/8BQFbUMOeC",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "food-cassava-plant-01",
+      "path": "assets/food/cassava-plant.glb",
+      "name": "Sweet Potato",
+      "category": "food",
+      "description": "Root vegetable stand-in for cassava.",
+      "size_m": 0.25,
+      "use_cases": [
+        "igbo",
+        "food"
+      ],
+      "tags": [
+        "cassava",
+        "root",
+        "vegetable",
+        "crop"
+      ],
+      "source": "https://poly.pizza/m/9RBO2tCJ9lk",
+      "license": "CC-BY",
+      "attribution": "jeremy"
+    },
+    {
+      "id": "igbo-palm-wine-gourd-01",
+      "path": "assets/igbo/palm-wine-gourd.glb",
+      "name": "Jug",
+      "category": "props",
+      "description": "Gourd-shaped jug for palm wine.",
+      "size_m": 0.3,
+      "use_cases": [
+        "igbo",
+        "food"
+      ],
+      "tags": [
+        "gourd",
+        "jug",
+        "palm wine",
+        "vessel"
+      ],
+      "source": "https://poly.pizza/m/19TCZFj-6jI",
+      "license": "CC-BY",
+      "attribution": "Jarlan Perez"
+    },
+    {
+      "id": "characters-igbo-man-01",
+      "path": "assets/characters/igbo-man.glb",
+      "name": "Tribal Man",
+      "category": "characters",
+      "description": "Traditional-attire male figure.",
+      "size_m": 1.8,
+      "use_cases": [
+        "igbo",
+        "village"
+      ],
+      "tags": [
+        "igbo",
+        "man",
+        "tribal",
+        "traditional"
+      ],
+      "source": "https://poly.pizza/m/vrdJP4oV26",
+      "license": "CC0",
+      "attribution": "Polygonal Mind"
+    },
+    {
+      "id": "characters-igbo-woman-01",
+      "path": "assets/characters/igbo-woman.glb",
+      "name": "Tribal Woman",
+      "category": "characters",
+      "description": "Female figure in traditional wrapper.",
+      "size_m": 1.7,
+      "use_cases": [
+        "igbo",
+        "village"
+      ],
+      "tags": [
+        "igbo",
+        "woman",
+        "tribal",
+        "wrapper"
+      ],
+      "source": "https://poly.pizza/m/t91lDHaqRW",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "igbo-village-drum-01",
+      "path": "assets/igbo/village-drum.glb",
+      "name": "Drum",
+      "category": "props",
+      "description": "Djembe-style village drum.",
+      "size_m": 0.8,
+      "use_cases": [
+        "igbo",
+        "ceremony"
+      ],
+      "tags": [
+        "drum",
+        "djembe",
+        "percussion",
+        "ceremonial"
+      ],
+      "source": "https://poly.pizza/m/5Wp2emwd7xw",
+      "license": "CC-BY",
+      "attribution": "jeremy"
+    },
+    {
+      "id": "igbo-compound-wall-01",
+      "path": "assets/igbo/compound-wall.glb",
+      "name": "Mud Wall",
+      "category": "architecture",
+      "description": "Low mud compound wall.",
+      "size_m": 3,
+      "use_cases": [
+        "igbo",
+        "village"
+      ],
+      "tags": [
+        "wall",
+        "compound",
+        "mud",
+        "boundary"
+      ],
+      "source": "https://poly.pizza/m/CkF171SeTV",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "handmaid-red-cloak-figure-01",
+      "path": "assets/handmaid/red-cloak-figure.glb",
+      "name": "Hooded Adventurer",
+      "category": "characters",
+      "description": "Standing hooded figure; recolor as red cloak.",
+      "size_m": 1.8,
+      "use_cases": [
+        "handmaid"
+      ],
+      "tags": [
+        "cloak",
+        "hooded",
+        "handmaid",
+        "red"
+      ],
+      "source": "https://poly.pizza/m/y9KWOVG21R",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "handmaid-winged-bonnet-figure-01",
+      "path": "assets/handmaid/winged-bonnet-figure.glb",
+      "name": "Hooded Stranger",
+      "category": "characters",
+      "description": "Hooded/cowled figure for winged bonnet handmaid.",
+      "size_m": 1.8,
+      "use_cases": [
+        "handmaid"
+      ],
+      "tags": [
+        "handmaid",
+        "bonnet",
+        "hooded",
+        "figure"
+      ],
+      "source": "https://poly.pizza/m/0domsLgwnKq",
+      "license": "CC-BY",
+      "attribution": "Thomas DR"
+    },
+    {
+      "id": "handmaid-shaker-stool-01",
+      "path": "assets/handmaid/shaker-stool.glb",
+      "name": "Shaker Stool",
+      "category": "furniture",
+      "description": "Plain wooden Shaker-style stool.",
+      "size_m": 0.5,
+      "use_cases": [
+        "handmaid",
+        "austere"
+      ],
+      "tags": [
+        "stool",
+        "shaker",
+        "plain",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/cLydFlVg-wI",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "handmaid-red-tulip-patch-01",
+      "path": "assets/handmaid/red-tulip-patch.glb",
+      "name": "Tulips",
+      "category": "nature",
+      "description": "Patch of red tulips.",
+      "size_m": 0.5,
+      "use_cases": [
+        "handmaid",
+        "garden"
+      ],
+      "tags": [
+        "tulips",
+        "red",
+        "flowers",
+        "patch"
+      ],
+      "source": "https://poly.pizza/m/aaJtRIXws3U",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "handmaid-scissors-01",
+      "path": "assets/handmaid/scissors.glb",
+      "name": "Scissors",
+      "category": "props",
+      "description": "Pair of scissors.",
+      "size_m": 0.15,
+      "use_cases": [
+        "handmaid",
+        "symbolic"
+      ],
+      "tags": [
+        "scissors",
+        "sharp",
+        "sewing",
+        "cut"
+      ],
+      "source": "https://poly.pizza/m/bPoDmWdmdj",
+      "license": "CC0",
+      "attribution": "MilkAndBanana"
+    },
+    {
+      "id": "handmaid-austere-window-01",
+      "path": "assets/handmaid/austere-window.glb",
+      "name": "Austere Window",
+      "category": "architecture",
+      "description": "Austere window with simple frame.",
+      "size_m": 1.2,
+      "use_cases": [
+        "handmaid",
+        "interior"
+      ],
+      "tags": [
+        "window",
+        "austere",
+        "simple",
+        "shutters"
+      ],
+      "source": "https://poly.pizza/m/QkcvcLgHcd",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "handmaid-garden-gate-01",
+      "path": "assets/handmaid/garden-gate.glb",
+      "name": "Gate Double",
+      "category": "architecture",
+      "description": "Austere garden gate.",
+      "size_m": 2,
+      "use_cases": [
+        "handmaid",
+        "garden"
+      ],
+      "tags": [
+        "gate",
+        "garden",
+        "austere",
+        "entry"
+      ],
+      "source": "https://poly.pizza/m/TYTjhBKIym",
+      "license": "CC0",
+      "attribution": "Isa Lousberg"
+    },
+    {
+      "id": "handmaid-bicycle-01",
+      "path": "assets/handmaid/bicycle.glb",
+      "name": "Bicycle",
+      "category": "props",
+      "description": "Simple bicycle.",
+      "size_m": 1.7,
+      "use_cases": [
+        "handmaid",
+        "modern"
+      ],
+      "tags": [
+        "bicycle",
+        "bike",
+        "transport",
+        "simple"
+      ],
+      "source": "https://poly.pizza/m/19VoUuA2pcN",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "handmaid-watchtower-01",
+      "path": "assets/handmaid/watchtower.glb",
+      "name": "Watch Tower",
+      "category": "architecture",
+      "description": "Tall abstract watchtower.",
+      "size_m": 8,
+      "use_cases": [
+        "handmaid",
+        "dystopia"
+      ],
+      "tags": [
+        "watchtower",
+        "guard",
+        "tall",
+        "abstract"
+      ],
+      "source": "https://poly.pizza/m/f2J0aSLVi4",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "handmaid-cloth-on-hook-01",
+      "path": "assets/handmaid/cloth-on-hook.glb",
+      "name": "Wardrobe Hanger",
+      "category": "props",
+      "description": "Hanging cloth/robe on hook.",
+      "size_m": 1.2,
+      "use_cases": [
+        "handmaid",
+        "interior"
+      ],
+      "tags": [
+        "robe",
+        "cloth",
+        "hanging",
+        "hook"
+      ],
+      "source": "https://poly.pizza/m/7Am6p3KyrWR",
+      "license": "CC-BY",
+      "attribution": "\u00c1d\u00e1m Knapecz"
+    },
+    {
+      "id": "handmaid-austere-chair-01",
+      "path": "assets/handmaid/austere-chair.glb",
+      "name": "Hard Chair",
+      "category": "furniture",
+      "description": "Hard-backed austere chair.",
+      "size_m": 0.9,
+      "use_cases": [
+        "handmaid",
+        "austere"
+      ],
+      "tags": [
+        "chair",
+        "hard",
+        "austere",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/zMmKNm8w4a",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "handmaid-red-rose-01",
+      "path": "assets/handmaid/red-rose.glb",
+      "name": "Rose",
+      "category": "nature",
+      "description": "Single red rose bloom.",
+      "size_m": 0.3,
+      "use_cases": [
+        "handmaid",
+        "symbolic"
+      ],
+      "tags": [
+        "rose",
+        "red",
+        "flower",
+        "single"
+      ],
+      "source": "https://poly.pizza/m/4UQ29NSK0ir",
+      "license": "CC-BY",
+      "attribution": "Erbay \u00c7ELIK"
+    },
+    {
+      "id": "handmaid-stone-pillar-01",
+      "path": "assets/handmaid/stone-pillar.glb",
+      "name": "Column",
+      "category": "architecture",
+      "description": "Stone pillar/pedestal.",
+      "size_m": 2,
+      "use_cases": [
+        "handmaid",
+        "castle"
+      ],
+      "tags": [
+        "pillar",
+        "stone",
+        "pedestal",
+        "column"
+      ],
+      "source": "https://poly.pizza/m/wLubNpOTX4",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "characters-woman-silhouette-red-01",
+      "path": "assets/characters/woman-silhouette-red.glb",
+      "name": "Woman Seated",
+      "category": "characters",
+      "description": "Seated woman figure for red-dress silhouette.",
+      "size_m": 1.7,
+      "use_cases": [
+        "handmaid"
+      ],
+      "tags": [
+        "woman",
+        "silhouette",
+        "red",
+        "seated"
+      ],
+      "source": "https://poly.pizza/m/AQsd9ngvKU",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "handmaid-cross-frame-window-01",
+      "path": "assets/handmaid/cross-frame-window.glb",
+      "name": "Big Window",
+      "category": "architecture",
+      "description": "Simple wooden cross-frame window.",
+      "size_m": 1.2,
+      "use_cases": [
+        "handmaid",
+        "interior"
+      ],
+      "tags": [
+        "window",
+        "cross",
+        "wooden",
+        "simple"
+      ],
+      "source": "https://poly.pizza/m/eKPRsuda1HN",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "handmaid-plain-writing-desk-01",
+      "path": "assets/handmaid/plain-writing-desk.glb",
+      "name": "Plain Desk",
+      "category": "furniture",
+      "description": "Plain wooden writing desk.",
+      "size_m": 1.2,
+      "use_cases": [
+        "handmaid",
+        "interior"
+      ],
+      "tags": [
+        "desk",
+        "writing",
+        "plain",
+        "wooden"
+      ],
+      "source": "https://poly.pizza/m/V86Go2rlnq",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "korean-market-shelf-01",
+      "path": "assets/korean/market-shelf.glb",
+      "name": "Shelf Tall",
+      "category": "furniture",
+      "description": "Tall stocked shelf for Korean market.",
+      "size_m": 2,
+      "use_cases": [
+        "korean",
+        "market"
+      ],
+      "tags": [
+        "shelf",
+        "market",
+        "tall",
+        "stocked"
+      ],
+      "source": "https://poly.pizza/m/TDgvIuorcX",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "food-kimchi-jar-01",
+      "path": "assets/food/kimchi-jar.glb",
+      "name": "Banchan",
+      "category": "food",
+      "description": "Traditional banchan/kimchi ceramic dish.",
+      "size_m": 0.2,
+      "use_cases": [
+        "korean",
+        "food"
+      ],
+      "tags": [
+        "kimchi",
+        "jar",
+        "ceramic",
+        "korean"
+      ],
+      "source": "https://poly.pizza/m/fIhe5Iz3jTB",
+      "license": "CC-BY",
+      "attribution": "Jimi Youm"
+    },
+    {
+      "id": "food-ramyun-01",
+      "path": "assets/food/ramyun.glb",
+      "name": "Ramen",
+      "category": "food",
+      "description": "Bowl of ramen/ramyun noodles.",
+      "size_m": 0.2,
+      "use_cases": [
+        "korean",
+        "food"
+      ],
+      "tags": [
+        "ramen",
+        "ramyun",
+        "noodles",
+        "korean"
+      ],
+      "source": "https://poly.pizza/m/DTOzkHhvDK",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "korean-rice-cooker-01",
+      "path": "assets/korean/rice-cooker.glb",
+      "name": "Rice Cooker",
+      "category": "props",
+      "description": "Korean rice cooker appliance.",
+      "size_m": 0.4,
+      "use_cases": [
+        "korean",
+        "kitchen"
+      ],
+      "tags": [
+        "rice",
+        "cooker",
+        "korean",
+        "appliance"
+      ],
+      "source": "https://poly.pizza/m/b1UsSWf1sy",
+      "license": "CC0",
+      "attribution": "MilkAndBanana"
+    },
+    {
+      "id": "korean-chopsticks-01",
+      "path": "assets/korean/chopsticks.glb",
+      "name": "Chopsticks",
+      "category": "props",
+      "description": "Pair of chopsticks.",
+      "size_m": 0.25,
+      "use_cases": [
+        "korean",
+        "food"
+      ],
+      "tags": [
+        "chopsticks",
+        "pair",
+        "utensils",
+        "asian"
+      ],
+      "source": "https://poly.pizza/m/LD1IEWZkn1",
+      "license": "CC0",
+      "attribution": "MilkAndBanana"
+    },
+    {
+      "id": "korean-rice-bowl-01",
+      "path": "assets/korean/rice-bowl.glb",
+      "name": "Bowl Soup",
+      "category": "props",
+      "description": "Small white rice bowl.",
+      "size_m": 0.15,
+      "use_cases": [
+        "korean",
+        "food"
+      ],
+      "tags": [
+        "rice",
+        "bowl",
+        "white",
+        "small"
+      ],
+      "source": "https://poly.pizza/m/GwyYbV6NNw",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "korean-hospital-bed-01",
+      "path": "assets/korean/hospital-bed.glb",
+      "name": "Hospital Bed",
+      "category": "furniture",
+      "description": "Hospital bed with rails.",
+      "size_m": 2.1,
+      "use_cases": [
+        "korean",
+        "hospital"
+      ],
+      "tags": [
+        "hospital",
+        "bed",
+        "medical",
+        "rails"
+      ],
+      "source": "https://poly.pizza/m/9sUalfQ76kn",
+      "license": "CC-BY",
+      "attribution": "GRADD CO"
+    },
+    {
+      "id": "korean-iv-stand-01",
+      "path": "assets/korean/iv-stand.glb",
+      "name": "IV Stand",
+      "category": "props",
+      "description": "Hospital IV drip stand.",
+      "size_m": 1.7,
+      "use_cases": [
+        "korean",
+        "hospital"
+      ],
+      "tags": [
+        "IV",
+        "stand",
+        "drip",
+        "hospital"
+      ],
+      "source": "https://poly.pizza/m/2S4tGImSXzt",
+      "license": "CC-BY",
+      "attribution": "Daisuke Takeoka"
+    },
+    {
+      "id": "korean-chrysanthemum-01",
+      "path": "assets/korean/chrysanthemum.glb",
+      "name": "Daisy",
+      "category": "nature",
+      "description": "Single daisy/chrysanthemum flower.",
+      "size_m": 0.4,
+      "use_cases": [
+        "korean",
+        "funeral"
+      ],
+      "tags": [
+        "chrysanthemum",
+        "flower",
+        "white",
+        "single"
+      ],
+      "source": "https://poly.pizza/m/cuayhwWYHet",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "korean-piano-modern-01",
+      "path": "assets/korean/piano-modern.glb",
+      "name": "Piano Modern",
+      "category": "props",
+      "description": "Upright modern piano.",
+      "size_m": 1.5,
+      "use_cases": [
+        "korean",
+        "home"
+      ],
+      "tags": [
+        "piano",
+        "upright",
+        "music",
+        "instrument"
+      ],
+      "source": "https://poly.pizza/m/1YoE664mJTd",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "korean-acoustic-guitar-01",
+      "path": "assets/korean/acoustic-guitar.glb",
+      "name": "Acoustic Guitar",
+      "category": "props",
+      "description": "Acoustic guitar instrument.",
+      "size_m": 1,
+      "use_cases": [
+        "korean",
+        "home"
+      ],
+      "tags": [
+        "guitar",
+        "acoustic",
+        "music",
+        "instrument"
+      ],
+      "source": "https://poly.pizza/m/bf6_h_1wp2D",
+      "license": "CC-BY",
+      "attribution": "Dave Edwards"
+    },
+    {
+      "id": "korean-photo-frame-01",
+      "path": "assets/korean/photo-frame.glb",
+      "name": "Picture Frame",
+      "category": "props",
+      "description": "Modern family photo frame.",
+      "size_m": 0.3,
+      "use_cases": [
+        "korean",
+        "home"
+      ],
+      "tags": [
+        "photo",
+        "frame",
+        "family",
+        "modern"
+      ],
+      "source": "https://poly.pizza/m/6FS0HuI4XXz",
+      "license": "CC-BY",
+      "attribution": "Gabriel Valdivia"
+    },
+    {
+      "id": "korean-korean-bbq-grill-01",
+      "path": "assets/korean/korean-bbq-grill.glb",
+      "name": "Barbecue",
+      "category": "props",
+      "description": "Small tabletop BBQ grill.",
+      "size_m": 0.6,
+      "use_cases": [
+        "korean",
+        "food"
+      ],
+      "tags": [
+        "BBQ",
+        "grill",
+        "korean",
+        "tabletop"
+      ],
+      "source": "https://poly.pizza/m/ZZyQvAYY5L",
+      "license": "CC0",
+      "attribution": "CreativeTrio"
+    },
+    {
+      "id": "korean-cafeteria-tray-01",
+      "path": "assets/korean/cafeteria-tray.glb",
+      "name": "Tray",
+      "category": "props",
+      "description": "Cafeteria tray with compartments.",
+      "size_m": 0.35,
+      "use_cases": [
+        "korean",
+        "cafeteria"
+      ],
+      "tags": [
+        "tray",
+        "cafeteria",
+        "compartments",
+        "food"
+      ],
+      "source": "https://poly.pizza/m/ZolilLk3ft",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "korean-stethoscope-01",
+      "path": "assets/korean/stethoscope.glb",
+      "name": "Stethoscope",
+      "category": "props",
+      "description": "Medical stethoscope.",
+      "size_m": 0.4,
+      "use_cases": [
+        "korean",
+        "hospital"
+      ],
+      "tags": [
+        "stethoscope",
+        "medical",
+        "hospital",
+        "doctor"
+      ],
+      "source": "https://poly.pizza/m/a1ukOFrR9nJ",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "korean-visitor-chair-01",
+      "path": "assets/korean/visitor-chair.glb",
+      "name": "Office Chair",
+      "category": "furniture",
+      "description": "Visitor chair for hospital or office.",
+      "size_m": 0.9,
+      "use_cases": [
+        "korean",
+        "hospital"
+      ],
+      "tags": [
+        "chair",
+        "visitor",
+        "hospital",
+        "seat"
+      ],
+      "source": "https://poly.pizza/m/UfKvrZBK6C",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "korean-refrigerator-01",
+      "path": "assets/korean/refrigerator.glb",
+      "name": "Fridge",
+      "category": "furniture",
+      "description": "Modern refrigerator.",
+      "size_m": 1.8,
+      "use_cases": [
+        "korean",
+        "kitchen"
+      ],
+      "tags": [
+        "fridge",
+        "refrigerator",
+        "modern",
+        "kitchen"
+      ],
+      "source": "https://poly.pizza/m/8sjRm8fnHh",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "korean-kitchen-sink-01",
+      "path": "assets/korean/kitchen-sink.glb",
+      "name": "Kitchen Sink",
+      "category": "furniture",
+      "description": "Modern kitchen sink.",
+      "size_m": 1,
+      "use_cases": [
+        "korean",
+        "kitchen"
+      ],
+      "tags": [
+        "sink",
+        "kitchen",
+        "modern",
+        "plumbing"
+      ],
+      "source": "https://poly.pizza/m/nNGtcp9qK2",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "korean-ceramic-teapot-01",
+      "path": "assets/korean/ceramic-teapot.glb",
+      "name": "Chinese Tea Pot",
+      "category": "props",
+      "description": "Asian-style ceramic teapot.",
+      "size_m": 0.25,
+      "use_cases": [
+        "korean",
+        "home"
+      ],
+      "tags": [
+        "teapot",
+        "ceramic",
+        "asian",
+        "tea"
+      ],
+      "source": "https://poly.pizza/m/8CehjFekLaY",
+      "license": "CC-BY",
+      "attribution": "Merlin Cheng"
+    },
+    {
+      "id": "food-rice-bag-01",
+      "path": "assets/food/rice-bag.glb",
+      "name": "Rice Ball",
+      "category": "food",
+      "description": "Rice item stand-in for rice bag.",
+      "size_m": 0.25,
+      "use_cases": [
+        "korean",
+        "kitchen"
+      ],
+      "tags": [
+        "rice",
+        "bag",
+        "sack",
+        "food"
+      ],
+      "source": "https://poly.pizza/m/BYwdAyw9aY",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "korean-kitchen-cabinet-01",
+      "path": "assets/korean/kitchen-cabinet.glb",
+      "name": "Kitchen Cabinet",
+      "category": "furniture",
+      "description": "Modern kitchen cabinet/counter.",
+      "size_m": 1.2,
+      "use_cases": [
+        "korean",
+        "kitchen"
+      ],
+      "tags": [
+        "kitchen",
+        "cabinet",
+        "counter",
+        "modern"
+      ],
+      "source": "https://poly.pizza/m/jRPnkxtk8s",
+      "license": "CC0",
+      "attribution": "Kenney"
+    },
+    {
+      "id": "korean-round-dining-table-01",
+      "path": "assets/korean/round-dining-table.glb",
+      "name": "Round Dining Table",
+      "category": "furniture",
+      "description": "Modern round dining table.",
+      "size_m": 1.4,
+      "use_cases": [
+        "korean",
+        "home"
+      ],
+      "tags": [
+        "dining",
+        "table",
+        "modern",
+        "round"
+      ],
+      "source": "https://poly.pizza/m/aG6qYcqcI0",
+      "license": "CC0",
+      "attribution": "CreativeTrio"
+    },
+    {
+      "id": "korean-modern-umbrella-01",
+      "path": "assets/korean/modern-umbrella.glb",
+      "name": "Umbrella",
+      "category": "props",
+      "description": "Modern umbrella for rain.",
+      "size_m": 1,
+      "use_cases": [
+        "korean",
+        "modern"
+      ],
+      "tags": [
+        "umbrella",
+        "modern",
+        "rain",
+        "clear"
+      ],
+      "source": "https://poly.pizza/m/ez4MoDQFgXz",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "nature-full-moon-01",
+      "path": "assets/nature/full-moon.glb",
+      "name": "Moon",
+      "category": "nature",
+      "description": "Glowing full moon disc.",
+      "size_m": 3,
+      "use_cases": [
+        "castle",
+        "atmospheric"
+      ],
+      "tags": [
+        "moon",
+        "full",
+        "glowing",
+        "night"
+      ],
+      "source": "https://poly.pizza/m/9OPocAqXM0u",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "nature-cloud-01",
+      "path": "assets/nature/cloud.glb",
+      "name": "Cloud",
+      "category": "nature",
+      "description": "Low-poly single cloud.",
+      "size_m": 3,
+      "use_cases": [
+        "atmospheric",
+        "sky"
+      ],
+      "tags": [
+        "cloud",
+        "sky",
+        "low-poly",
+        "white"
+      ],
+      "source": "https://poly.pizza/m/KdFNOVn1Gf",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "characters-butterfly-01",
+      "path": "assets/characters/butterfly.glb",
+      "name": "Butterfly",
+      "category": "characters",
+      "description": "Single butterfly.",
+      "size_m": 0.15,
+      "use_cases": [
+        "atmospheric",
+        "garden"
+      ],
+      "tags": [
+        "butterfly",
+        "insect",
+        "wings",
+        "colorful"
+      ],
+      "source": "https://poly.pizza/m/e9NAQQrCbLu",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "architecture-cobblestone-patch-01",
+      "path": "assets/architecture/cobblestone-patch.glb",
+      "name": "Cobblestone Tile",
+      "category": "architecture",
+      "description": "Cobblestone path patch.",
+      "size_m": 1.5,
+      "use_cases": [
+        "castle",
+        "algiers"
+      ],
+      "tags": [
+        "cobblestone",
+        "stone",
+        "path",
+        "tile"
+      ],
+      "source": "https://poly.pizza/m/UAXFoEBU8S",
+      "license": "CC0",
+      "attribution": "Kay Lousberg"
+    },
+    {
+      "id": "architecture-dirt-road-patch-01",
+      "path": "assets/architecture/dirt-road-patch.glb",
+      "name": "Dirt Floor Tile",
+      "category": "architecture",
+      "description": "Dirt road/path patch.",
+      "size_m": 1.5,
+      "use_cases": [
+        "igbo",
+        "village"
+      ],
+      "tags": [
+        "dirt",
+        "road",
+        "path",
+        "ground"
+      ],
+      "source": "https://poly.pizza/m/F0ZVJsCnI3",
+      "license": "CC0",
+      "attribution": "Kay Lousberg"
+    },
+    {
+      "id": "nature-snow-patch-01",
+      "path": "assets/nature/snow-patch.glb",
+      "name": "Rock Snow",
+      "category": "nature",
+      "description": "Snow patch/pile on rock.",
+      "size_m": 1.5,
+      "use_cases": [
+        "atmospheric",
+        "winter"
+      ],
+      "tags": [
+        "snow",
+        "patch",
+        "pile",
+        "winter"
+      ],
+      "source": "https://poly.pizza/m/eZRzCg5BcR",
+      "license": "CC0",
+      "attribution": "Quaternius"
+    },
+    {
+      "id": "nature-puddle-01",
+      "path": "assets/nature/puddle.glb",
+      "name": "Pond",
+      "category": "nature",
+      "description": "Small pond stand-in for puddle.",
+      "size_m": 1.2,
+      "use_cases": [
+        "atmospheric",
+        "rain"
+      ],
+      "tags": [
+        "puddle",
+        "water",
+        "pond",
+        "reflection"
+      ],
+      "source": "https://poly.pizza/m/5rf3YuZfJAW",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "nature-stepping-stones-01",
+      "path": "assets/nature/stepping-stones.glb",
+      "name": "Stones",
+      "category": "nature",
+      "description": "Small stones arranged as stepping stones.",
+      "size_m": 1.5,
+      "use_cases": [
+        "atmospheric",
+        "garden"
+      ],
+      "tags": [
+        "stones",
+        "stepping",
+        "path",
+        "rocks"
+      ],
+      "source": "https://poly.pizza/m/0vAJVcMEFdv",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "nature-mossy-rock-01",
+      "path": "assets/nature/mossy-rock.glb",
+      "name": "Rock Moss",
+      "category": "nature",
+      "description": "Moss-covered rock.",
+      "size_m": 0.8,
+      "use_cases": [
+        "atmospheric",
+        "nature"
+      ],
+      "tags": [
+        "rock",
+        "moss",
+        "stone",
+        "forest"
+      ],
+      "source": "https://poly.pizza/m/Oar39tFugM",
+      "license": "CC0",
+      "attribution": "Quaternius"
     }
   ]
 }
