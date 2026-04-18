@@ -103,6 +103,18 @@ export class GuideBook {
     };
   }
 
+  /** Distance from the camera (the player) to the guide book, in meters. */
+  distanceToCamera(camera) {
+    // Use this._position (the tweened target), not this.mesh.position, so the
+    // bob/spin offsets don't create micro-oscillations at the threshold.
+    return camera.position.distanceTo(this._position);
+  }
+
+  /** True when the book has finished moving to its current waypoint. */
+  isSettled() {
+    return this._tween === null;
+  }
+
   /** Per-frame update. Call from the scene's render loop. */
   update(dt) {
     // Tween between waypoints

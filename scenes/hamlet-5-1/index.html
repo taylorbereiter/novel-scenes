@@ -40,9 +40,11 @@ import {
   makeExaminable,
   enableExamination,
   startRenderLoop
-} from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js';
-import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js';
-import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js';
+} from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/scene-loader.js?v=4';
+import { BeatEngine } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/beat-engine.js?v=4';
+import { BookUI }    from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/book-ui.js?v=4';
+import { GuideBook } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/guide-book.js?v=4';
+import { PlayerControls } from 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/framework/player-controls.js?v=4';
 
 BookUI.mount();
 
@@ -179,7 +181,21 @@ makeExaminable(mound, 'grave', () => {
 enableExamination(camera);
 
 /* ============================================================
-   BEATS — a single beat for this test scene
+   GUIDE BOOK + PLAYER CONTROLS
+   ============================================================ */
+const guideBook = new GuideBook(scene);
+guideBook.addCollidable(stone1);
+guideBook.addCollidable(stone2);
+guideBook.addCollidable(cross);
+guideBook.addCollidable(tree);
+
+const controls = new PlayerControls(camera, {
+  colliders: [stone1, stone2, cross, tree, bench],
+  bounds: { x: [-14, 14], z: [-10, 14] }
+});
+
+/* ============================================================
+   BEATS — the player walks between them at their own pace
    ============================================================ */
 const BEATS = [
   {
@@ -188,14 +204,19 @@ const BEATS = [
     text: 'Hamlet and Horatio arrive at a freshly-dug grave. The gravedigger has tossed up a skull. <span class="hl">The skull on the ground arrests him.</span>',
     gloss: 'Three things lie at his feet: a <em>skull</em>, a <em>spade</em>, and the <em>grave</em> itself. Click each to read what Hamlet says about it. Then press Space.',
     cite: 'Hamlet · Act 5, Scene 1',
-    cameraPos: [0, 2.4, 7],
-    cameraLookAt: [0, 0.6, 0]
+    bookPos: [0, 1.5, 2.5]
   }
 ];
 
+const BOOK_WAYPOINTS = BEATS.map(b => b.bookPos);
+guideBook.placeAt(BOOK_WAYPOINTS[0]);
+
 await BeatEngine.init({
   camera,
-  onBeat: (beat, i, total) => BookUI.showBeat(beat, i, total),
+  onBeat: (beat, i, total) => {
+    BookUI.setBeat(beat, i, total);
+    guideBook.moveTo(BOOK_WAYPOINTS[i]);
+  },
   onEnd: () => BookUI.showEnding({
     eyebrow: 'End of Scene · Hamlet V.i',
     finalLine: '"To what base uses we may return, Horatio."',
@@ -208,13 +229,23 @@ await BookUI.showTitle({
   author: 'William Shakespeare',
   title: 'Hamlet',
   chapter: 'Act 5 · Scene 1',
-  intro: 'A churchyard. A freshly-dug grave. The gravedigger at his work.<br><br>Follow the book. Click what you want to examine. When you are ready, press <em>Space</em>.',
+  intro: 'A churchyard. A freshly-dug grave. The gravedigger at his work.<br><br>Walk up to the floating book to read. Click what you want to examine. When you are ready, press <em>Space</em>.',
   startLabel: 'Enter the graveyard'
 });
 
 BeatEngine.start(BEATS);
 
-startRenderLoop({ scene, camera, renderer, composer });
+startRenderLoop({
+  scene, camera, renderer, composer,
+  onFrame: (dt) => {
+    controls.update(dt);
+    guideBook.update(dt);
+    BookUI.updateProximity(
+      guideBook.distanceToCamera(camera),
+      guideBook.isSettled()
+    );
+  }
+});
 </script>
 </body>
 </html>

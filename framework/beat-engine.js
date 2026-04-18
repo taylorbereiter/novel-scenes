@@ -39,7 +39,7 @@ const state = {
   keydownBound: false,
 };
 
-function smoothMoveCamera(camera, targetPos, targetLook, duration = 1.2) {
+export function smoothMoveCamera(camera, targetPos, targetLook, duration = 1.2) {
   // Simple tween: lerps position and lookAt over `duration` seconds.
   if (!targetPos && !targetLook) return;
   const startPos = camera.position.clone();
@@ -71,9 +71,9 @@ async function ensureTHREE() {
 }
 
 function applyBeat(beat) {
-  if (state.camera && (beat.cameraPos || beat.cameraLookAt)) {
-    smoothMoveCamera(state.camera, beat.cameraPos, beat.cameraLookAt, beat.cameraDuration ?? 1.2);
-  }
+  // The camera is the player's body — we do NOT auto-teleport it on beat change.
+  // If a scene really wants cinematic camera moves, it can call smoothMoveCamera
+  // from its own onEnter hook. Default behavior is: player walks at their own pace.
   if (beat.onEnter) beat.onEnter();
   if (state.onBeat) state.onBeat(beat, state.index, state.beats.length);
 }

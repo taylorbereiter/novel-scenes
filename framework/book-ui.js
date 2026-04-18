@@ -340,10 +340,11 @@ const HTML = `
 <div id="hud" style="display:none">Beat <span class="num" id="beat-num">1</span> / <span id="beat-total">1</span></div>
 <div id="controls" style="display:none">
   <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> walk &nbsp;·&nbsp;
-  <kbd>Shift</kbd> run<br>
-  <kbd>Click</kbd> examine &nbsp;·&nbsp;
-  <kbd>B</kbd> hide book &nbsp;·&nbsp;
-  <kbd>Space</kbd> continue
+  Arrows look<br>
+  Walk up to the book to read &nbsp;·&nbsp;
+  <kbd>Click</kbd> to examine<br>
+  <kbd>Space</kbd> advance the book &nbsp;·&nbsp;
+  <kbd>B</kbd> hide book
 </div>
 
 <div id="page">
@@ -394,21 +395,29 @@ const HTML = `
 let _mounted = false;
 let _onRestart = null;
 let _bookVisible = true;
+// User explicitly hid the panel with B — overrides proximity reveal until next beat.
+let _userDismissed = false;
+// Proximity thresholds (meters, camera → guide book).
+const NEAR = 2.6;
+const FAR  = 3.6;
 
 function $(id) { return document.getElementById(id); }
 
 function hideBook() {
   const page = $('page');
   if (!page.classList.contains('show')) return; // nothing to hide
-  page.classList.add('hidden');
-  $('book-toggle').classList.add('show');
+  page.classList.remove('show');
   _bookVisible = false;
+  _userDismissed = true;
+  $('book-toggle').classList.add('show');
 }
 function showBook() {
   const page = $('page');
+  page.classList.add('show');
   page.classList.remove('hidden');
-  $('book-toggle').classList.remove('show');
   _bookVisible = true;
+  _userDismissed = false;
+  $('book-toggle').classList.remove('show');
 }
 function toggleBook() { _bookVisible ? hideBook() : showBook(); }
 
@@ -491,20 +500,17 @@ export const BookUI = {
   },
 
   /**
-   * Show a beat page. Called by BeatEngine.onBeat.
+   * Set the content of the book panel for the current beat. Does NOT reveal
+   * the panel — that's the job of updateProximity() (or showPanel() if the
+   * scene wants to force it open).
    *
-   *   beat: { label, title, text, cite? }
-   *   note: the book-ui treats beat.text as the LEFT-page quote and beat.gloss
-   *   as the RIGHT-page note. If gloss is omitted, the right leaf gets the
-   *   continuation prompt only.
+   *   beat: { label, title, text, gloss, cite? }
    */
-  showBeat(beat, index = 0, total = 1) {
-    // Hide the ending if it's showing — supports "Walk again"
+  setBeat(beat, index = 0, total = 1) {
     $('ending').classList.remove('show');
-    // Re-show the book on each beat change (in case user hid it)
-    $('page').classList.remove('hidden');
-    $('book-toggle').classList.remove('show');
-    _bookVisible = true;
+    // On every beat change, clear the user-dismissed flag so proximity can
+    // reveal the new content freely.
+    _userDismissed = false;
     $('beat-num').textContent = (index + 1).toString();
     $('beat-total').textContent = total.toString();
     $('beat-label').textContent = beat.label || '';
@@ -512,10 +518,55 @@ export const BookUI = {
     $('beat-quote').innerHTML = beat.text || beat.quote || '';
     $('beat-gloss').innerHTML = beat.gloss || '';
     $('beat-cite').textContent = beat.cite || '';
-    $('page').classList.add('show');
   },
 
-  hideBeat() { $('page').classList.remove('show'); },
+  /**
+   * Legacy: set content AND reveal panel immediately. Prefer setBeat + proximity
+   * for the Stranger-style walk. Kept for scenes that want the sit-and-get flow.
+   */
+  showBeat(beat, index = 0, total = 1) {
+    this.setBeat(beat, index, total);
+    this.showPanel();
+  },
+
+  /** Explicitly reveal the panel (respects user-dismissed state). */
+  showPanel() {
+    if (_userDismissed) return;
+    $('page').classList.add('show');
+    $('page').classList.remove('hidden');
+    _bookVisible = true;
+  },
+
+  /** Explicitly hide the panel (does NOT set the user-dismissed flag). */
+  hidePanel() {
+    $('page').classList.remove('show');
+    _bookVisible = false;
+  },
+
+  /** Back-compat alias. */
+  hideBeat() { this.hidePanel(); },
+
+  /**
+   * Per-frame proximity update. Call from the scene's render loop with:
+   *   distance  — camera-to-guide-book distance in meters
+   *   isSettled — true when the guide book is not currently tweening
+   *
+   * When the player is close (< NEAR) AND the book is settled, reveal the
+   * panel. When the player walks away (> FAR), hide it. Debounced by the
+   * two thresholds.
+   */
+  updateProximity(distance, isSettled) {
+    if (_userDismissed) return;
+    if (!isSettled) {
+      // While the book is moving toward its next waypoint, keep the panel out
+      // of the way so the student can see the book travel.
+      if ($('page').classList.contains('show')) this.hidePanel();
+      return;
+    }
+    const showing = $('page').classList.contains('show');
+    if (!showing && distance < NEAR) this.showPanel();
+    else if (showing && distance > FAR) this.hidePanel();
+  },
 
   /**
    * Show an examinable-object card (called from a makeExaminable onClick).
