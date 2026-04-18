@@ -1,3 +1,116 @@
 {
-  "assets": []
+  "assets": [
+    {
+      "id": "graveyard-gravestone-01",
+      "path": "assets/graveyard/gravestone.glb",
+      "tags": ["gravestone", "tombstone", "headstone", "grave", "marker", "stone", "graveyard", "cemetery", "death", "memento-mori"],
+      "source": "https://poly.pizza/m/ErfdU1GJSD",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "graveyard-coffin-01",
+      "path": "assets/graveyard/coffin.glb",
+      "tags": ["coffin", "casket", "wooden", "burial", "graveyard", "death", "funeral"],
+      "source": "https://poly.pizza/m/ySERERWPgE",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "graveyard-skull-01",
+      "path": "assets/graveyard/skull.glb",
+      "tags": ["skull", "bone", "skeleton", "memento-mori", "graveyard", "death", "yorick", "decay"],
+      "source": "https://poly.pizza/m/7clFQGz5jH",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "graveyard-shovel-01",
+      "path": "assets/graveyard/shovel.glb",
+      "tags": ["shovel", "spade", "tool", "digging", "gravedigger", "graveyard", "burial"],
+      "source": "https://poly.pizza/m/oNBQSf87ZJ",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "graveyard-dirt-mound-01",
+      "path": "assets/graveyard/dirt-mound.glb",
+      "tags": ["dirt", "mound", "grave", "earth", "soil", "freshly-dug", "burial", "graveyard"],
+      "source": "https://poly.pizza/m/Yg8Yz6T8A6",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-cypress-tree-01",
+      "path": "assets/nature/cypress-tree.glb",
+      "tags": ["cypress", "tree", "evergreen", "tall", "narrow", "graveyard", "mediterranean", "mourning"],
+      "source": "https://poly.pizza/m/eUQDPAFMQfv",
+      "license": "CC-BY",
+      "attribution": "Poly by Google"
+    },
+    {
+      "id": "nature-dead-tree-01",
+      "path": "assets/nature/dead-tree.glb",
+      "tags": ["tree", "dead", "bare", "leafless", "winter", "branches", "skeletal", "mourning", "graveyard"],
+      "source": "https://poly.pizza/m/Mcd2zYqyww",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "nature-grass-01",
+      "path": "assets/nature/grass.glb",
+      "tags": ["grass", "tuft", "ground", "vegetation", "nature", "low-poly"],
+      "source": "https://poly.pizza/m/UGTOzcO3P2",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-bench-01",
+      "path": "assets/props/bench.glb",
+      "tags": ["bench", "seat", "wooden", "park", "outdoor", "furniture"],
+      "source": "https://poly.pizza/m/7uSlZo3n9Y",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-candle-01",
+      "path": "assets/props/candle.glb",
+      "tags": ["candle", "flame", "light", "wax", "mourning", "vigil", "religious"],
+      "source": "https://poly.pizza/m/AnzHB44wlW",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-chair-01",
+      "path": "assets/props/chair.glb",
+      "tags": ["chair", "wooden", "seat", "furniture", "simple", "interior"],
+      "source": "https://poly.pizza/m/iMNqRzPwwe",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-cross-01",
+      "path": "assets/props/cross.glb",
+      "tags": ["cross", "crucifix", "grave-marker", "religious", "christian", "wooden", "graveyard"],
+      "source": "https://poly.pizza/m/fKE29ukGpF",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "props-chandelier-01",
+      "path": "assets/props/chandelier.glb",
+      "tags": ["chandelier", "light", "ceiling", "hanging", "interior", "church", "grand", "ornate"],
+      "source": "https://poly.pizza/m/q3k8I8YYX9",
+      "license": "CC0",
+      "attribution": null
+    },
+    {
+      "id": "character-human-01",
+      "path": "assets/characters/human.glb",
+      "tags": ["human", "person", "figure", "character", "low-poly", "stylized", "neutral", "mourner", "gravedigger", "placeholder"],
+      "source": "https://poly.pizza/m/HMnuH5geEG",
+      "license": "CC0",
+      "attribution": null
+    }
+  ]
 }
