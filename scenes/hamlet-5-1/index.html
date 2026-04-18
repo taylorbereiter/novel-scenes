@@ -52,9 +52,12 @@ BookUI.mount();
 const { scene, camera, renderer, composer, sun, hemi } = createScene({
   skyColor: 0x8e8778,            // overcast pewter
   fogDensity: 0.03,
-  cameraPos: [0, 1.65, 6],
+  cameraPos: [0, 2.4, 7],
   exposure: 0.95
 });
+// Look at the grave from slightly above and further back so the book
+// panel (at the bottom) doesn't occlude the examinables.
+camera.lookAt(0, 0.6, 0);
 
 // Dim the sun & recolor hemi for the muted mood
 sun.intensity = 1.0;
@@ -203,8 +206,8 @@ const BEATS = [
     text: 'Hamlet and Horatio arrive at a freshly-dug grave. The gravedigger has tossed up a skull. <span class="hl">The skull on the ground arrests him.</span>',
     gloss: 'Three things lie at his feet: a <em>skull</em>, a <em>spade</em>, and the <em>grave</em> itself. Click each to read what Hamlet says about it. Then press Space.',
     cite: 'Hamlet · Act 5, Scene 1',
-    cameraPos: [0, 1.65, 4.2],
-    cameraLookAt: [0, 0.8, 0.4]
+    cameraPos: [0, 2.4, 7],
+    cameraLookAt: [0, 0.6, 0]
   }
 ];
 

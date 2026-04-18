@@ -105,6 +105,14 @@ canvas { display: block; }
   font-family: inherit; font-size: 10px;
   color: var(--paper); margin: 0 1px;
 }
+#page-close {
+  position: absolute; top: 8px; right: 10px;
+  background: none; border: none; color: var(--accent);
+  font-size: 14px; cursor: pointer; font-family: inherit;
+  opacity: 0.5; padding: 4px 8px; line-height: 1;
+  letter-spacing: 2px;
+}
+#page-close:hover { opacity: 1; }
 
 /* ---------- The page panel (the book's open pages as UI) ---------- */
 #page {
@@ -124,6 +132,30 @@ canvas { display: block; }
 #page.show {
   opacity: 1; transform: translateX(-50%) translateY(0);
   pointer-events: auto;
+}
+#page.hidden {
+  opacity: 0; transform: translateX(-50%) translateY(40px);
+  pointer-events: none;
+}
+#book-toggle {
+  position: fixed; right: 18px; bottom: 18px;
+  z-index: 60;
+  background: rgba(20, 14, 8, 0.82);
+  border: 1px solid rgba(247, 227, 164, 0.35);
+  color: var(--sun); font-family: inherit;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  padding: 8px 14px; cursor: pointer; border-radius: 2px;
+  transition: background 0.2s;
+  display: none;
+}
+#book-toggle.show { display: inline-block; }
+#book-toggle:hover { background: rgba(247, 227, 164, 0.15); }
+#book-toggle kbd {
+  background: rgba(244, 234, 211, 0.08);
+  border: 1px solid rgba(244, 234, 211, 0.2);
+  padding: 1px 5px; border-radius: 2px;
+  font-family: inherit; font-size: 10px;
+  color: var(--paper); margin-right: 6px;
 }
 #page::before {
   content: ''; position: absolute; inset: 6px;
@@ -300,10 +332,12 @@ const HTML = `
 <div id="hud" style="display:none">Beat <span class="num" id="beat-num">1</span> / <span id="beat-total">1</span></div>
 <div id="controls" style="display:none">
   <kbd>Click</kbd> examine &nbsp;·&nbsp;
+  <kbd>B</kbd> hide book &nbsp;·&nbsp;
   <kbd>Space</kbd> continue
 </div>
 
 <div id="page">
+  <button id="page-close" title="Hide book (B)">✕</button>
   <div class="leaf left">
     <div class="beat-label" id="beat-label"></div>
     <div class="beat-title" id="beat-title"></div>
@@ -319,6 +353,8 @@ const HTML = `
     <span class="advance">[Space] Continue ▸</span>
   </div>
 </div>
+
+<button id="book-toggle"><kbd>B</kbd>Open book</button>
 
 <div id="card-modal">
   <div class="card">
@@ -343,8 +379,24 @@ const HTML = `
 
 let _mounted = false;
 let _onRestart = null;
+let _bookVisible = true;
 
 function $(id) { return document.getElementById(id); }
+
+function hideBook() {
+  const page = $('page');
+  if (!page.classList.contains('show')) return; // nothing to hide
+  page.classList.add('hidden');
+  $('book-toggle').classList.add('show');
+  _bookVisible = false;
+}
+function showBook() {
+  const page = $('page');
+  page.classList.remove('hidden');
+  $('book-toggle').classList.remove('show');
+  _bookVisible = true;
+}
+function toggleBook() { _bookVisible ? hideBook() : showBook(); }
 
 export const BookUI = {
   /** Inject styles and DOM into the current page. Idempotent. */
@@ -361,6 +413,18 @@ export const BookUI = {
     $('card-close').addEventListener('click', () => BookUI.hideCard());
     $('card-modal').addEventListener('click', (e) => {
       if (e.target.id === 'card-modal') BookUI.hideCard();
+    });
+
+    // Book toggle — X button on the book, toggle button when hidden, B key
+    $('page-close').addEventListener('click', hideBook);
+    $('book-toggle').addEventListener('click', showBook);
+    document.addEventListener('keydown', (e) => {
+      if ((e.key === 'b' || e.key === 'B') && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        // Don't fire if the user is typing in the reflection textarea
+        if (document.activeElement && document.activeElement.tagName === 'TEXTAREA') return;
+        e.preventDefault();
+        toggleBook();
+      }
     });
 
     $('restart-btn').addEventListener('click', () => {
@@ -423,6 +487,10 @@ export const BookUI = {
   showBeat(beat, index = 0, total = 1) {
     // Hide the ending if it's showing — supports "Walk again"
     $('ending').classList.remove('show');
+    // Re-show the book on each beat change (in case user hid it)
+    $('page').classList.remove('hidden');
+    $('book-toggle').classList.remove('show');
+    _bookVisible = true;
     $('beat-num').textContent = (index + 1).toString();
     $('beat-total').textContent = total.toString();
     $('beat-label').textContent = beat.label || '';
