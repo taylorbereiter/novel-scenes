@@ -12,7 +12,7 @@ Build a linear 3D walkthrough of a literary passage for Taylor's high school Eng
 - A **linear guided walk** through 2–5 beats, advanced with Space
 - A few **examinable objects** — students click a skull, a candle, a hat, and get a card with a passage excerpt or analytical note
 - A **book-as-UI** overlay (title card → beat pages → ending reflection) in Taylor's warm, serif, terracotta/paper/ink aesthetic
-- **Browser-only.** No install. Students open a jsDelivr URL.
+- **Browser-only.** No install. Students open a `raw.githack.com` URL (jsDelivr serves HTML as text/plain, so it shows source instead of rendering — use raw.githack.com for scene HTML, jsDelivr for framework JS imports).
 - **Chapter-scoped.** Beats and examinables reference only events from the target chapter or earlier — never later. Students will encounter this scene *before* they have read the rest of the book.
 
 ## What a scene is NOT
@@ -183,7 +183,7 @@ Report to Taylor in this shape (keep under 12 lines):
 
 ```
 Scene: <title>
-URL:   https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/scenes/<slug>/index.html
+URL:   https://raw.githack.com/taylorbereiter/novel-scenes/main/scenes/<slug>/index.html
 
 Sources used: PDF (ch. <N>), LitCharts ✓/✗, SparkNotes ✓/✗
 Assets added: <count> new, <count> reused
@@ -194,7 +194,11 @@ Any passage I couldn't verify against the PDF:
   - <list, or "none">
 ```
 
-Add the note: *"jsDelivr sometimes takes ~1 minute to pick up new commits. Append `?v=<timestamp>` if you see a stale version."*
+Add the note: *"The CDN may take ~1 minute to pick up new commits. Append `?v=<timestamp>` if you see a stale version."*
+
+**Two CDN rule:**
+- **`raw.githack.com`** for the scene HTML URL students open (jsDelivr serves HTML as `text/plain`, browser shows source)
+- **`cdn.jsdelivr.net`** for framework JS imports inside the scene (jsDelivr serves JS modules correctly)
 
 ---
 

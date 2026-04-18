@@ -285,7 +285,10 @@ const BEATS = [
   }
 ];
 
-const NEXT_URL = 'https://cdn.jsdelivr.net/gh/taylorbereiter/novel-scenes@main/scenes/hamlet-1-2/index.html';
+// Use raw.githack.com (not jsDelivr) for scene HTML — jsDelivr serves .html
+// as text/plain (security policy), so the browser shows source instead of
+// rendering. raw.githack.com serves with text/html.
+const NEXT_URL = 'https://raw.githack.com/taylorbereiter/novel-scenes/main/scenes/hamlet-1-2/index.html';
 
 // Book waypoints — one per beat. Default to cameraLookAt lifted 0.4m.
 // Default: lift the book 1.0m above the lookAt so it floats above waist-height
